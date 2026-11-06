@@ -65,7 +65,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           {/* Top bar metadata */}
           <div className="relative z-10 flex items-center justify-between text-[11px] font-mono tracking-widest text-[#888888] uppercase">
             <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-[#ff2020] animate-ping rounded-full inline-block" />
+              <span className="w-2 h-2 bg-[#F20D18] animate-ping rounded-full inline-block" />
               <span className="text-white font-bold">SYSTEM ACTIVE</span>
               <span className="hidden sm:inline text-white/30">|</span>
               <span className="hidden sm:inline">KERALA [IST +05:30]</span>
@@ -84,7 +84,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="flex items-baseline gap-4 md:gap-8 flex-wrap"
               >
-                <span className="text-xs md:text-sm font-mono text-[#ff2020] tracking-[0.3em] font-bold">
+                <span className="text-xs md:text-sm font-mono text-[#F20D18] tracking-[0.3em] font-bold">
                   STUDIO ARCHIVE
                 </span>
                 <span className="text-xs md:text-sm font-mono text-white/40 tracking-[0.2em]">
@@ -100,7 +100,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="font-anton text-6xl sm:text-8xl md:text-9xl lg:text-[13vw] leading-[0.85] tracking-tight text-white uppercase"
               >
-                AFTER <span className="text-[#ff2020]">THAT</span>
+                AFTER <span className="text-[#F20D18]">THAT</span>
               </motion.h1>
             </div>
 
@@ -130,7 +130,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
               <div className="text-right">
                 <span className="font-bebas text-5xl md:text-7xl leading-none text-white tracking-wider">
                   {progress}
-                  <span className="text-[#ff2020] text-3xl md:text-5xl">%</span>
+                  <span className="text-[#F20D18] text-3xl md:text-5xl">%</span>
                 </span>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             {/* Industrial progress bar */}
             <div className="h-[3px] w-full bg-white/10 relative overflow-hidden">
               <motion.div
-                className="h-full bg-[#ff2020] shadow-[0_0_15px_#ff2020]"
+                className="h-full bg-[#F20D18] shadow-[0_0_15px_#F20D18]"
                 style={{ width: `${progress}%` }}
                 transition={{ ease: "easeOut" }}
               />
@@ -156,7 +156,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
               initial={{ scaleY: 0 }}
               animate={{ scaleY: 1 }}
               transition={{ duration: 0.4, ease: "circIn" }}
-              className="absolute inset-0 bg-[#ff2020] z-20 origin-bottom"
+              className="absolute inset-0 bg-[#F20D18] z-20 origin-bottom"
             />
           )}
         </motion.div>

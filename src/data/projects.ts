@@ -4,7 +4,7 @@ export const PROJECTS: Project[] = [
   {
     id: "pulse-of-the-underground",
     title: "PULSE OF THE UNDERGROUND",
-    category: "Live Experience & Festival IP",
+    category: "Events & Brand Experiences",
     year: "2024",
     client: "After That Live & Subculture Collective",
     location: "Calicut / Kochi, Kerala",
@@ -39,12 +39,12 @@ export const PROJECTS: Project[] = [
       strategy: "Subculture Media Group",
     },
     featured: true,
-    colorAccent: "#ff2020",
+    colorAccent: "#F20D18",
   },
   {
     id: "monsoon-noir",
     title: "MONSOON NOIR",
-    category: "Cinematic Fashion Film & Commercial",
+    category: "Commercial Films",
     year: "2024",
     client: "HAUTEVOLT Apparel",
     location: "Idukki & Vagamon High Ranges",
@@ -78,12 +78,12 @@ export const PROJECTS: Project[] = [
       postProduction: "Colorist Studio Mumbai",
     },
     featured: true,
-    colorAccent: "#ff2020",
+    colorAccent: "#F20D18",
   },
   {
     id: "team-five-campaign",
     title: "TEAM FIVE: CINEMA PACKAGING",
-    category: "Theatrical Marketing & Creative Direction",
+    category: "Advertising",
     year: "2023",
     client: "Feature Film Consortium",
     location: "Kochi / Bangalore",
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
   {
     id: "neon-horizon",
     title: "NEON HORIZON COMMERCIAL",
-    category: "Commercial Film & VFX",
+    category: "Commercial Films",
     year: "2024",
     client: "Volt Surge Energy",
     location: "Kochi Marine Drive",
@@ -150,12 +150,12 @@ export const PROJECTS: Project[] = [
       postProduction: "After That Studio VFX",
     },
     featured: false,
-    colorAccent: "#ff2020",
+    colorAccent: "#F20D18",
   },
   {
     id: "kerala-roots-global-vibes",
     title: "KERALA ROOTS x GLOBAL VIBES",
-    category: "Celebrity & Creator Ecosystem",
+    category: "Digital Campaigns",
     year: "2023",
     client: "Youth Culture Alliance",
     location: "Trivandrum / Bangalore",
@@ -188,7 +188,7 @@ export const PROJECTS: Project[] = [
   {
     id: "after-hours-club",
     title: "AFTER HOURS CLUB",
-    category: "Subculture Residency & Archival Print",
+    category: "Branding",
     year: "2024",
     client: "After That Experimental Lab",
     location: "Fort Kochi",
@@ -217,6 +217,74 @@ export const PROJECTS: Project[] = [
       curator: "After That Arts Wing",
     },
     featured: true,
-    colorAccent: "#ff2020",
+    colorAccent: "#F20D18",
+  },
+  {
+    id: "venture-flow-digital",
+    title: "VENTUREFLOW PLATFORM",
+    category: "Website & Technology",
+    year: "2024",
+    client: "Fintech Venture Consortium",
+    location: "Bangalore / Ahmedabad",
+    role: "Custom Web Application, UI/UX Architecture & API Systems",
+    coverImage:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    secondaryImage:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1400&auto=format&fit=crop",
+    ],
+    tagline: "Enterprise-grade digital dashboard and real-time transaction engine.",
+    overview:
+      "Full-stack custom software development delivering instantaneous transaction telemetry, intuitive data visualization, and banking-grade security interfaces.",
+    challenges:
+      "Synthesizing intricate financial datasets into a sub-second reactive frontend interface with zero layout shift and fluid microinteractions.",
+    deliverables: [
+      "Custom React & Next.js Web Flagship",
+      "Full Design System & Component Library",
+      "REST & GraphQL Integration",
+      "Automated CI/CD Deployment Pipeline",
+    ],
+    credits: {
+      technologyLead: "After That Tech Lab",
+      uiUxDesign: "After That Design Studio",
+    },
+    featured: false,
+    colorAccent: "#ffffff",
+  },
+  {
+    id: "neural-fashion-ai",
+    title: "NEURAL CAMPAIGN LAB",
+    category: "AI Advertising",
+    year: "2024",
+    client: "After That R&D Initiative",
+    location: "Kochi / Bangalore",
+    role: "AI Video Commercials, Neural Synthesis & Synthetic Art Direction",
+    coverImage:
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1600&auto=format&fit=crop",
+    videoUrl: "/videos/monsoon-noir-reel.mp4",
+    secondaryImage:
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1400&auto=format&fit=crop",
+    ],
+    tagline: "Exploring the boundary where algorithmic precision meets human creative vision.",
+    overview:
+      "An internal research and development initiative testing multi-modal generative video models, character consistency algorithms, and virtual camera motion for upcoming enterprise brand campaigns.",
+    challenges:
+      "Achieving photorealistic temporal coherence across dynamic fluid simulations and high-fashion textile physics.",
+    deliverables: [
+      "AI Generated 4K Video Commercial Spot",
+      "Character Avatar Consistency Model",
+      "Algorithmic Visual Prompt Framework",
+    ],
+    credits: {
+      creativeDirector: "Anand Bhairav",
+      aiSpecialist: "After That Creative Tech",
+    },
+    featured: true,
+    colorAccent: "#F20D18",
   },
 ];

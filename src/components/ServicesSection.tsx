@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, Plus, Minus, CheckCircle2, Film } from "lucide-react";
-import { SERVICES } from "@/data/services";
+import { ArrowUpRight, Plus, Minus, CheckCircle2, Sparkles, Layers, ArrowRight } from "lucide-react";
+import { SERVICES, VerticalService } from "@/data/services";
 import { sound } from "@/utils/sound";
 import ScrambleText from "@/components/motion/ScrambleText";
 import MagneticButton from "@/components/motion/MagneticButton";
@@ -12,7 +12,7 @@ import MagneticButton from "@/components/motion/MagneticButton";
 export default function ServicesSection() {
   const [activeService, setActiveService] = useState<string>(SERVICES[0].id);
 
-  const currentService =
+  const currentService: VerticalService =
     SERVICES.find((s) => s.id === activeService) || SERVICES[0];
 
   const handleSelect = (id: string) => {
@@ -23,7 +23,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative w-full bg-[#080808] text-white py-24 md:py-36 px-5 sm:px-8 md:px-12 border-b border-white/10 overflow-hidden"
+      className="relative w-full bg-[#0A0A0A] text-white py-24 md:py-36 px-5 sm:px-8 md:px-12 border-b border-white/10 overflow-hidden"
     >
       {/* Background Grid */}
       <div className="absolute inset-0 subtle-grid opacity-20 pointer-events-none" />
@@ -32,30 +32,30 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
           <div className="space-y-2">
-            <div className="flex items-center gap-3 font-mono text-xs text-[#ff2020] font-bold tracking-[0.3em] uppercase">
+            <div className="flex items-center gap-3 font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
               <span>// SECTION 03</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
-                CAPABILITIES & SERVICES
+                OUR FIVE SERVICE VERTICALS
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
-              ENGINEERED <span className="text-[#ff2020]">IMPACT</span>
+              INTEGRATED <span className="text-[#F20D18]">CAPABILITIES</span>
             </h2>
           </div>
 
           <div className="max-w-md font-mono text-xs text-[#888888] leading-relaxed">
             <p>
-              WE FORGE UNCONVENTIONAL NARRATIVES ACROSS COMMERCIAL CINEMA, HIP-HOP
-              SUBCULTURE, CELEBRITY NETWORKS, AND GRAPHIC ARCHITECTURE.
+              WE BRING BRAND STRATEGY, COMMERCIAL ADVERTISING, DIGITAL MARKETING,
+              CUSTOM SOFTWARE & PR TOGETHER UNDER ONE ACCOUNTABLE ROOF.
             </p>
           </div>
         </div>
 
-        {/* Desktop Split View: Interactive Services List + Dynamic Showcase Panel */}
+        {/* Split View: Interactive Vertical Accordion + Sticky Cinematic Stage */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Interactive Service Accordion Items */}
-          <div className="lg:col-span-7 space-y-3">
+          <div className="lg:col-span-7 space-y-4">
             {SERVICES.map((service) => {
               const isActive = activeService === service.id;
 
@@ -65,8 +65,8 @@ export default function ServicesSection() {
                   data-preview-img={service.bgImage}
                   className={`border transition-all duration-300 ${
                     isActive
-                      ? "bg-[#121212] border-[#ff2020] shadow-[0_0_25px_rgba(255,32,32,0.15)]"
-                      : "bg-[#0b0b0b] border-white/10 hover:border-white/40"
+                      ? "bg-[#121212] border-[#F20D18] shadow-[0_0_30px_rgba(242,13,24,0.18)]"
+                      : "bg-[#0b0b0b] border-white/10 hover:border-white/30"
                   }`}
                 >
                   {/* Service Header Row */}
@@ -80,27 +80,32 @@ export default function ServicesSection() {
                       <span
                         className={`font-mono text-sm sm:text-base font-bold tracking-widest transition-colors ${
                           isActive
-                            ? "text-[#ff2020]"
+                            ? "text-[#F20D18]"
                             : "text-white/40 group-hover:text-white"
                         }`}
                       >
                         {service.number}
                       </span>
-                      <h3
-                        className={`font-anton text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide transition-colors ${
-                          isActive
-                            ? "text-white"
-                            : "text-white/70 group-hover:text-white"
-                        }`}
-                      >
-                        <ScrambleText text={service.title} />
-                      </h3>
+                      <div>
+                        <h3
+                          className={`font-anton text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide transition-colors ${
+                            isActive
+                              ? "text-white"
+                              : "text-white/70 group-hover:text-white"
+                          }`}
+                        >
+                          <ScrambleText text={service.title} />
+                        </h3>
+                        <span className="font-mono text-[10px] sm:text-xs text-[#F20D18] tracking-widest uppercase block mt-1">
+                          {service.tagline}
+                        </span>
+                      </div>
                     </div>
 
                     <div
                       className={`w-9 h-9 flex items-center justify-center shrink-0 border transition-all ${
                         isActive
-                          ? "bg-[#ff2020] border-[#ff2020] text-black"
+                          ? "bg-[#F20D18] border-[#F20D18] text-white"
                           : "border-white/20 text-white group-hover:border-white"
                       }`}
                     >
@@ -122,43 +127,57 @@ export default function ServicesSection() {
                         transition={{ duration: 0.35, ease: "easeInOut" }}
                         className="overflow-hidden px-6 sm:px-8 pb-8 pt-2 border-t border-white/5 space-y-6"
                       >
+                        {/* Headline */}
+                        <div className="bg-white/[0.02] border-l-2 border-[#F20D18] p-4">
+                          <span className="font-mono text-[10px] text-[#F20D18] font-bold uppercase tracking-widest block mb-1">
+                            OBJECTIVE & PROMISE
+                          </span>
+                          <h4 className="font-anton text-lg sm:text-xl md:text-2xl text-white uppercase tracking-wide">
+                            {service.headline}
+                          </h4>
+                        </div>
+
+                        {/* Description */}
                         <p className="font-space text-white/80 text-base sm:text-lg leading-relaxed">
                           {service.description}
                         </p>
 
-                        {/* Capabilities Tags */}
-                        <div className="space-y-3">
-                          <span className="font-mono text-xs text-[#ff2020] font-bold tracking-widest uppercase block">
-                            // CORE SPECIALIZATIONS
+                        {/* Full Detailed Services List (No omissions) */}
+                        <div className="space-y-3 pt-2">
+                          <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase flex items-center gap-2">
+                            <Sparkles className="w-3.5 h-3.5" />
+                            SPECIALIZED DISCIPLINES & DELIVERABLES ({service.services.length})
                           </span>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            {service.capabilities.map((cap, i) => (
+                            {service.services.map((item, i) => (
                               <div
                                 key={i}
-                                className="flex items-center gap-2 font-mono text-xs text-white/90 bg-white/5 px-3 py-2 border border-white/10 hover:border-[#ff2020] transition-colors"
+                                className="flex items-start gap-2.5 font-mono text-xs text-white/90 bg-white/[0.03] p-2.5 border border-white/10 hover:border-[#F20D18] transition-colors"
                               >
-                                <CheckCircle2 className="w-3.5 h-3.5 text-[#ff2020] shrink-0" />
-                                <span>{cap}</span>
+                                <CheckCircle2 className="w-3.5 h-3.5 text-[#F20D18] shrink-0 mt-0.5" />
+                                <span>{item}</span>
                               </div>
                             ))}
                           </div>
                         </div>
 
-                        {/* Deliverables */}
-                        <div className="pt-2">
-                          <span className="font-mono text-[11px] text-white/50 tracking-wider uppercase block mb-2">
-                            KEY DELIVERABLES:
+                        {/* CTA Row inside accordion for mobile / quick access */}
+                        <div className="pt-4 flex items-center justify-between border-t border-white/10">
+                          <span className="font-mono text-xs text-white/50">
+                            READY TO DEPLOY THIS VERTICAL?
                           </span>
-                          <div className="flex flex-wrap gap-2">
-                            {service.deliverables.map((del, idx) => (
-                              <span
-                                key={idx}
-                                className="font-mono text-[11px] text-white/70 border border-white/10 px-2.5 py-1"
-                              >
-                                {del}
-                              </span>
-                            ))}
-                          </div>
+                          <a
+                            href="#contact"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              sound.playClick();
+                              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+                            }}
+                            className="inline-flex items-center gap-1.5 font-anton text-xs uppercase tracking-wider text-[#F20D18] hover:text-white transition-colors"
+                          >
+                            <span>START PROJECT ENQUIRY</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </a>
                         </div>
                       </motion.div>
                     )}
@@ -170,7 +189,7 @@ export default function ServicesSection() {
 
           {/* Right Column: Dynamic Showcase Stage */}
           <div className="lg:col-span-5 sticky top-28 hidden lg:block">
-            <div className="bg-[#111111] border border-white/15 p-6 space-y-6">
+            <div className="bg-[#111111] border border-white/15 p-6 space-y-6 shadow-2xl">
               {/* Media Preview Window */}
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-black border border-white/20">
                 <AnimatePresence mode="wait">
@@ -179,7 +198,7 @@ export default function ServicesSection() {
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.45 }}
                     className="relative w-full h-full"
                   >
                     <Image
@@ -195,32 +214,32 @@ export default function ServicesSection() {
 
                 {/* Top Overlay Badge */}
                 <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 border border-white/20 font-mono text-[10px] text-white font-bold tracking-widest uppercase flex items-center gap-2">
-                  <Film className="w-3 h-3 text-[#ff2020]" />
-                  <span>DISCIPLINE {currentService.number}</span>
+                  <Layers className="w-3 h-3 text-[#F20D18]" />
+                  <span>VERTICAL {currentService.number} // ACTIVE</span>
                 </div>
 
                 {/* Bottom Overlay Info */}
                 <div className="absolute bottom-4 left-4 right-4 font-mono">
-                  <span className="text-[10px] text-[#ff2020] font-bold tracking-widest block uppercase">
-                    TAGLINE
+                  <span className="text-[10px] text-[#F20D18] font-bold tracking-widest block uppercase">
+                    CORE PROMISE
                   </span>
-                  <span className="text-sm font-bold text-white uppercase block">
-                    {currentService.tagline}
+                  <span className="text-sm font-bold text-white uppercase block line-clamp-1">
+                    {currentService.headline}
                   </span>
                 </div>
               </div>
 
-              {/* Service Quote / Ethos */}
-              <div className="p-4 bg-black/60 border-l-2 border-[#ff2020] space-y-2">
+              {/* Service Directive Quote */}
+              <div className="p-4 bg-black/60 border-l-2 border-[#F20D18] space-y-1">
                 <p className="font-syne text-sm italic text-white/90">
-                  {currentService.accentQuote}
+                  “{currentService.tagline}”
                 </p>
-                <span className="font-mono text-[10px] text-[#888888] tracking-widest uppercase block">
-                  — AFTER THAT PRODUCTION DIRECTIVE
+                <span className="font-mono text-[9px] text-[#888888] tracking-widest uppercase block pt-1">
+                  AFTER THAT ENTERTAINMENT • CAPABILITY BLUEPRINT
                 </span>
               </div>
 
-              {/* Magnetic Action Button */}
+              {/* Action Button */}
               <MagneticButton strength={0.25} className="w-full">
                 <a
                   href="#contact"
@@ -233,7 +252,7 @@ export default function ServicesSection() {
                   }}
                   onMouseEnter={() => sound.playHover()}
                   data-cursor="INQUIRE"
-                  className="w-full flex items-center justify-between px-5 py-3.5 bg-white text-black font-anton text-sm tracking-wider uppercase hover:bg-[#ff2020] hover:text-white transition-colors"
+                  className="w-full flex items-center justify-between px-5 py-4 bg-[#F20D18] text-white font-anton text-sm tracking-wider uppercase hover:bg-white hover:text-black transition-colors shadow-[0_0_20px_rgba(242,13,24,0.4)]"
                 >
                   <span>COMMISSION THIS CAPABILITY</span>
                   <ArrowUpRight className="w-4 h-4" />

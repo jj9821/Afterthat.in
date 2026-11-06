@@ -65,8 +65,8 @@ export default function InteractiveCanvasNoise() {
         mouseY,
         450
       );
-      gradient.addColorStop(0, "rgba(255, 32, 32, 0.065)");
-      gradient.addColorStop(0.5, "rgba(255, 32, 32, 0.018)");
+      gradient.addColorStop(0, "rgba(242, 13, 24, 0.065)");
+      gradient.addColorStop(0.5, "rgba(242, 13, 24, 0.018)");
       gradient.addColorStop(1, "transparent");
 
       ctx.fillStyle = gradient;

@@ -149,7 +149,7 @@ export default function CustomCursor() {
       >
         {cursorText === "PLAY" ? (
           /* Cinematic Round Play Cursor for Video Reels */
-          <div className="w-16 h-16 rounded-full bg-[#ff2020] text-black border-2 border-white flex flex-col items-center justify-center shadow-[0_0_35px_rgba(255,32,32,0.9)] scale-110 transition-transform">
+          <div className="w-16 h-16 rounded-full bg-[#F20D18] text-black border-2 border-white flex flex-col items-center justify-center shadow-[0_0_35px_rgba(242,13,24,0.9)] scale-110 transition-transform">
             <svg
               className="w-4 h-4 fill-black translate-x-0.5"
               viewBox="0 0 24 24"
@@ -162,15 +162,15 @@ export default function CustomCursor() {
           </div>
         ) : cursorText === "VIEW" ? (
           /* Editorial Cinematic View Disc for Case Studies */
-          <div className="w-16 h-16 rounded-full bg-black/95 text-white border-2 border-[#ff2020] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(255,32,32,0.6)] backdrop-blur-md">
-            <span className="w-1.5 h-1.5 bg-[#ff2020] rounded-full animate-ping mb-1" />
+          <div className="w-16 h-16 rounded-full bg-black/95 text-white border-2 border-[#F20D18] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(242,13,24,0.6)] backdrop-blur-md">
+            <span className="w-1.5 h-1.5 bg-[#F20D18] rounded-full animate-ping mb-1" />
             <span className="font-mono text-[9px] font-black tracking-widest text-white">
               VIEW
             </span>
           </div>
         ) : cursorText ? (
           /* Contextual Action Pill (e.g. MENU, CLOSE, EXPLORE, INQUIRE) */
-          <div className="bg-[#ff2020] text-black font-mono text-[10px] uppercase font-extrabold tracking-widest px-3.5 py-1.5 border border-white/20 shadow-[0_0_25px_rgba(255,32,32,0.85)] flex items-center gap-1.5 animate-pulse whitespace-nowrap">
+          <div className="bg-[#F20D18] text-black font-mono text-[10px] uppercase font-extrabold tracking-widest px-3.5 py-1.5 border border-white/20 shadow-[0_0_25px_rgba(242,13,24,0.85)] flex items-center gap-1.5 animate-pulse whitespace-nowrap">
             <span className="w-1.5 h-1.5 bg-black rounded-full" />
             <span>{cursorText}</span>
           </div>
@@ -179,19 +179,19 @@ export default function CustomCursor() {
           <div
             className={`relative flex items-center justify-center rounded-full transition-all duration-200 ease-out ${
               isClicking
-                ? "w-7 h-7 border border-[#ff2020] bg-[#ff2020]/25 scale-90"
+                ? "w-7 h-7 border border-[#F20D18] bg-[#F20D18]/25 scale-90"
                 : isPointer
-                ? "w-14 h-14 border border-[#ff2020] bg-[#ff2020]/15 scale-105 shadow-[0_0_20px_rgba(255,32,32,0.35)]"
+                ? "w-14 h-14 border border-[#F20D18] bg-[#F20D18]/15 scale-105 shadow-[0_0_20px_rgba(242,13,24,0.35)]"
                 : "w-9 h-9 border border-white/40"
             }`}
           >
             {/* Center Electric Red Dot — Absolute Dead Center */}
             <div
-              className={`rounded-full bg-[#ff2020] transition-all duration-150 ease-out shadow-[0_0_10px_#ff2020] ${
+              className={`rounded-full bg-[#F20D18] transition-all duration-150 ease-out shadow-[0_0_10px_#F20D18] ${
                 isClicking
                   ? "w-1 h-1 scale-75"
                   : isPointer
-                  ? "w-2 h-2 scale-110 shadow-[0_0_14px_#ff2020]"
+                  ? "w-2 h-2 scale-110 shadow-[0_0_14px_#F20D18]"
                   : "w-1.5 h-1.5"
               }`}
             />
@@ -213,7 +213,7 @@ export default function CustomCursor() {
         }}
       >
         {previewImage && (
-          <div className="w-48 h-32 relative bg-black border-2 border-[#ff2020] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.9),0_0_25px_rgba(255,32,32,0.5)]">
+          <div className="w-48 h-32 relative bg-black border-2 border-[#F20D18] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.9),0_0_25px_rgba(242,13,24,0.5)]">
             <Image
               src={previewImage}
               alt="Preview"
@@ -223,7 +223,7 @@ export default function CustomCursor() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-2 left-2 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-[#ff2020] animate-ping rounded-full" />
+              <span className="w-1.5 h-1.5 bg-[#F20D18] animate-ping rounded-full" />
               <span className="font-mono text-[9px] text-white font-bold tracking-widest uppercase">
                 PREVIEW ARCHIVE
               </span>

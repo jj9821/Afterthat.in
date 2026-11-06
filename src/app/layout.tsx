@@ -38,44 +38,59 @@ const jbMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080808",
+  themeColor: "#0A0A0A",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  title: "AFTER THAT | Cultural Production, Ad Films & Creative Studio",
+  metadataBase: new URL("https://www.afterthat.in"),
+  title: "AFTER THAT ENTERTAINMENT | Ideas. People. Brands. Beyond.",
   description:
-    "AFTER THAT is an independent advertising, cinematic film production, and cultural creative studio founded by Anand Bhairav. We engineer cultural shockwaves through commercials, influencer marketing, music festival IP, and high-fashion digital art direction.",
+    "AFTER THAT ENTERTAINMENT is an independent integrated creative, advertising, digital marketing and technology agency operating across Kochi, Bangalore and Ahmedabad. From brand strategy and commercial ad films to performance marketing, custom software, and AI creative technology.",
   keywords: [
+    "AFTER THAT ENTERTAINMENT",
     "AFTER THAT",
-    "After That Entertainment",
-    "Anand Bhairav",
-    "Advertising Agency",
-    "Ad Films",
-    "Cinematic Commercials",
-    "Creative Studio",
-    "Music Festivals",
-    "Kerala Advertising",
-    "Calicut",
-    "Brand Strategy",
-    "Digital Direction",
+    "Creative advertising agency",
+    "Advertising agency in Kochi",
+    "Digital marketing agency in Kochi",
+    "Branding and brand identity services",
+    "Ad film production",
+    "AI video advertisements",
+    "Social media marketing services",
+    "Performance marketing",
+    "SEO services",
+    "Website development",
+    "E-commerce website development",
+    "Mobile app development",
+    "Custom software development",
+    "Company profile design",
+    "Investor pitch deck design",
+    "Celebrity management",
+    "Public relations and PR campaigns",
+    "Kochi",
+    "Bangalore",
+    "Ahmedabad",
   ],
-  authors: [{ name: "AFTER THAT Studio" }],
+  authors: [{ name: "AFTER THAT ENTERTAINMENT LLP" }],
+  alternates: {
+    canonical: "https://www.afterthat.in",
+  },
   openGraph: {
-    title: "AFTER THAT | Beyond Ordinary Content",
+    title: "AFTER THAT ENTERTAINMENT | Ideas. People. Brands. Beyond.",
     description:
-      "Independent advertising, cinematic commercial production, and cultural creative studio. What happens next changes everything.",
-    url: "https://afterthat.in",
-    siteName: "AFTER THAT",
+      "Independent integrated creative, advertising, digital marketing and technology agency. We bring strategy, creativity, advertising, marketing and technology together.",
+    url: "https://www.afterthat.in",
+    siteName: "AFTER THAT ENTERTAINMENT",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AFTER THAT | Digital Flagship",
-    description: "Cinematic Ad Films • Culture • High-Impact Campaigns",
+    title: "AFTER THAT ENTERTAINMENT | Integrated Creative & Tech Agency",
+    description:
+      "Ideas. People. Brands. Beyond. Operating across Kochi, Bangalore & Ahmedabad.",
   },
 };
 
@@ -84,12 +99,38 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AdvertisingAgency",
+    name: "AFTER THAT ENTERTAINMENT LLP",
+    alternateName: "AFTER THAT",
+    url: "https://www.afterthat.in",
+    logo: "https://www.afterthat.in/public/next.svg",
+    description:
+      "Independent integrated creative, advertising, digital marketing and technology agency bringing strategy, creativity, media production, marketing and technology together.",
+    telephone: "+91-96561-66555",
+    email: "connect@afterthat.in",
+    sameAs: ["https://www.instagram.com/afterthat.in/"],
+    areaServed: [
+      { "@type": "City", name: "Kochi" },
+      { "@type": "City", name: "Bangalore" },
+      { "@type": "City", name: "Ahmedabad" },
+    ],
+    serviceArea: "India & International",
+  };
+
   return (
     <html
       lang="en"
       className={`${syne.variable} ${spaceGrotesk.variable} ${bebasNeue.variable} ${anton.variable} ${jbMono.variable} dark`}
     >
-      <body className="bg-[#080808] text-white font-sans antialiased selection:bg-[#ff2020] selection:text-white overflow-x-hidden min-h-screen">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="bg-[#0A0A0A] text-white font-sans antialiased selection:bg-[#F20D18] selection:text-white overflow-x-hidden min-h-screen">
         {children}
       </body>
     </html>

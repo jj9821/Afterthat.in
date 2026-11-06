@@ -122,8 +122,8 @@ export default function HorizontalGallery() {
       {/* Top Pin Header */}
       <div className="absolute top-6 left-6 right-6 md:left-12 md:right-12 z-20 flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs">
         <div className="flex items-center gap-3">
-          <span className="w-2 h-2 rounded-full bg-[#ff2020] animate-ping" />
-          <span className="text-[#ff2020] font-bold tracking-widest uppercase">
+          <span className="w-2 h-2 rounded-full bg-[#F20D18] animate-ping" />
+          <span className="text-[#F20D18] font-bold tracking-widest uppercase">
             // HORIZONTAL REEL
           </span>
           <span className="text-white/40 hidden sm:inline">|</span>
@@ -133,7 +133,7 @@ export default function HorizontalGallery() {
         </div>
         <div className="flex items-center gap-2 text-white/50 text-[11px]">
           <span>SCROLL VERTICALLY TO TRAVERSE</span>
-          <ArrowRight className="w-3.5 h-3.5 text-[#ff2020]" />
+          <ArrowRight className="w-3.5 h-3.5 text-[#F20D18]" />
         </div>
       </div>
 
@@ -144,16 +144,16 @@ export default function HorizontalGallery() {
       >
         {/* Intro Card */}
         <div className="w-[300px] sm:w-[420px] shrink-0 space-y-6">
-          <span className="font-mono text-xs text-[#ff2020] font-bold tracking-[0.3em] uppercase block">
+          <span className="font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase block">
             VISUAL DISCIPLINE
           </span>
           <h2 className="font-anton text-4xl sm:text-6xl md:text-7xl uppercase leading-[0.9] text-white tracking-tight">
-            BEHIND THE <span className="text-[#ff2020]">GLASS</span>
+            BEHIND THE <span className="text-[#F20D18]">GLASS</span>
           </h2>
           <p className="font-space text-sm sm:text-base text-[#aaaaaa] leading-relaxed">
             Every camera rig, lens package, and location scout is chosen to inject raw visceral emotion into commercial advertising.
           </p>
-          <div className="p-4 bg-[#111111] border-l-2 border-[#ff2020] font-mono text-xs text-white/80">
+          <div className="p-4 bg-[#111111] border-l-2 border-[#F20D18] font-mono text-xs text-white/80">
             KERALA PRODUCTION INFRASTRUCTURE • 4K DCI & 35MM ARCHIVE
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function HorizontalGallery() {
         {frames.map((frame, index) => (
           <div
             key={index}
-            className="w-[340px] sm:w-[540px] md:w-[680px] shrink-0 bg-[#0e0e0e] border border-white/10 p-5 md:p-7 space-y-5 hover:border-[#ff2020] transition-colors group"
+            className="w-[340px] sm:w-[540px] md:w-[680px] shrink-0 bg-[#0e0e0e] border border-white/10 p-5 md:p-7 space-y-5 hover:border-[#F20D18] transition-colors group"
             onMouseEnter={() => sound.playHover()}
             data-cursor="EXAMINE"
           >
@@ -179,12 +179,12 @@ export default function HorizontalGallery() {
 
               {/* Badges */}
               <div className="absolute top-3 left-3 bg-black/80 px-2.5 py-1 border border-white/20 font-mono text-[10px] text-white font-bold tracking-widest flex items-center gap-1.5">
-                <Film className="w-3 h-3 text-[#ff2020]" />
+                <Film className="w-3 h-3 text-[#F20D18]" />
                 <span>{frame.num}</span>
               </div>
 
               <div className="absolute bottom-3 left-3 right-3 font-mono">
-                <span className="text-[10px] text-[#ff2020] font-bold tracking-widest uppercase block">
+                <span className="text-[10px] text-[#F20D18] font-bold tracking-widest uppercase block">
                   TECHNICAL SPEC
                 </span>
                 <span className="text-xs text-white/90 font-medium">
@@ -197,9 +197,9 @@ export default function HorizontalGallery() {
             <div className="space-y-2">
               <div className="flex items-center justify-between font-mono text-xs">
                 <span className="text-[#888888]">{frame.location}</span>
-                <span className="text-[#ff2020] font-bold">0{index + 1} / 05</span>
+                <span className="text-[#F20D18] font-bold">0{index + 1} / 05</span>
               </div>
-              <h3 className="font-anton text-2xl sm:text-3xl uppercase tracking-wide text-white group-hover:text-[#ff2020] transition-colors">
+              <h3 className="font-anton text-2xl sm:text-3xl uppercase tracking-wide text-white group-hover:text-[#F20D18] transition-colors">
                 {frame.title}
               </h3>
               <p className="font-space text-xs sm:text-sm text-white/70">

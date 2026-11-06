@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bg-black: #080808;
+  --bg-black: #0A0A0A;
   --bg-card: #121212;
   --bg-card-hover: #181818;
   --text-white: #ffffff;
   --text-muted: #888888;
   --text-subtle: #444444;
-  --accent-red: #ff2020;
-  --accent-red-glow: rgba(255, 32, 32, 0.35);
+  --accent-red: #F20D18;
+  --accent-red-glow: rgba(242, 13, 24, 0.4);
   --border-dark: #1f1f1f;
   --border-light: rgba(255, 255, 255, 0.12);
 }
@@ -22,7 +22,7 @@
 }
 
 html {
-  background-color: #080808;
+  background-color: #0A0A0A;
   color: #ffffff;
   scroll-behavior: auto;
 }
@@ -48,7 +48,7 @@ html.lenis, html.lenis body {
 }
 
 body {
-  background-color: #080808;
+  background-color: #0A0A0A;
   color: #ffffff;
   overflow-x: hidden;
   font-family: var(--font-space), sans-serif;
@@ -57,7 +57,7 @@ body {
 }
 
 ::selection {
-  background-color: #ff2020;
+  background-color: #F20D18;
   color: #ffffff;
 }
 
@@ -66,14 +66,14 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #080808;
+  background: #0A0A0A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ff2020;
+  background: #F20D18;
   border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff4a4a;
+  background: #ff333d;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -94,7 +94,7 @@ body {
   color: transparent;
 }
 .text-stroke-red {
-  -webkit-text-stroke: 2px #ff2020;
+  -webkit-text-stroke: 2px #F20D18;
   color: transparent;
 }
 .text-stroke-thick {
@@ -104,10 +104,10 @@ body {
 
 /* Red glow filters */
 .red-glow {
-  box-shadow: 0 0 35px rgba(255, 32, 32, 0.35);
+  box-shadow: 0 0 35px rgba(242, 13, 24, 0.35);
 }
 .red-text-glow {
-  text-shadow: 0 0 25px rgba(255, 32, 32, 0.65);
+  text-shadow: 0 0 25px rgba(242, 13, 24, 0.65);
 }
 
 /* Film grain overlay */
@@ -120,8 +120,8 @@ body {
 .brutalist-stripes {
   background: repeating-linear-gradient(
     45deg,
-    #ff2020,
-    #ff2020 10px,
+    #F20D18,
+    #F20D18 10px,
     #080808 10px,
     #080808 20px
   );
@@ -137,8 +137,8 @@ body {
 .subtle-red-grid {
   background-size: 80px 80px;
   background-image: 
-    linear-gradient(to right, rgba(255, 32, 32, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 32, 32, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(242, 13, 24, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(242, 13, 24, 0.08) 1px, transparent 1px);
 }
 
 /* Keyframes for marquee */

@@ -22,24 +22,29 @@ export interface Project {
     strategy?: string;
     production?: string;
     curator?: string;
+    technologyLead?: string;
+    uiUxDesign?: string;
+    creativeDirector?: string;
+    aiSpecialist?: string;
     [key: string]: string | undefined;
   };
   featured: boolean;
   colorAccent?: string;
 }
 
-export interface Service {
+export interface VerticalService {
   number: string;
   id: string;
   title: string;
   shortTitle: string;
-  tagline: string;
+  headline: string;
   description: string;
-  capabilities: string[];
-  deliverables: string[];
+  services: string[];
   bgImage: string;
-  accentQuote: string;
+  tagline: string;
 }
+
+export type Service = VerticalService;
 
 export interface BrandManifestoPoint {
   index: string;

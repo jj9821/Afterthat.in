@@ -9,8 +9,12 @@ import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import HorizontalGallery from "@/components/HorizontalGallery";
 import ServicesSection from "@/components/ServicesSection";
+import AiTechSection from "@/components/AiTechSection";
 import WorkSection from "@/components/WorkSection";
-import PhilosophySection from "@/components/PhilosophySection";
+import WhyUsSection from "@/components/WhyUsSection";
+import ProcessSection from "@/components/ProcessSection";
+import CommunicationPhilosophySection from "@/components/CommunicationPhilosophySection";
+import LocationsSection from "@/components/LocationsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ProjectModal from "@/components/ProjectModal";
@@ -55,28 +59,40 @@ export default function Home() {
       {loading && <Preloader onComplete={() => setLoading(false)} />}
 
       {/* Main Website Experience */}
-      <main className="min-h-screen bg-[#080808] text-white selection:bg-[#ff2020] selection:text-white relative z-10">
+      <main className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#F20D18] selection:text-white relative z-10">
         <Navbar />
 
-        {/* Hero Section */}
+        {/* Section 01: Hero Section */}
         <Hero onOpenProject={handleOpenProjectById} />
 
-        {/* Editorial About Section */}
+        {/* Section 02: Company Positioning & About */}
         <AboutSection />
 
-        {/* Pinned Horizontal Reel Gallery */}
+        {/* Dynamic Horizontal Production Reel Gallery */}
         <HorizontalGallery />
 
-        {/* Interactive Services Section */}
+        {/* Section 03: 5 Integrated Capability Verticals */}
         <ServicesSection />
 
-        {/* Dynamic Selected Work Section */}
+        {/* Section 04: AI-Powered Advertising & Creative Technology */}
+        <AiTechSection />
+
+        {/* Section 05: Dynamic Selected Work & Case Studies */}
         <WorkSection onSelectProject={setSelectedProject} />
 
-        {/* Brand Philosophy / Manifesto */}
-        <PhilosophySection />
+        {/* Section 06: Why After That — 6 Integrated Advantages */}
+        <WhyUsSection />
 
-        {/* Interactive Contact / Commission Terminal */}
+        {/* Section 07: Execution Process — 5-Stage Framework */}
+        <ProcessSection />
+
+        {/* Section 08: Strategic Brand Communication Philosophy */}
+        <CommunicationPhilosophySection />
+
+        {/* Section 09: Regional Hubs & Presence (Kochi | Bangalore | Ahmedabad) */}
+        <LocationsSection />
+
+        {/* Section 10: Interactive Project Commission & Enquiry Terminal */}
         <ContactSection />
 
         {/* Maximalist Architectural Footer */}

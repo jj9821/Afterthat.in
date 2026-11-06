@@ -1,174 +1,189 @@
 "use client";
 
 import Image from "next/image";
-import { Flame, Sparkles, MapPin } from "lucide-react";
+import { Layers, Target, Cpu, CheckCircle2, MapPin, ArrowRight } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
 import TiltCard from "@/components/motion/TiltCard";
 import ScrambleText from "@/components/motion/ScrambleText";
 
 export default function AboutSection() {
+  const pillars = [
+    {
+      title: "STRATEGY & CREATIVE",
+      desc: "Brand positioning, naming, and visual identity systems built for commercial distinction.",
+      icon: Target,
+    },
+    {
+      title: "MEDIA PRODUCTION",
+      desc: "Commercial ad films, corporate films, photography, and high-velocity digital content.",
+      icon: Layers,
+    },
+    {
+      title: "DIGITAL MARKETING",
+      desc: "Performance marketing, Meta & Google ads, SEO, and multi-channel audience growth.",
+      icon: CheckCircle2,
+    },
+    {
+      title: "TECH & AI WORKFLOWS",
+      desc: "Custom web flagships, mobile applications, business software, and AI creative tooling.",
+      icon: Cpu,
+    },
+  ];
+
   return (
     <section
       id="about"
-      className="relative w-full bg-[#080808] text-white py-24 md:py-36 px-5 sm:px-8 md:px-12 border-b border-white/10 overflow-hidden"
+      className="relative w-full bg-[#0A0A0A] text-white py-24 md:py-36 px-5 sm:px-8 md:px-12 border-b border-white/10 overflow-hidden"
     >
       {/* Background grain & grid */}
       <div className="absolute inset-0 subtle-grid opacity-20 pointer-events-none" />
 
-      <div className="max-w-[1720px] mx-auto w-full relative z-10 space-y-20 md:space-y-28">
+      <div className="max-w-[1720px] mx-auto w-full relative z-10 space-y-16 md:space-y-24">
         {/* Section Header with Industrial Tag */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
           <div className="space-y-2">
             <div className="flex items-center gap-3">
-              <span className="font-mono text-xs text-[#ff2020] font-bold tracking-[0.3em] uppercase">
+              <span className="font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
                 // SECTION 02
               </span>
               <span className="text-white/30 font-mono">/</span>
               <span className="font-mono text-xs text-white/50 tracking-widest uppercase">
-                EDITORIAL MANIFESTO
+                COMPANY OVERVIEW
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
-              BEYOND THE <span className="text-[#ff2020]">SURFACE</span>
+              ABOUT <span className="text-[#F20D18]">AFTER THAT</span>
             </h2>
           </div>
 
           <div className="max-w-md font-mono text-xs text-[#888888] leading-relaxed">
             <p>
-              ROOTED IN KERALA • OPERATING ACROSS SOUTH ASIA • REJECTING MEDIOCRE
-              ADVERTISING WITH CINEMATIC DISCIPLINE.
+              KOCHI • BANGALORE • AHMEDABAD • INTEGRATED CREATIVE, ADVERTISING,
+              MARKETING & TECHNOLOGY SOLUTIONS UNDER ONE ROOF.
             </p>
           </div>
         </div>
 
         {/* Asymmetrical Editorial Composition */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left Column: Bold Founder Perspective & Philosophy */}
-          <div className="lg:col-span-7 space-y-10">
+          {/* Left Column: Official Positioning & Copy */}
+          <div className="lg:col-span-7 space-y-8">
             <div className="space-y-6">
-              <h3 className="font-syne text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1] text-white tracking-tight">
-                Most agencies give you safe slides. We give you{" "}
-                <span className="text-[#ff2020] underline decoration-[#ff2020] decoration-2 underline-offset-8 inline-block hover:scale-105 transition-transform duration-200">
-                  goosebumps
+              <h3 className="font-anton text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-[1.05]">
+                {COMPANY_INFO.about.headline.split(".")[0]}.{" "}
+                <span className="text-[#F20D18]">
+                  {COMPANY_INFO.about.headline.split(".")[1]}.
                 </span>
-                .
               </h3>
 
               <div className="space-y-5 text-[#cccccc] font-space text-base md:text-lg leading-relaxed pt-2">
-                <p>
-                  Established in October 2021 by actor and digital entrepreneur{" "}
-                  <strong className="text-white font-semibold">
-                    Anand Bhairav
-                  </strong>
-                  , <strong className="text-white font-semibold">AFTER THAT</strong>{" "}
-                  was conceived as an antidote to the monotonous corporate advertising
-                  landscape.
-                </p>
-                <p>
-                  Having walked both the silver screen in feature cinema and the
-                  underground street scenes of Malabar and Kochi, Anand realized that
-                  modern audiences don’t hate advertising—they hate being bored.
-                  They crave spectacle, narrative tension, and visceral emotion.
-                </p>
-                <p className="border-l-2 border-[#ff2020] pl-6 text-white font-mono text-sm md:text-base italic leading-relaxed py-2 bg-white/[0.02]">
-                  “We don’t think in 15-second throwaway social posts. We think in
-                  cinematic frames, cultural resonance, and unforgettable visual
-                  gravity.”
-                </p>
+                <p>{COMPANY_INFO.about.paragraph1}</p>
+                <p>{COMPANY_INFO.about.paragraph2}</p>
+                <p>{COMPANY_INFO.about.paragraph3}</p>
+                <p>{COMPANY_INFO.about.paragraph4}</p>
+
+                {/* Closing Impact Callout */}
+                <div className="border-l-4 border-[#F20D18] pl-6 py-4 bg-white/[0.02] space-y-2 my-6">
+                  <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase block">
+                    OUR CORE DIRECTIVE
+                  </span>
+                  <p className="font-anton text-xl sm:text-2xl md:text-3xl text-white uppercase tracking-wide leading-snug">
+                    {COMPANY_INFO.about.closing}
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Core Pillars Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <TiltCard intensity={8} glare={true}>
-                <div className="bg-[#111111] border border-white/10 p-6 space-y-3 hover:border-[#ff2020] transition-colors group h-full">
-                  <div className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-[#ff2020] group-hover:bg-[#ff2020] group-hover:text-black transition-colors">
-                    <Flame className="w-5 h-5" />
-                  </div>
-                  <h4 className="font-anton text-xl tracking-wide uppercase text-white">
-                    <ScrambleText text="CINEMA DISCIPLINE" />
-                  </h4>
-                  <p className="font-mono text-xs text-[#888888] leading-relaxed">
-                    Every ad film is graded, shot, and directed with the rigor of
-                    theatrical releases, using high-end anamorphic glass and raw
-                    soundscapes.
-                  </p>
-                </div>
-              </TiltCard>
-
-              <TiltCard intensity={8} glare={true}>
-                <div className="bg-[#111111] border border-white/10 p-6 space-y-3 hover:border-[#ff2020] transition-colors group h-full">
-                  <div className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-[#ff2020] group-hover:bg-[#ff2020] group-hover:text-black transition-colors">
-                    <Sparkles className="w-5 h-5" />
-                  </div>
-                  <h4 className="font-anton text-xl tracking-wide uppercase text-white">
-                    <ScrambleText text="YOUTH SUBCULTURE" />
-                  </h4>
-                  <p className="font-mono text-xs text-[#888888] leading-relaxed">
-                    We curate Kerala’s biggest independent hip-hop and rap
-                    festivals, connecting your brand to authentic youth subculture
-                    rather than manufactured trends.
-                  </p>
-                </div>
-              </TiltCard>
+            {/* Core Capabilities Pillars Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {pillars.map((item, i) => {
+                const IconComponent = item.icon;
+                return (
+                  <TiltCard key={i} intensity={8} glare={true}>
+                    <div className="bg-[#111111] border border-white/10 p-6 space-y-3 hover:border-[#F20D18] transition-colors group h-full">
+                      <div className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center text-[#F20D18] group-hover:bg-[#F20D18] group-hover:text-white transition-colors">
+                        <IconComponent className="w-5 h-5" />
+                      </div>
+                      <h4 className="font-anton text-lg tracking-wide uppercase text-white">
+                        <ScrambleText text={item.title} />
+                      </h4>
+                      <p className="font-mono text-xs text-[#888888] leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </TiltCard>
+                );
+              })}
             </div>
           </div>
 
-          {/* Right Column: Imagery Collage with 3D Tilt */}
+          {/* Right Column: Layered Editorial Visuals & Hub Telemetry */}
           <div className="lg:col-span-5 space-y-8">
             <TiltCard intensity={10} glare={true}>
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-black border border-white/20 group shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop"
-                  alt="Cinema Production Rig in South India"
+                  src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200&auto=format&fit=crop"
+                  alt="Integrated Agency Strategy & Creative Direction"
                   fill
-                  className="object-cover group-hover:scale-106 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                  className="object-cover group-hover:scale-106 transition-transform duration-700 opacity-85 group-hover:opacity-100"
                   sizes="(max-width: 1024px) 100vw, 500px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
 
-                {/* Corner Badges */}
-                <div className="absolute top-4 left-4 font-mono text-[10px] bg-black/80 backdrop-blur-md px-3 py-1 text-white border border-white/20">
-                  EST. OCT 2021 // REG. LLP
+                {/* Top Badge */}
+                <div className="absolute top-4 left-4 font-mono text-[10px] bg-black/80 backdrop-blur-md px-3 py-1 text-[#F20D18] font-bold border border-white/20">
+                  ESTABLISHED 2021 // INTEGRATED AGENCY
                 </div>
 
+                {/* Bottom Overlay */}
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between font-mono">
                   <div>
-                    <span className="text-[10px] text-[#ff2020] font-bold tracking-widest block uppercase">
-                      CREATIVE DIRECTION
+                    <span className="text-[10px] text-[#F20D18] font-bold tracking-widest block uppercase">
+                      OFFICIAL POSITIONING
                     </span>
                     <span className="text-sm font-bold text-white uppercase tracking-wider">
-                      {COMPANY_INFO.founder.name}
+                      IDEAS. PEOPLE. BRANDS. BEYOND.
                     </span>
                   </div>
-                  <span className="text-xs text-white/60">IDUKKI / KOCHI</span>
+                  <span className="text-xs text-white/60">KOCHI • BLR • AMD</span>
                 </div>
               </div>
             </TiltCard>
 
-            {/* Overlapping Brutalist Accent Card */}
-            <div className="p-5 bg-[#141414] border border-[#ff2020]/40 flex items-start gap-4 shadow-xl">
-              <MapPin className="w-5 h-5 text-[#ff2020] shrink-0 mt-0.5" />
-              <div className="space-y-1 font-mono text-xs">
-                <span className="text-white font-bold block uppercase tracking-wider">
-                  HEADQUARTERS & PRODUCTION BASE
+            {/* Hub Locations Banner */}
+            <div className="p-6 bg-[#121212] border border-[#F20D18]/40 space-y-4 shadow-xl">
+              <div className="flex items-center gap-3 border-b border-white/10 pb-3">
+                <MapPin className="w-5 h-5 text-[#F20D18] shrink-0" />
+                <span className="font-mono text-xs text-white font-bold tracking-widest uppercase">
+                  ACTIVE HUB MATRIX
                 </span>
-                <p className="text-[#888888] leading-relaxed">
-                  {COMPANY_INFO.headquarters.address}
-                </p>
-                <span className="text-[#ff2020] font-bold block pt-1">
-                  ACTIVE HUBS: KOCHI • CALICUT • BANGALORE • TRIVANDRUM
-                </span>
+              </div>
+              <p className="font-space text-xs text-[#aaaaaa] leading-relaxed">
+                Operating across three key regional hubs to support rapid collaboration, live media production, and scalable enterprise software deployment.
+              </p>
+              <div className="grid grid-cols-3 gap-2 pt-1 font-mono text-center">
+                <div className="p-2.5 bg-black/60 border border-white/10">
+                  <span className="text-white font-bold text-xs block">KOCHI</span>
+                  <span className="text-[9px] text-[#F20D18]">PRODUCTION</span>
+                </div>
+                <div className="p-2.5 bg-black/60 border border-white/10">
+                  <span className="text-white font-bold text-xs block">BANGALORE</span>
+                  <span className="text-[9px] text-[#F20D18]">TECH & GROWTH</span>
+                </div>
+                <div className="p-2.5 bg-black/60 border border-white/10">
+                  <span className="text-white font-bold text-xs block">AHMEDABAD</span>
+                  <span className="text-[9px] text-[#F20D18]">STRATEGY</span>
+                </div>
               </div>
             </div>
 
-            {/* Live Verified Brand Metrics */}
+            {/* Agency Metrics */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono">
               {COMPANY_INFO.stats.map((s, i) => (
                 <div
                   key={i}
-                  className="bg-[#111111] border border-white/10 p-3.5 text-center hover:border-[#ff2020] hover:scale-105 transition-all cursor-default"
+                  className="bg-[#111111] border border-white/10 p-3.5 text-center hover:border-[#F20D18] hover:scale-105 transition-all cursor-default"
                 >
                   <span className="font-bebas text-3xl md:text-4xl text-white block leading-none">
                     {s.value}
