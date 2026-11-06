@@ -69,13 +69,15 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
     { label: "INDEX", href: "#hero", index: "01" },
     { label: "ABOUT", href: "#about", index: "02" },
     { label: "SERVICES", href: "#services", index: "03" },
-    { label: "AI TECHNOLOGY", href: "#ai-tech", index: "04" },
+    { label: "AI AD FILMS", href: "#ai-films", index: "04" },
     { label: "SELECTED WORK", href: "#work", index: "05" },
-    { label: "WHY AFTER THAT", href: "#why-us", index: "06" },
-    { label: "EXECUTION PROCESS", href: "#process", index: "07" },
-    { label: "PHILOSOPHY", href: "#philosophy", index: "08" },
-    { label: "LOCATIONS", href: "#locations", index: "09" },
-    { label: "COMMISSION", href: "#contact", index: "10" },
+    { label: "CREATIVE ARCHIVE", href: "#creative-archive", index: "06" },
+    { label: "PITCH DECKS", href: "#pitch-decks", index: "07" },
+    { label: "WHY AFTER THAT", href: "#why-us", index: "08" },
+    { label: "EXECUTION PROCESS", href: "#process", index: "09" },
+    { label: "PHILOSOPHY", href: "#philosophy", index: "10" },
+    { label: "LOCATIONS", href: "#locations", index: "11" },
+    { label: "COMMISSION", href: "#contact", index: "12" },
   ];
 
   const handleLinkClick = (href: string) => {

@@ -1,8 +1,8 @@
 export interface PortfolioImage {
   src: string;
   alt: string;
-  sourcePdf: string;
-  sourcePage: number;
+  sourcePdf?: string;
+  sourcePage?: number;
   caption?: string;
 }
 

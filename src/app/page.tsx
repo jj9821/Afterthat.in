@@ -11,6 +11,9 @@ import HorizontalGallery from "@/components/HorizontalGallery";
 import ServicesSection from "@/components/ServicesSection";
 import AiTechSection from "@/components/AiTechSection";
 import WorkSection from "@/components/WorkSection";
+import AIAdFilmsSection from "@/components/AIAdFilmsSection";
+import CreativeArchiveSection from "@/components/CreativeArchiveSection";
+import PitchDecksSection from "@/components/PitchDecksSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import ProcessSection from "@/components/ProcessSection";
 import CommunicationPhilosophySection from "@/components/CommunicationPhilosophySection";
@@ -77,8 +80,17 @@ export default function Home() {
         {/* Section 04: AI-Powered Advertising & Creative Technology */}
         <AiTechSection />
 
+        {/* Section 04B: AI Films. Real Impact (AI Video Showcase) */}
+        <AIAdFilmsSection />
+
         {/* Section 05: Dynamic Selected Work & Case Studies */}
         <WorkSection onSelectProject={setSelectedProject} />
+
+        {/* Section 05B: The Creative Archive (Ideas Made Visible) */}
+        <CreativeArchiveSection />
+
+        {/* Section 05C: Pitch Decks & Strategy Presentations (Ideas, Presented) */}
+        <PitchDecksSection />
 
         {/* Section 06: Why After That — 6 Integrated Advantages */}
         <WhyUsSection />
