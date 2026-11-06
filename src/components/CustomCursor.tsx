@@ -147,8 +147,29 @@ export default function CustomCursor() {
           transform: "translate3d(-200px, -200px, 0) translate(-50%, -50%)",
         }}
       >
-        {cursorText ? (
-          /* Contextual Action Pill (e.g. VIEW, EXPLORE, CLOSE) */
+        {cursorText === "PLAY" ? (
+          /* Cinematic Round Play Cursor for Video Reels */
+          <div className="w-16 h-16 rounded-full bg-[#ff2020] text-black border-2 border-white flex flex-col items-center justify-center shadow-[0_0_35px_rgba(255,32,32,0.9)] scale-110 transition-transform">
+            <svg
+              className="w-4 h-4 fill-black translate-x-0.5"
+              viewBox="0 0 24 24"
+            >
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            <span className="font-mono text-[8px] font-black tracking-widest uppercase mt-0.5">
+              PLAY
+            </span>
+          </div>
+        ) : cursorText === "VIEW" ? (
+          /* Editorial Cinematic View Disc for Case Studies */
+          <div className="w-16 h-16 rounded-full bg-black/95 text-white border-2 border-[#ff2020] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(255,32,32,0.6)] backdrop-blur-md">
+            <span className="w-1.5 h-1.5 bg-[#ff2020] rounded-full animate-ping mb-1" />
+            <span className="font-mono text-[9px] font-black tracking-widest text-white">
+              VIEW
+            </span>
+          </div>
+        ) : cursorText ? (
+          /* Contextual Action Pill (e.g. MENU, CLOSE, EXPLORE, INQUIRE) */
           <div className="bg-[#ff2020] text-black font-mono text-[10px] uppercase font-extrabold tracking-widest px-3.5 py-1.5 border border-white/20 shadow-[0_0_25px_rgba(255,32,32,0.85)] flex items-center gap-1.5 animate-pulse whitespace-nowrap">
             <span className="w-1.5 h-1.5 bg-black rounded-full" />
             <span>{cursorText}</span>

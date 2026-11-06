@@ -11,6 +11,7 @@ export const PROJECTS: Project[] = [
     role: "Concept, Stage Direction, Visual Identity & Festival Production",
     coverImage:
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
+    videoUrl: "/videos/pulse-festival-reel.mp4",
     secondaryImage:
       "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop",
     gallery: [
@@ -50,6 +51,7 @@ export const PROJECTS: Project[] = [
     role: "Creative Direction, Film Production & Sound Design",
     coverImage:
       "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1600&auto=format&fit=crop",
+    videoUrl: "/videos/monsoon-noir-reel.mp4",
     secondaryImage:
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop",
     gallery: [
@@ -88,6 +90,7 @@ export const PROJECTS: Project[] = [
     role: "Theatrical Promotion Strategy, Trailer Cuts & CBFC Support",
     coverImage:
       "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1600&auto=format&fit=crop",
+    videoUrl: "/videos/motorsport-reel.mp4",
     secondaryImage:
       "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1200&auto=format&fit=crop",
     gallery: [
@@ -192,6 +195,7 @@ export const PROJECTS: Project[] = [
     role: "Creative Direction, Projection Scenography & Lookbook Publication",
     coverImage:
       "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600&auto=format&fit=crop",
+    videoUrl: "/videos/fort-kochi-noir.mp4",
     secondaryImage:
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop",
     gallery: [

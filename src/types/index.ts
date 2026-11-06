@@ -7,6 +7,7 @@ export interface Project {
   location: string;
   role: string;
   coverImage: string;
+  videoUrl?: string;
   secondaryImage: string;
   gallery: string[];
   tagline: string;

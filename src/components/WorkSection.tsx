@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Filter, Disc } from "lucide-react";
+import { ArrowUpRight, Filter, Disc, Play } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
 import { Project } from "@/types";
 import { sound } from "@/utils/sound";
@@ -16,6 +16,7 @@ interface WorkSectionProps {
 
 export default function WorkSection({ onSelectProject }: WorkSectionProps) {
   const [selectedFilter, setSelectedFilter] = useState<string>("ALL");
+  const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
 
   const categories = [
     "ALL",
@@ -57,7 +58,7 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
               <span>// SECTION 04</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
-                SELECTED PORTFOLIO
+                SELECTED PORTFOLIO & REELS
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
@@ -95,7 +96,7 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
           ))}
         </div>
 
-        {/* Asymmetrical Portfolio Grid with 3D Tilt & Scramble Text */}
+        {/* Asymmetrical Portfolio Grid with 3D Tilt & Live Video Hover */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {filteredProjects.map((project, index) => {
             const isSpanFull = index === 0;
@@ -105,13 +106,19 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
               ? "md:col-span-7"
               : "md:col-span-5";
 
+            const isHovered = hoveredProjectId === project.id;
+
             return (
               <div
                 key={project.id}
                 className={`${colSpan} group cursor-pointer relative bg-[#0e0e0e] border border-white/10 hover:border-[#ff2020] transition-all duration-500 flex flex-col justify-between shadow-2xl`}
                 onClick={() => handleCardClick(project)}
-                onMouseEnter={() => sound.playHover()}
-                data-cursor="VIEW CASE"
+                onMouseEnter={() => {
+                  sound.playHover();
+                  setHoveredProjectId(project.id);
+                }}
+                onMouseLeave={() => setHoveredProjectId(null)}
+                data-cursor={project.videoUrl ? "PLAY" : "VIEW"}
                 data-preview-img={project.coverImage}
               >
                 {/* 3D Tilt Wrapper for Media */}
@@ -125,13 +132,33 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
                         : "aspect-[4/3]"
                     }`}
                   >
+                    {/* Primary Image Still */}
                     <Image
                       src={project.coverImage}
                       alt={project.title}
                       fill
-                      className="object-cover group-hover:scale-108 transition-transform duration-700 opacity-85 group-hover:opacity-100"
+                      className={`object-cover group-hover:scale-108 transition-transform duration-700 opacity-85 group-hover:opacity-100 ${
+                        project.videoUrl && isHovered ? "opacity-0" : "opacity-85"
+                      }`}
                       sizes="(max-width: 768px) 100vw, 1200px"
                     />
+
+                    {/* Dynamic Looping Video Preview on Card Hover */}
+                    {project.videoUrl && (
+                      <video
+                        key={project.videoUrl}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                          isHovered ? "opacity-100 scale-105" : "opacity-0 pointer-events-none"
+                        }`}
+                      >
+                        <source src={project.videoUrl} type="video/mp4" />
+                      </video>
+                    )}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90" />
 
                     {/* Corner Badges */}
@@ -142,6 +169,11 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
                       <span className="bg-[#ff2020] text-black font-mono text-[10px] font-extrabold px-2.5 py-1 tracking-widest uppercase shadow-[0_0_12px_rgba(255,32,32,0.6)]">
                         {project.location.split(",")[0]}
                       </span>
+                      {project.videoUrl && (
+                        <span className="hidden sm:flex items-center gap-1 bg-black/80 backdrop-blur-md px-2 py-1 font-mono text-[9px] text-[#ff2020] font-bold border border-white/20">
+                          <Play className="w-2.5 h-2.5 fill-[#ff2020]" /> 4K REEL
+                        </span>
+                      )}
                     </div>
 
                     <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#ff2020] group-hover:text-black group-hover:border-[#ff2020] group-hover:scale-110 transition-all">
@@ -166,7 +198,7 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
                     {project.tagline}
                   </p>
                   <span className="text-[#ff2020] font-bold uppercase tracking-wider shrink-0 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                    EXPLORE CASE STUDY →
+                    {project.videoUrl ? "WATCH REEL & CASE →" : "EXPLORE CASE STUDY →"}
                   </span>
                 </div>
               </div>

@@ -131,6 +131,41 @@ class SoundManager {
       // Ignore
     }
   }
+
+  public playShutter() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+
+    try {
+      // Multi-layer shutter click
+      const osc1 = this.ctx.createOscillator();
+      const osc2 = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+
+      osc1.type = "square";
+      osc1.frequency.setValueAtTime(320, this.ctx.currentTime);
+      osc1.frequency.exponentialRampToValueAtTime(80, this.ctx.currentTime + 0.06);
+
+      osc2.type = "triangle";
+      osc2.frequency.setValueAtTime(950, this.ctx.currentTime);
+      osc2.frequency.exponentialRampToValueAtTime(140, this.ctx.currentTime + 0.05);
+
+      gain.gain.setValueAtTime(0.09, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.07);
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      osc1.start();
+      osc2.start();
+      osc1.stop(this.ctx.currentTime + 0.07);
+      osc2.stop(this.ctx.currentTime + 0.07);
+    } catch {
+      // Ignore
+    }
+  }
 }
 
 export const sound = new SoundManager();

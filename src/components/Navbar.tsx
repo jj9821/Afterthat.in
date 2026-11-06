@@ -159,6 +159,7 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
                 setIsOpen(!isOpen);
               }}
               onMouseEnter={() => sound.playHover()}
+              data-cursor={isOpen ? "CLOSE" : "MENU"}
               className={`relative z-50 flex items-center gap-2 px-4 py-2 font-mono text-xs font-bold tracking-widest uppercase transition-all duration-200 ${
                 isOpen
                   ? "bg-[#ff2020] text-black"
