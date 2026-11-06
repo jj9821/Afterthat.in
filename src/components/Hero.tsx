@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { sound } from "@/utils/sound";
 import { COMPANY_INFO } from "@/data/company";
+import { useScrollLock } from "@/utils/scrollLock";
 import MagneticButton from "@/components/motion/MagneticButton";
 import TiltCard from "@/components/motion/TiltCard";
 import ScrambleText from "@/components/motion/ScrambleText";
@@ -72,6 +73,20 @@ export default function Hero({ onOpenProject }: HeroProps) {
   const [timecode, setTimecode] = useState("00:00:24:18");
   const [showFullReelModal, setShowFullReelModal] = useState(false);
   const [viewfinderActive, setViewfinderActive] = useState(true);
+
+  // Global scroll lock when full reel modal is open
+  useScrollLock(showFullReelModal);
+
+  useEffect(() => {
+    if (!showFullReelModal) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setShowFullReelModal(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [showFullReelModal]);
 
   // Mouse parallax motion values
   const mouseX = useMotionValue(0);
@@ -491,10 +506,18 @@ export default function Hero({ onOpenProject }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[99999] bg-black/95 backdrop-blur-2xl flex flex-col justify-between p-4 sm:p-8"
+            className="modal-backdrop fixed inset-0 z-[99999] bg-black/95 backdrop-blur-2xl flex flex-col justify-between p-4 sm:p-8 overscroll-contain"
+            data-lenis-prevent="true"
+            onWheel={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                sound.playClick();
+                setShowFullReelModal(false);
+              }
+            }}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between border-b border-white/20 pb-4">
+            <div className="flex items-center justify-between border-b border-white/20 pb-4 shrink-0">
               <div className="flex items-center gap-3">
                 <span className="px-3 py-1 bg-[#F20D18] text-white font-mono font-bold text-xs uppercase">
                   AFTER THAT ENTERTAINMENT // MASTER REEL
@@ -517,7 +540,7 @@ export default function Hero({ onOpenProject }: HeroProps) {
             </div>
 
             {/* Modal Video Player */}
-            <div className="relative my-auto w-full max-w-6xl mx-auto aspect-video bg-black border-2 border-white/20 shadow-[0_0_50px_rgba(242,13,24,0.3)] overflow-hidden">
+            <div className="relative my-auto w-full max-w-6xl mx-auto aspect-video bg-black border-2 border-white/20 shadow-[0_0_50px_rgba(242,13,24,0.3)] overflow-hidden shrink-0">
               <video
                 autoPlay
                 controls
@@ -530,7 +553,7 @@ export default function Hero({ onOpenProject }: HeroProps) {
             </div>
 
             {/* Modal Footer Telemetry */}
-            <div className="border-t border-white/20 pt-4 flex flex-col sm:flex-row items-center justify-between font-mono text-xs text-white/50 gap-2">
+            <div className="border-t border-white/20 pt-4 flex flex-col sm:flex-row items-center justify-between font-mono text-xs text-white/50 gap-2 shrink-0">
               <span>AFTER THAT ENTERTAINMENT LLP • KOCHI | BANGALORE | AHMEDABAD</span>
               <span className="text-[#F20D18] font-bold">IDEAS. PEOPLE. BRANDS. BEYOND.</span>
             </div>

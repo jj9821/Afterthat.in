@@ -39,6 +39,8 @@ yarn-error.log*
 # source portfolio pdfs & extraction working dir (preserved locally, excluded from git/deployment)
 portfolio-source-assets/
 /pdfs/
+AI AD VIDS/
+pitchdecks/
 
 # typescript
 *.tsbuildinfo

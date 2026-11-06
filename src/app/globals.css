@@ -36,15 +36,68 @@ html.lenis, html.lenis body {
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 .lenis.lenis-stopped {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* Global Modal & Overlay Scroll Containment System */
+html.modal-open,
+body.modal-open {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  touch-action: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-content {
+  max-height: 90dvh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-content-scroll {
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+/* Custom Red-Themed Scrollbar for Modal Content */
+.modal-content-scroll::-webkit-scrollbar,
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content-scroll::-webkit-scrollbar-track,
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-content-scroll::-webkit-scrollbar-thumb,
+.modal-content::-webkit-scrollbar-thumb {
+  background: #F20D18;
+  border-radius: 3px;
+}
+
+.modal-content-scroll::-webkit-scrollbar-thumb:hover,
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #ff3842;
 }
 
 body {

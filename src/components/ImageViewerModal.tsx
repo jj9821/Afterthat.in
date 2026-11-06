@@ -2,9 +2,10 @@
 
 import { useEffect, useCallback } from "react";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight, Maximize2, FileText } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, FileText } from "lucide-react";
 import { PortfolioImage } from "@/types";
 import { sound } from "@/utils/sound";
+import { useScrollLock } from "@/utils/scrollLock";
 
 interface ImageViewerModalProps {
   images: PortfolioImage[];
@@ -22,6 +23,9 @@ export default function ImageViewerModal({
   onNavigate,
 }: ImageViewerModalProps) {
   const currentImage = images[currentIndex];
+
+  // Global scroll lock for image viewer overlay
+  useScrollLock(isOpen);
 
   const handleNext = useCallback(() => {
     sound.playClick();
@@ -48,11 +52,8 @@ export default function ImageViewerModal({
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
-
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "unset";
     };
   }, [isOpen, onClose, handleNext, handlePrev]);
 
@@ -63,10 +64,18 @@ export default function ImageViewerModal({
       role="dialog"
       aria-modal="true"
       aria-label="Full Screen Image Viewer"
-      className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-6 md:p-8 animate-in fade-in duration-200 select-none"
+      className="modal-backdrop fixed inset-0 z-[2000] bg-black/95 backdrop-blur-2xl flex flex-col justify-between p-4 sm:p-6 md:p-8 animate-in fade-in duration-200 select-none overscroll-contain"
+      data-lenis-prevent="true"
+      onWheel={(e) => e.stopPropagation()}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          sound.playClick();
+          onClose();
+        }
+      }}
     >
       {/* Top Header Bar */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-4 relative z-10">
+      <div className="flex items-center justify-between border-b border-white/10 pb-4 relative z-10 shrink-0">
         <div className="flex items-center gap-3">
           <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase">
             IMAGE {currentIndex + 1} / {images.length}

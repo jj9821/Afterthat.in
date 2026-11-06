@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Volume2, VolumeX, Menu, X, ArrowUpRight } from "lucide-react";
 import { sound } from "@/utils/sound";
 import { COMPANY_INFO } from "@/data/company";
+import { useScrollLock } from "@/utils/scrollLock";
 
 interface NavbarProps {
   onSoundToggle?: (enabled: boolean) => void;
@@ -15,6 +16,20 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [currentTime, setCurrentTime] = useState("");
+
+  // Lock body scroll when mobile navigation menu is open
+  useScrollLock(isOpen);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
   // Live Kerala (IST) Time
   useEffect(() => {
@@ -194,7 +209,9 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
             animate={{ opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
             exit={{ opacity: 0, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
             transition={{ duration: 0.55, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-40 bg-[#080808] flex flex-col justify-between pt-24 pb-8 px-6 sm:px-12 md:px-16 overflow-y-auto"
+            className="modal-backdrop fixed inset-0 z-40 bg-[#080808] flex flex-col justify-between pt-24 pb-8 px-6 sm:px-12 md:px-16 overflow-y-auto overscroll-contain modal-content-scroll"
+            data-lenis-prevent="true"
+            onWheel={(e) => e.stopPropagation()}
           >
             {/* Background brutalist red accent slash */}
             <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-[#F20D18]/10 pointer-events-none hidden lg:block subtle-red-grid" />

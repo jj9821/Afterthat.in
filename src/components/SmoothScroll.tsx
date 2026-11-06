@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { registerLenis, unregisterLenis } from "@/utils/scrollLock";
 
 export default function SmoothScroll({
   children,
@@ -33,6 +34,7 @@ export default function SmoothScroll({
     });
 
     lenisRef.current = lenis;
+    registerLenis(lenis);
 
     // Connect Lenis scroll events to GSAP ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
@@ -46,6 +48,7 @@ export default function SmoothScroll({
 
     return () => {
       gsap.ticker.remove(tickerCb);
+      unregisterLenis();
       lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
