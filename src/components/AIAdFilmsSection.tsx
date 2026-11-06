@@ -65,7 +65,7 @@ export default function AIAdFilmsSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-b border-white/10 pb-8">
           <div className="space-y-3">
             <div className="flex items-center gap-3 font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
-              <span>// SECTION 04</span>
+              <span>// SECTION 05</span>
               <span className="text-white/30">/</span>
               <span className="text-white/60 tracking-widest">
                 AI CREATIVE TECHNOLOGY & 4K COMMERCIALS

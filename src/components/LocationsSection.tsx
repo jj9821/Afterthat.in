@@ -22,7 +22,7 @@ export default function LocationsSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
           <div className="space-y-2">
             <div className="flex items-center gap-3 font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
-              <span>// SECTION 10</span>
+              <span>// SECTION 11</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
                 GEOGRAPHIC REACH · KOCHI | BLR | AMD

@@ -69,14 +69,15 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
     { label: "INDEX", href: "#hero", index: "01" },
     { label: "ABOUT", href: "#about", index: "02" },
     { label: "SERVICES", href: "#services", index: "03" },
-    { label: "AI AD FILMS", href: "#ai-films", index: "04" },
-    { label: "SELECTED WORK", href: "#work", index: "05" },
-    { label: "CREATIVE ARCHIVE", href: "#creative-archive", index: "06" },
-    { label: "PITCH DECKS", href: "#pitch-decks", index: "07" },
-    { label: "WHY AFTER THAT", href: "#why-us", index: "08" },
-    { label: "EXECUTION PROCESS", href: "#process", index: "09" },
-    { label: "REGIONAL HUBS", href: "#locations", index: "10" },
-    { label: "START A PROJECT", href: "#contact", index: "11" },
+    { label: "FEATURED FILM", href: "#featured-film", index: "04" },
+    { label: "AI AD FILMS", href: "#ai-films", index: "05" },
+    { label: "SELECTED WORK", href: "#work", index: "06" },
+    { label: "CREATIVE ARCHIVE", href: "#creative-archive", index: "07" },
+    { label: "PITCH DECKS", href: "#pitch-decks", index: "08" },
+    { label: "WHY AFTER THAT", href: "#why-us", index: "09" },
+    { label: "EXECUTION PROCESS", href: "#process", index: "10" },
+    { label: "REGIONAL HUBS", href: "#locations", index: "11" },
+    { label: "START A PROJECT", href: "#contact", index: "12" },
   ];
 
   const handleLinkClick = (href: string) => {
@@ -133,12 +134,19 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
                 SERVICES
               </button>
               <button
-                onClick={() => handleLinkClick("#ai-films")}
+                onClick={() => handleLinkClick("#featured-film")}
                 onMouseEnter={() => sound.playHover()}
                 className="hover:text-[#F20D18] transition-colors flex items-center gap-1.5"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F20D18] animate-pulse" />
-                AI AD FILMS
+                FEATURED FILM
+              </button>
+              <button
+                onClick={() => handleLinkClick("#ai-films")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors"
+              >
+                AI FILMS
               </button>
               <button
                 onClick={() => handleLinkClick("#work")}

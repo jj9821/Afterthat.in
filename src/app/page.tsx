@@ -9,8 +9,9 @@ import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import HorizontalGallery from "@/components/HorizontalGallery";
 import ServicesSection from "@/components/ServicesSection";
-import WorkSection from "@/components/WorkSection";
+import FeaturedFilmSection from "@/components/FeaturedFilmSection";
 import AIAdFilmsSection from "@/components/AIAdFilmsSection";
+import WorkSection from "@/components/WorkSection";
 import CreativeArchiveSection from "@/components/CreativeArchiveSection";
 import PitchDecksSection from "@/components/PitchDecksSection";
 import WhyUsSection from "@/components/WhyUsSection";
@@ -75,28 +76,31 @@ export default function Home() {
         {/* Section 03: 5 Integrated Capability Verticals */}
         <ServicesSection />
 
-        {/* Section 04: AI-Powered Creative Technology & 4K Commercials */}
+        {/* Section 04: Featured Production Film — Live On-Set Commercial Cinema (EVA GOLD) */}
+        <FeaturedFilmSection />
+
+        {/* Section 05: AI-Powered Creative Technology & 4K Commercials */}
         <AIAdFilmsSection />
 
-        {/* Section 05: Dynamic Selected Work & Case Studies */}
+        {/* Section 06: Dynamic Selected Work & Case Studies */}
         <WorkSection onSelectProject={setSelectedProject} />
 
-        {/* Section 06: The Creative Archive (Ideas Made Visible) */}
+        {/* Section 07: The Creative Archive (Ideas Made Visible) */}
         <CreativeArchiveSection />
 
-        {/* Section 07: Pitch Decks & Strategy Presentations (Ideas, Presented) */}
+        {/* Section 08: Pitch Decks & Strategy Presentations (Ideas, Presented) */}
         <PitchDecksSection />
 
-        {/* Section 08: Why After That — Strategic Advantages & Operational Philosophy */}
+        {/* Section 09: Why After That — Strategic Advantages & Operational Philosophy */}
         <WhyUsSection />
 
-        {/* Section 09: Execution Process — 5-Stage Framework */}
+        {/* Section 10: Execution Process — 5-Stage Framework */}
         <ProcessSection />
 
-        {/* Section 10: Regional Hubs & Presence (Kochi | Bangalore | Ahmedabad) */}
+        {/* Section 11: Regional Hubs & Presence (Kochi | Bangalore | Ahmedabad) */}
         <LocationsSection />
 
-        {/* Section 11: Interactive Project Commission & Enquiry Terminal */}
+        {/* Section 12: Interactive Project Commission & Enquiry Terminal */}
         <ContactSection />
 
         {/* Maximalist Architectural Footer */}

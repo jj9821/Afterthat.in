@@ -91,6 +91,7 @@ export default function Footer() {
                 { name: "HOME", href: "#hero" },
                 { name: "ABOUT", href: "#about" },
                 { name: "SERVICES", href: "#services" },
+                { name: "FEATURED FILM (EVA GOLD)", href: "#featured-film" },
                 { name: "AI AD FILMS", href: "#ai-films" },
                 { name: "SELECTED WORK", href: "#work" },
                 { name: "CREATIVE ARCHIVE", href: "#creative-archive" },
