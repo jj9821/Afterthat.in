@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
+import { PROJECTS } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.afterthat.in";
   const lastModified = new Date();
 
-  return [
+  const coreRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified,
@@ -36,10 +37,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/#why-us`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/#process`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/#philosophy`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/#locations`,
@@ -54,4 +67,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
   ];
+
+  const projectRoutes: MetadataRoute.Sitemap = PROJECTS.map((project) => ({
+    url: `${baseUrl}/work/${project.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  return [...coreRoutes, ...projectRoutes];
 }

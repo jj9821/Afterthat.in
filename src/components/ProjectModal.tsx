@@ -6,6 +6,7 @@ import Image from "next/image";
 import {
   X,
   ArrowRight,
+  ArrowUpRight,
   CheckCircle2,
   MapPin,
   Calendar,
@@ -127,6 +128,17 @@ export default function ProjectModal({
                   STILL FRAME
                 </button>
               </div>
+            )}
+
+            {project.slug && (
+              <a
+                href={`/work/${project.slug}`}
+                onClick={() => sound.playClick()}
+                className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-[#F20D18] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors"
+              >
+                <span>OPEN FULL PAGE</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
             )}
 
             <button
@@ -345,7 +357,7 @@ export default function ProjectModal({
               // PRODUCTION STILLS & ANAMORPHIC ARCHIVE
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {project.gallery.map((img, i) => (
+              {(project.gallery || []).map((img, i) => (
                 <div
                   key={i}
                   className="relative aspect-[4/3] w-full overflow-hidden bg-black border border-white/10 group"
@@ -367,6 +379,17 @@ export default function ProjectModal({
 
           {/* Modal Bottom CTAs */}
           <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+            {project.slug && (
+              <a
+                href={`/work/${project.slug}`}
+                onClick={() => sound.playClick()}
+                className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-[#F20D18] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors"
+              >
+                <span>OPEN FULL PAGE</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            )}
+
             <button
               onClick={() => {
                 sound.playClick();

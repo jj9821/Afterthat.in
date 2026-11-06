@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# source portfolio pdfs & extraction working dir (preserved locally, excluded from git/deployment)
+portfolio-source-assets/
+/pdfs/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

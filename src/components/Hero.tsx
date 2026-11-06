@@ -27,36 +27,41 @@ interface CameraFeed {
   tag: string;
   url: string;
   poster: string;
+  projectId?: string;
 }
 
 const CAMERA_FEEDS: CameraFeed[] = [
   {
     id: "cam-1",
-    name: "01 // AGENCY REEL",
-    tag: "INTEGRATED CAPABILITIES",
+    name: "01 // FMCG & PACKAGING",
+    tag: "HAPPEATS PACKAGING ARCHITECTURE",
     url: "/videos/hero-cinematic-reel.mp4",
-    poster: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
+    poster: "/portfolio/branding/hapeats/cover.webp",
+    projectId: "hapeats-fmcg-packaging",
   },
   {
     id: "cam-2",
-    name: "02 // LIVE & FESTIVALS",
-    tag: "SUBCULTURE IP & EVENTS",
+    name: "02 // LIVE & CONCERTS",
+    tag: "CALICUT BANGER HIP-HOP FESTIVAL",
     url: "/videos/pulse-festival-reel.mp4",
-    poster: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop",
+    poster: "/portfolio/events-pr/calicut-banger/cover.webp",
+    projectId: "calicut-banger-music-festival",
   },
   {
     id: "cam-3",
-    name: "03 // COMMERCIAL FILMS",
-    tag: "AD FILMS & DIRECTION",
+    name: "03 // LUXURY REBRANDING",
+    tag: "DIZZIRE SILKS & SAREES REBRAND",
     url: "/videos/monsoon-noir-reel.mp4",
-    poster: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1600&auto=format&fit=crop",
+    poster: "/portfolio/branding/dizzire/cover.webp",
+    projectId: "dizzire-silks-and-sarees",
   },
   {
     id: "cam-4",
-    name: "04 // MOTORSPORT & AD",
-    tag: "THEATRICAL PROMOTION",
+    name: "04 // EDTECH PLATFORM",
+    tag: "APTVEL DIGITAL LAUNCH CAMPAIGN",
     url: "/videos/motorsport-reel.mp4",
-    poster: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1600&auto=format&fit=crop",
+    poster: "/portfolio/technology/aptvel/cover.webp",
+    projectId: "aptvel-edtech-launch",
   },
 ];
 

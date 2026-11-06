@@ -1,36 +1,53 @@
-export interface Project {
+export interface PortfolioImage {
+  src: string;
+  alt: string;
+  sourcePdf: string;
+  sourcePage: number;
+  caption?: string;
+}
+
+export interface PortfolioProject {
   id: string;
+  slug: string;
   title: string;
-  category: string;
-  year: string;
   client?: string;
+  category: string;
+  categoryLabel: string;
+  tags: string[];
+  year: string;
   location: string;
-  role: string;
-  coverImage: string;
-  videoUrl?: string;
-  secondaryImage: string;
-  gallery: string[];
-  tagline: string;
-  overview: string;
-  challenges: string;
+  headline: string;
+  description: string;
+  challenge: string;
+  approach: string;
   deliverables: string[];
+  coverImage: string;
+  images: PortfolioImage[];
+  projectType: "confirmed" | "concept" | "showcase";
+  verified: boolean;
+  featured: boolean;
+  videoUrl?: string;
   credits?: {
     director?: string;
     producer?: string;
     dop?: string;
     postProduction?: string;
     strategy?: string;
-    production?: string;
-    curator?: string;
-    technologyLead?: string;
-    uiUxDesign?: string;
     creativeDirector?: string;
-    aiSpecialist?: string;
+    technologyLead?: string;
     [key: string]: string | undefined;
   };
-  featured: boolean;
+  // Backwards compatibility fields
+  role?: string;
+  secondaryImage?: string;
+  gallery?: string[];
+  tagline?: string;
+  overview?: string;
+  challenges?: string;
   colorAccent?: string;
 }
+
+export type Project = PortfolioProject;
 
 export interface VerticalService {
   number: string;
