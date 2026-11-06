@@ -1,0 +1,215 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import { ArrowUpRight, Filter, Disc } from "lucide-react";
+import { PROJECTS } from "@/data/projects";
+import { Project } from "@/types";
+import { sound } from "@/utils/sound";
+import TiltCard from "@/components/motion/TiltCard";
+import MagneticButton from "@/components/motion/MagneticButton";
+import ScrambleText from "@/components/motion/ScrambleText";
+
+interface WorkSectionProps {
+  onSelectProject: (project: Project) => void;
+}
+
+export default function WorkSection({ onSelectProject }: WorkSectionProps) {
+  const [selectedFilter, setSelectedFilter] = useState<string>("ALL");
+
+  const categories = [
+    "ALL",
+    "Live Experience & Festival IP",
+    "Cinematic Fashion Film & Commercial",
+    "Theatrical Marketing & Creative Direction",
+    "Commercial Film & VFX",
+    "Subculture Residency & Archival Print",
+  ];
+
+  const filteredProjects =
+    selectedFilter === "ALL"
+      ? PROJECTS
+      : PROJECTS.filter((p) => p.category === selectedFilter);
+
+  const handleFilterClick = (cat: string) => {
+    sound.playClick();
+    setSelectedFilter(cat);
+  };
+
+  const handleCardClick = (project: Project) => {
+    sound.playClick();
+    onSelectProject(project);
+  };
+
+  return (
+    <section
+      id="work"
+      className="relative w-full bg-[#080808] text-white py-24 md:py-36 px-5 sm:px-8 md:px-12 border-b border-white/10 overflow-hidden"
+    >
+      {/* Subtle Grid Layer */}
+      <div className="absolute inset-0 subtle-grid opacity-20 pointer-events-none" />
+
+      <div className="max-w-[1720px] mx-auto w-full relative z-10 space-y-16 md:space-y-24">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
+          <div className="space-y-2">
+            <div className="flex items-center gap-3 font-mono text-xs text-[#ff2020] font-bold tracking-[0.3em] uppercase">
+              <span>// SECTION 04</span>
+              <span className="text-white/30">/</span>
+              <span className="text-white/50 tracking-widest">
+                SELECTED PORTFOLIO
+              </span>
+            </div>
+            <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
+              CULTURAL <span className="text-[#ff2020]">OUTPUTS</span>
+            </h2>
+          </div>
+
+          <div className="max-w-md font-mono text-xs text-[#888888] leading-relaxed">
+            <p>
+              HIGH-IMPACT AD FILMS, INDEPENDENT RAP FESTIVALS, THEATRICAL
+              CAMPAIGNS, AND RAW EXPERIENCES SHAPING SOUTH ASIAN CULTURE.
+            </p>
+          </div>
+        </div>
+
+        {/* Category Filters Bar with Magnetic Pills */}
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2">
+          <span className="font-mono text-xs text-white/40 uppercase tracking-widest mr-3 flex items-center gap-1.5 shrink-0">
+            <Filter className="w-3.5 h-3.5 text-[#ff2020]" /> FILTER:
+          </span>
+          {categories.map((cat) => (
+            <MagneticButton key={cat} strength={0.2}>
+              <button
+                onClick={() => handleFilterClick(cat)}
+                onMouseEnter={() => sound.playHover()}
+                className={`font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 shrink-0 border transition-all duration-200 ${
+                  selectedFilter === cat
+                    ? "bg-[#ff2020] border-[#ff2020] text-black font-bold shadow-[0_0_15px_rgba(255,32,32,0.6)]"
+                    : "bg-transparent border-white/15 text-white/70 hover:border-white hover:text-white"
+                }`}
+              >
+                {cat === "ALL" ? "ALL PROJECTS (06)" : cat.split("&")[0].trim()}
+              </button>
+            </MagneticButton>
+          ))}
+        </div>
+
+        {/* Asymmetrical Portfolio Grid with 3D Tilt & Scramble Text */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+          {filteredProjects.map((project, index) => {
+            const isSpanFull = index === 0;
+            const colSpan = isSpanFull
+              ? "md:col-span-12"
+              : index % 3 === 1
+              ? "md:col-span-7"
+              : "md:col-span-5";
+
+            return (
+              <div
+                key={project.id}
+                className={`${colSpan} group cursor-pointer relative bg-[#0e0e0e] border border-white/10 hover:border-[#ff2020] transition-all duration-500 flex flex-col justify-between shadow-2xl`}
+                onClick={() => handleCardClick(project)}
+                onMouseEnter={() => sound.playHover()}
+                data-cursor="VIEW CASE"
+                data-preview-img={project.coverImage}
+              >
+                {/* 3D Tilt Wrapper for Media */}
+                <TiltCard intensity={8} glare={true} className="w-full">
+                  <div
+                    className={`relative w-full overflow-hidden bg-black ${
+                      isSpanFull
+                        ? "aspect-[16/9] md:aspect-[16/8]"
+                        : index % 3 === 1
+                        ? "aspect-[16/10]"
+                        : "aspect-[4/3]"
+                    }`}
+                  >
+                    <Image
+                      src={project.coverImage}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-108 transition-transform duration-700 opacity-85 group-hover:opacity-100"
+                      sizes="(max-width: 768px) 100vw, 1200px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90" />
+
+                    {/* Corner Badges */}
+                    <div className="absolute top-4 left-4 flex items-center gap-2">
+                      <span className="bg-black/80 backdrop-blur-md px-3 py-1 font-mono text-[10px] text-white font-bold tracking-widest uppercase border border-white/20">
+                        {project.year}
+                      </span>
+                      <span className="bg-[#ff2020] text-black font-mono text-[10px] font-extrabold px-2.5 py-1 tracking-widest uppercase shadow-[0_0_12px_rgba(255,32,32,0.6)]">
+                        {project.location.split(",")[0]}
+                      </span>
+                    </div>
+
+                    <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#ff2020] group-hover:text-black group-hover:border-[#ff2020] group-hover:scale-110 transition-all">
+                      <ArrowUpRight className="w-4 h-4" />
+                    </div>
+
+                    {/* Bottom Title on Image */}
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <span className="font-mono text-[10px] md:text-xs text-[#ff2020] tracking-[0.2em] font-bold uppercase block mb-1">
+                        // {project.category}
+                      </span>
+                      <h3 className="font-anton text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white group-hover:text-[#ff2020] transition-colors leading-[0.95]">
+                        <ScrambleText text={project.title} />
+                      </h3>
+                    </div>
+                  </div>
+                </TiltCard>
+
+                {/* Footer Meta Row */}
+                <div className="p-5 md:p-6 bg-[#0f0f0f] border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-mono text-xs">
+                  <p className="text-white/70 line-clamp-2 max-w-xl">
+                    {project.tagline}
+                  </p>
+                  <span className="text-[#ff2020] font-bold uppercase tracking-wider shrink-0 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    EXPLORE CASE STUDY →
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Portfolio Bottom Banner */}
+        <div className="bg-[#121212] border border-white/10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div className="absolute right-0 top-0 bottom-0 w-1/3 subtle-red-grid opacity-20 pointer-events-none" />
+
+          <div className="space-y-2 text-center md:text-left relative z-10">
+            <span className="font-mono text-xs text-[#ff2020] font-bold tracking-widest uppercase flex items-center gap-2 justify-center md:justify-start">
+              <Disc className="w-3.5 h-3.5 animate-spin" /> MORE IN THE VAULT
+            </span>
+            <h4 className="font-anton text-2xl md:text-4xl text-white uppercase tracking-wide">
+              HAVE A VISION FOR YOUR BRAND OR FESTIVAL?
+            </h4>
+            <p className="font-space text-sm text-[#888888] max-w-xl">
+              We consult with select brands, production houses, and cultural
+              promoters who demand uncompromising creative execution.
+            </p>
+          </div>
+
+          <MagneticButton strength={0.3} className="shrink-0 relative z-10">
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                sound.playClick();
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              onMouseEnter={() => sound.playHover()}
+              data-cursor="INQUIRE"
+              className="px-8 py-4 bg-[#ff2020] text-black font-anton text-base tracking-wider uppercase hover:bg-white transition-colors block shadow-[0_0_20px_rgba(255,32,32,0.4)]"
+            >
+              DISCUSS A COLLABORATION
+            </a>
+          </MagneticButton>
+        </div>
+      </div>
+    </section>
+  );
+}
