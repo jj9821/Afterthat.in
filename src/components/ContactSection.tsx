@@ -122,23 +122,26 @@ export default function ContactSection() {
       <div className="max-w-[1720px] mx-auto w-full relative z-10 space-y-16 md:space-y-24">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
-          <div className="space-y-2">
+          <div className="space-y-3">
             <div className="flex items-center gap-3 font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
-              <span>// SECTION 10</span>
+              <span>// SECTION 11</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
-                START A PROJECT
+                START A PROJECT · ENQUIRY TERMINAL
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
-              HAVE AN IDEA? <span className="text-[#F20D18]">LET&apos;S MAKE IT HAPPEN.</span>
+              HAVE A PROJECT <span className="text-[#F20D18]">IN MIND?</span>
             </h2>
+            <p className="font-syne text-xl sm:text-2xl text-white/90 font-bold max-w-2xl leading-snug">
+              Let&apos;s turn your next idea into something worth paying attention to.
+            </p>
           </div>
 
           <div className="max-w-md font-mono text-xs text-[#888888] leading-relaxed">
             <p>
-              WE PARTNER WITH CLIENTS WHO VALUE INTENTIONAL DESIGN, PROVOKING
-              COMMERCIALS, AND SCALABLE DIGITAL TECHNOLOGY.
+              WHETHER YOU ARE LAUNCHING A BRAND, PRODUCING AN AD FILM, SCALING DIGITAL
+              MARKETING, OR BUILDING A HIGH-PERFORMANCE WEB PLATFORM, WE ARE READY TO COLLABORATE.
             </p>
           </div>
         </div>

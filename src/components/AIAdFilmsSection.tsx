@@ -10,7 +10,11 @@ import {
   Layers,
   ArrowUpRight,
   Filter,
-  Maximize2
+  Maximize2,
+  Cpu,
+  Zap,
+  ShieldCheck,
+  CheckCircle2,
 } from "lucide-react";
 import { AI_AD_FILMS } from "@/data/creative-archive";
 import { AIAdFilm } from "@/types/creative-archive";
@@ -61,10 +65,10 @@ export default function AIAdFilmsSection() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-b border-white/10 pb-8">
           <div className="space-y-3">
             <div className="flex items-center gap-3 font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
-              <span>// CREATIVE INTELLIGENCE</span>
+              <span>// SECTION 04</span>
               <span className="text-white/30">/</span>
               <span className="text-white/60 tracking-widest">
-                4K NEURAL PRODUCTION ARCHIVE
+                AI CREATIVE TECHNOLOGY & 4K COMMERCIALS
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
@@ -82,6 +86,67 @@ export default function AIAdFilmsSection() {
             <div className="flex items-center gap-4 text-[#F20D18] font-bold">
               <span>• 10 AD FILMS ARCHIVED</span>
               <span>• ZERO STOCK FOOTAGE</span>
+            </div>
+          </div>
+        </div>
+
+        {/* AI Strategic Superpower Rationale & Principle */}
+        <div className="bg-[#101010] border border-[#F20D18]/30 p-8 sm:p-10 relative overflow-hidden group shadow-2xl">
+          <div className="absolute top-0 right-0 w-64 h-64 subtle-red-grid opacity-15 pointer-events-none" />
+          
+          <div className="relative z-10 space-y-8">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+              <div className="flex items-center gap-2.5 font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase">
+                <Cpu className="w-4 h-4 animate-pulse" />
+                <span>THE AFTER THAT AI PRINCIPLE</span>
+              </div>
+              <span className="font-mono text-[10px] text-white/50 tracking-widest uppercase">
+                HUMAN STRATEGIC LEADERSHIP • NEURAL PRODUCTION VELOCITY
+              </span>
+            </div>
+
+            <div className="max-w-4xl space-y-3">
+              <h3 className="font-anton text-2xl sm:text-3xl md:text-4xl uppercase leading-tight tracking-wide text-white">
+                “We do not use AI to replace human creativity. We use AI to multiply creative possibilities, compress production timelines and produce visual quality that was previously impossible within traditional budget constraints.”
+              </h3>
+              <p className="font-space text-sm sm:text-base text-white/70 leading-relaxed">
+                By combining generative diffusion pipelines, camera projection, and sound engineering with experienced creative directors, we deliver commercials with the visual scale of multi-million dollar shoots at high-speed turnaround.
+              </p>
+            </div>
+
+            {/* 4 Client-Centric Value Propositions */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+              <div className="p-4 bg-black/60 border border-white/10 hover:border-[#F20D18] transition-colors">
+                <span className="font-mono text-xs font-bold text-[#F20D18] block mb-1">01 // VELOCITY</span>
+                <h4 className="font-anton text-base uppercase text-white tracking-wide">10x Speed to Market</h4>
+                <p className="font-mono text-[11px] text-[#888888] mt-1 leading-relaxed">
+                  Go from storyboard to finished 4K commercial in days instead of months of logistics.
+                </p>
+              </div>
+
+              <div className="p-4 bg-black/60 border border-white/10 hover:border-[#F20D18] transition-colors">
+                <span className="font-mono text-xs font-bold text-[#F20D18] block mb-1">02 // SCALE</span>
+                <h4 className="font-anton text-base uppercase text-white tracking-wide">Cinematic Boundlessness</h4>
+                <p className="font-mono text-[11px] text-[#888888] mt-1 leading-relaxed">
+                  Photorealistic worlds, bespoke styling, and dramatic lighting with zero stock video clips.
+                </p>
+              </div>
+
+              <div className="p-4 bg-black/60 border border-white/10 hover:border-[#F20D18] transition-colors">
+                <span className="font-mono text-xs font-bold text-[#F20D18] block mb-1">03 // DIRECTION</span>
+                <h4 className="font-anton text-base uppercase text-white tracking-wide">Human Art Direction</h4>
+                <p className="font-mono text-[11px] text-[#888888] mt-1 leading-relaxed">
+                  Every frame is orchestrated by seasoned creative directors, copywriters, and colorists.
+                </p>
+              </div>
+
+              <div className="p-4 bg-black/60 border border-white/10 hover:border-[#F20D18] transition-colors">
+                <span className="font-mono text-xs font-bold text-[#F20D18] block mb-1">04 // OPTIMISATION</span>
+                <h4 className="font-anton text-base uppercase text-white tracking-wide">High-Cadence Testing</h4>
+                <p className="font-mono text-[11px] text-[#888888] mt-1 leading-relaxed">
+                  Generate multiple creative angles and test varying hooks at the cost of one traditional shoot.
+                </p>
+              </div>
             </div>
           </div>
         </div>

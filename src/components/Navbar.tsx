@@ -75,9 +75,8 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
     { label: "PITCH DECKS", href: "#pitch-decks", index: "07" },
     { label: "WHY AFTER THAT", href: "#why-us", index: "08" },
     { label: "EXECUTION PROCESS", href: "#process", index: "09" },
-    { label: "PHILOSOPHY", href: "#philosophy", index: "10" },
-    { label: "LOCATIONS", href: "#locations", index: "11" },
-    { label: "COMMISSION", href: "#contact", index: "12" },
+    { label: "REGIONAL HUBS", href: "#locations", index: "10" },
+    { label: "START A PROJECT", href: "#contact", index: "11" },
   ];
 
   const handleLinkClick = (href: string) => {
@@ -123,16 +122,50 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
             </div>
           </a>
 
-          {/* Desktop Status Bar / Live Time */}
+          {/* Desktop Status Bar / Quick Navigation */}
           <div className="hidden lg:flex items-center gap-6 font-mono text-[11px] text-[#888888]">
+            <nav className="flex items-center gap-6 font-mono text-[11px] font-bold tracking-widest uppercase text-white/70">
+              <button
+                onClick={() => handleLinkClick("#services")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors"
+              >
+                SERVICES
+              </button>
+              <button
+                onClick={() => handleLinkClick("#ai-films")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors flex items-center gap-1.5"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[#F20D18] animate-pulse" />
+                AI AD FILMS
+              </button>
+              <button
+                onClick={() => handleLinkClick("#work")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors"
+              >
+                WORK
+              </button>
+              <button
+                onClick={() => handleLinkClick("#creative-archive")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors"
+              >
+                ARCHIVE
+              </button>
+              <button
+                onClick={() => handleLinkClick("#pitch-decks")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors"
+              >
+                DECKS
+              </button>
+            </nav>
+            <div className="h-3 w-[1px] bg-white/20" />
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#F20D18] animate-ping" />
-              <span className="text-white font-medium tracking-wider">KOCHI • BANGALORE • AHMEDABAD</span>
-              <span className="text-white/40 font-mono tracking-widest ml-1">{currentTime}</span>
-            </div>
-            <div className="h-3 w-[1px] bg-white/20" />
-            <div className="text-white/60">
-              <span className="text-[#F20D18] font-semibold">//</span> INDEPENDENT AGENCY
+              <span className="text-white/60 font-mono tracking-widest">{currentTime}</span>
             </div>
           </div>
 

@@ -428,12 +428,12 @@ export default function Hero({ onOpenProject }: HeroProps) {
 
               <MagneticButton
                 strength={0.3}
-                onClick={() => scrollTo("#services")}
+                onClick={() => scrollTo("#work")}
                 onMouseEnter={() => sound.playHover()}
                 className="flex-1"
               >
                 <div className="w-full flex items-center justify-between px-6 py-4 bg-black/80 backdrop-blur-sm border border-white/20 text-white font-mono text-xs font-bold tracking-widest uppercase hover:border-[#F20D18] hover:text-[#F20D18] transition-all duration-200">
-                  <span>EXPLORE OUR SERVICES</span>
+                  <span>EXPLORE OUR WORK</span>
                   <ArrowDownRight className="w-3.5 h-3.5" />
                 </div>
               </MagneticButton>

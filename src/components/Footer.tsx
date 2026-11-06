@@ -91,9 +91,13 @@ export default function Footer() {
                 { name: "HOME", href: "#hero" },
                 { name: "ABOUT", href: "#about" },
                 { name: "SERVICES", href: "#services" },
-                { name: "AI TECHNOLOGY", href: "#ai-tech" },
-                { name: "WORK", href: "#work" },
-                { name: "PHILOSOPHY", href: "#philosophy" },
+                { name: "AI AD FILMS", href: "#ai-films" },
+                { name: "SELECTED WORK", href: "#work" },
+                { name: "CREATIVE ARCHIVE", href: "#creative-archive" },
+                { name: "PITCH DECKS", href: "#pitch-decks" },
+                { name: "WHY AFTER THAT", href: "#why-us" },
+                { name: "PROCESS", href: "#process" },
+                { name: "LOCATIONS", href: "#locations" },
                 { name: "CONTACT", href: "#contact" },
               ].map((link) => (
                 <li key={link.href}>

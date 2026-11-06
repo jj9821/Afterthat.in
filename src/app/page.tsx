@@ -9,14 +9,12 @@ import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import HorizontalGallery from "@/components/HorizontalGallery";
 import ServicesSection from "@/components/ServicesSection";
-import AiTechSection from "@/components/AiTechSection";
 import WorkSection from "@/components/WorkSection";
 import AIAdFilmsSection from "@/components/AIAdFilmsSection";
 import CreativeArchiveSection from "@/components/CreativeArchiveSection";
 import PitchDecksSection from "@/components/PitchDecksSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import ProcessSection from "@/components/ProcessSection";
-import CommunicationPhilosophySection from "@/components/CommunicationPhilosophySection";
 import LocationsSection from "@/components/LocationsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -77,34 +75,28 @@ export default function Home() {
         {/* Section 03: 5 Integrated Capability Verticals */}
         <ServicesSection />
 
-        {/* Section 04: AI-Powered Advertising & Creative Technology */}
-        <AiTechSection />
-
-        {/* Section 04B: AI Films. Real Impact (AI Video Showcase) */}
+        {/* Section 04: AI-Powered Creative Technology & 4K Commercials */}
         <AIAdFilmsSection />
 
         {/* Section 05: Dynamic Selected Work & Case Studies */}
         <WorkSection onSelectProject={setSelectedProject} />
 
-        {/* Section 05B: The Creative Archive (Ideas Made Visible) */}
+        {/* Section 06: The Creative Archive (Ideas Made Visible) */}
         <CreativeArchiveSection />
 
-        {/* Section 05C: Pitch Decks & Strategy Presentations (Ideas, Presented) */}
+        {/* Section 07: Pitch Decks & Strategy Presentations (Ideas, Presented) */}
         <PitchDecksSection />
 
-        {/* Section 06: Why After That — 6 Integrated Advantages */}
+        {/* Section 08: Why After That — Strategic Advantages & Operational Philosophy */}
         <WhyUsSection />
 
-        {/* Section 07: Execution Process — 5-Stage Framework */}
+        {/* Section 09: Execution Process — 5-Stage Framework */}
         <ProcessSection />
 
-        {/* Section 08: Strategic Brand Communication Philosophy */}
-        <CommunicationPhilosophySection />
-
-        {/* Section 09: Regional Hubs & Presence (Kochi | Bangalore | Ahmedabad) */}
+        {/* Section 10: Regional Hubs & Presence (Kochi | Bangalore | Ahmedabad) */}
         <LocationsSection />
 
-        {/* Section 10: Interactive Project Commission & Enquiry Terminal */}
+        {/* Section 11: Interactive Project Commission & Enquiry Terminal */}
         <ContactSection />
 
         {/* Maximalist Architectural Footer */}

@@ -6,17 +6,17 @@ export const COMPANY_INFO = {
   tagline: "IDEAS. PEOPLE. BRANDS. BEYOND.",
   supportingHeadline: "WE MAKE BRANDS IMPOSSIBLE TO IGNORE.",
   supportingDescription:
-    "We bring strategy, creativity, advertising, digital marketing and technology together to help businesses communicate better and move forward.",
+    "We bring strategy, creativity, advertising, digital marketing and technology together to help businesses communicate better, build stronger brands and move forward.",
   about: {
     headline: "MORE THAN AN AGENCY. WE CONNECT THE DOTS.",
     paragraph1:
-      "AFTER THAT ENTERTAINMENT is an independent creative, advertising and digital solutions agency bringing together strategy, creativity, media production, marketing and technology.",
+      "AFTER THAT ENTERTAINMENT is an independent creative, advertising and digital technology agency. We exist to eliminate the friction of fragmented execution across detached vendors.",
     paragraph2:
-      "We help businesses build distinctive brands, communicate effectively and strengthen their presence across traditional and digital platforms.",
+      "Rather than hiring a branding studio, a separate ad film crew, an isolated performance marketing agency, and an external software vendor, AFTER THAT unifies all five core capabilities under single-point strategic leadership.",
     paragraph3:
-      "From developing brand identities and producing commercial advertisements to executing digital marketing campaigns and developing websites, mobile applications and software solutions, we bring multiple creative and technical capabilities together under one roof.",
+      "We pair sharp commercial positioning and cinematic visual storytelling with performance-driven marketing and resilient software engineering—amplified by high-velocity AI creative pipelines.",
     paragraph4:
-      "Our approach combines strategic thinking, creative storytelling, digital innovation and professional execution to deliver communication and technology solutions aligned with business objectives.",
+      "Operating across Kochi, Bangalore and Ahmedabad, we partner with founders and enterprise leaders to craft work that commands attention and drives sustained commercial growth.",
     closing: "WE CONNECT IDEAS, PEOPLE, BRANDS AND TECHNOLOGY TO CREATE WHAT COMES NEXT.",
   },
   aiPhilosophy: {
