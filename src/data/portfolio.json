@@ -86,70 +86,83 @@
     "featured": true
   },
   {
-    "id": "dizzire-silks-and-sarees",
-    "slug": "dizzire-silks-and-sarees",
-    "title": "Dizzire Silks & Sarees Brand Repositioning",
-    "client": "Dizzire Silks and Sarees",
-    "category": "branding",
-    "categoryLabel": "BRANDING & BRAND IDENTITY",
+    "id": "dizzire-silk-and-sarees",
+    "slug": "dizzire-silk-and-sarees",
+    "title": "DIZZIRE SILK AND SAREES",
+    "client": "Dizzire Silk and Sarees",
+    "category": "fashion",
+    "categoryLabel": "BRAND IDENTITY / FASHION",
     "tags": [
       "Luxury Fashion",
       "Textile Heritage",
       "Visual Identity",
-      "Brand Guidelines",
+      "Saree Campaigns",
+      "Retail Architecture",
       "Packaging"
     ],
     "year": "2026",
     "location": "Kothamangalam, Kerala",
-    "headline": "Elegance woven into every thread \u2014 modern luxury for Kerala textile heritage.",
-    "description": "Dezzire Silk and Sarees, based in Kothamangalam, Kerala, entered a new era with a refined, contemporary identity created by AFTER THAT. Rooted in the richness of Indian textile heritage, the rebranding reflects an elevated, high-fashion expression while staying true to the trust and warmth built with generations of bridal and festive customers.",
+    "headline": "ELEGANCE WOVEN INTO EVERY THREAD.",
+    "description": "A contemporary fashion identity inspired by the elegance of Indian silk, combining distinctive visual symbolism, editorial campaign imagery and retail applications.",
     "challenge": "Modernise a respected heritage silk and bridal saree destination with a modern, elegant visual identity that competes with national luxury fashion houses while honouring traditional handloom motifs.",
-    "approach": "We created the bespoke 'D' monogram symbolizing intertwining silk threads and a central guiding star. The identity is supported by an opulent color system of imperial crimson red and woven gold, custom typography, luxury embossed carry bags, and rigorous brand usage guidelines.",
+    "approach": "We created the bespoke 'DI' desire-star identity embodying fluid silk draping and customer aspirations. The identity is supported by an opulent color system of imperial red, warm champagne gold, light beige, and deep maroon, paired with Cormorant and Montserrat typography, luxury carry bags, outdoor billboards, and retail architectural concepts.",
     "deliverables": [
-      "Master Brand Identity & Thread Monogram",
-      "Brand Guidelines Manual",
-      "Color Architecture (Imperial Red, Woven Gold, Silk Cream)",
-      "Bespoke Typography Hierarchy",
-      "Luxury Carry Bags & Packaging Suite",
-      "Retail Showroom Signage System",
-      "Corporate Stationery & Invoicing Suite"
+      "Master Brand Identity & Desire Star Monogram",
+      "Four Distinct Logo Exploration Suites",
+      "Silk Saree Fashion Campaign Photography",
+      "6-Tone Color System (Primary Red, Light Beige, Champagne Gold, Maroon)",
+      "Cormorant & Montserrat Editorial Typography Hierarchy",
+      "Textile & Saree-Inspired Geometric Patterns",
+      "Large-Format Outdoor Billboard Advertising Mockups",
+      "Modernized Retail Storefront Architectural Concept",
+      "Luxury Embossed Shopping Carry Bag Suite",
+      "Hospitality & Retail Staff Attire & Badging",
+      "Multi-Format Social Media Campaign Creatives (4:5, 9:16, 16:9, 1:1)",
+      "Executive Correspondence Stationery Suite"
     ],
-    "coverImage": "/portfolio/branding/dizzire/cover.webp",
+    "coverImage": "/portfolio/dizzire/hero/dizzire-hero-campaign-saree.webp",
     "images": [
       {
-        "src": "/portfolio/branding/dizzire/cover.webp",
-        "alt": "Dizzire Silks & Sarees Brand Identity Hero",
+        "src": "/portfolio/dizzire/hero/dizzire-hero-campaign-saree.webp",
+        "alt": "Dizzire Silk and Sarees Crimson Saree Campaign Hero",
         "sourcePdf": "DIZZIRE_BRAND GUIDLINES.pdf",
-        "sourcePage": 2,
-        "caption": "Elegance woven into every thread \u2014 heritage silk saree editorial"
+        "sourcePage": 7,
+        "caption": "Elegance woven into every thread — signature crimson bridal silk saree editorial"
       },
       {
-        "src": "/portfolio/branding/dizzire/luxury-carry-bags.webp",
-        "alt": "Dizzire Luxury Carry Bags",
+        "src": "/portfolio/dizzire/fashion-campaigns/saree-campaign-editorial-lifestyle.webp",
+        "alt": "Dizzire Contemporary Silk Drape",
+        "sourcePdf": "DIZZIRE_BRAND GUIDLINES.pdf",
+        "sourcePage": 7,
+        "caption": "Fluid silk draping and contemporary editorial fashion lifestyle portrait"
+      },
+      {
+        "src": "/portfolio/dizzire/shopping-bags/shopping-bag-luxury-crimson-red.webp",
+        "alt": "Dizzire Luxury Crimson Carry Bags",
         "sourcePdf": "DIZZIRE_BRAND GUIDLINES.pdf",
         "sourcePage": 9,
-        "caption": "Embossed shopping bags featuring the gold thread monogram and subtle geometric repeat"
+        "caption": "Embossed shopping bags featuring gold foil stamping, woven handles, and reinforced base"
       },
       {
-        "src": "/portfolio/branding/dizzire/monogram-system.webp",
-        "alt": "Dizzire Monogram System",
+        "src": "/portfolio/dizzire/logo-explorations/logo-option-01-primary-silk.webp",
+        "alt": "Dizzire Logo Exploration Option 01",
         "sourcePdf": "DEZZIRE_FINAL LOGO copy.pdf",
-        "sourcePage": 4,
-        "caption": "Thread-and-star logo mark variations across crimson and burgundy silk backgrounds"
+        "sourcePage": 3,
+        "caption": "Logo exploration Direction 01 on rich crimson silk background"
       },
       {
-        "src": "/portfolio/branding/dizzire/color-palette.webp",
-        "alt": "Dizzire Silk Color Palette",
-        "sourcePdf": "DIZZIRE_BRAND GUIDLINES.pdf",
-        "sourcePage": 5,
-        "caption": "Imperial crimson, handloom gold, and textured silk beige color specifications"
+        "src": "/portfolio/dizzire/billboards/billboard-option-03-cityscape-day.webp",
+        "alt": "Dizzire Daylight Cityscape Billboard",
+        "sourcePdf": "DEZZIRE_FINAL LOGO copy.pdf",
+        "sourcePage": 14,
+        "caption": "Large-format outdoor billboard advertising visualization in architectural cityscape setting"
       },
       {
-        "src": "/portfolio/branding/dizzire/typography.webp",
-        "alt": "Dizzire Editorial Typography",
+        "src": "/portfolio/dizzire/colour-and-typography/color-palette-board.webp",
+        "alt": "Dizzire 6-Tone Color System",
         "sourcePdf": "DIZZIRE_BRAND GUIDLINES.pdf",
         "sourcePage": 6,
-        "caption": "Bespoke high-contrast serif typography paired with clean modern subtexts"
+        "caption": "Official color palette: Primary Red (#C92028), Light Beige (#ECE9E3), Champagne Gold (#F8E8CD), Deep Maroon (#6A1013)"
       }
     ],
     "projectType": "confirmed",

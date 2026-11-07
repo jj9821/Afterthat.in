@@ -22,6 +22,9 @@ export const getProjectBySlug = (slug: string): PortfolioProject | undefined => 
     (p) =>
       p.slug === slug ||
       p.id === slug ||
+      (slug === "dizzire" && (p.slug === "dizzire-silk-and-sarees" || p.id === "dizzire-silk-and-sarees")) ||
+      (slug === "dizzire-silk-and-sarees" && (p.slug === "dizzire-silks-and-sarees" || p.id === "dizzire-silks-and-sarees")) ||
+      (slug === "dizzire-silks-and-sarees" && (p.slug === "dizzire-silk-and-sarees" || p.id === "dizzire-silk-and-sarees")) ||
       (slug === "kakapo-streetwear-identity" && (p.slug === "kakapo" || p.id === "kakapo")) ||
       (slug === "kakapo" && (p.slug === "kakapo-streetwear-identity" || p.id === "kakapo-streetwear-identity")) ||
       (slug === "milli-flame" && (p.slug === "milli-flame-bistro-paris" || p.id === "milli-flame-bistro-paris")) ||
