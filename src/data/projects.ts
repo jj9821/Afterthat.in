@@ -23,7 +23,9 @@ export const getProjectBySlug = (slug: string): PortfolioProject | undefined => 
       p.slug === slug ||
       p.id === slug ||
       (slug === "kakapo-streetwear-identity" && (p.slug === "kakapo" || p.id === "kakapo")) ||
-      (slug === "kakapo" && (p.slug === "kakapo-streetwear-identity" || p.id === "kakapo-streetwear-identity"))
+      (slug === "kakapo" && (p.slug === "kakapo-streetwear-identity" || p.id === "kakapo-streetwear-identity")) ||
+      (slug === "milli-flame" && (p.slug === "milli-flame-bistro-paris" || p.id === "milli-flame-bistro-paris")) ||
+      (slug === "milli-flame-bistro-paris" && (p.slug === "milli-flame" || p.id === "milli-flame"))
   );
 };
 

@@ -222,60 +222,62 @@
   {
     "id": "milli-flame-bistro-paris",
     "slug": "milli-flame-bistro-paris",
-    "title": "Milli Flame Parisian Dining & Caf\u00e9",
+    "title": "Milli Flame Parisian Dining & Café",
     "client": "Milli Flame",
     "category": "branding",
-    "categoryLabel": "BRANDING & BRAND IDENTITY",
+    "categoryLabel": "BRANDING / HOSPITALITY",
     "tags": [
       "Hospitality",
-      "Caf\u00e9 & Bistro",
+      "Café & Bistro",
       "Brand Guidelines",
       "Visual Identity",
-      "Gourmet Packaging"
+      "Gourmet Packaging",
+      "Storefront Architecture"
     ],
     "year": "2025",
     "location": "Paris, France",
-    "headline": "Petite Flamme. Grand Go\u00fbt. \u2014 Understated luxury in modern Parisian dining.",
-    "description": "Set in Paris, Milli Flame embodies the art of understated culinary indulgence. Inspired by the belief that even the smallest flame can create remarkable depth, AFTER THAT crafted the full brand guidelines, minimal circular flame seal, Tropical Cyan & Quetzal Green visual architecture, bakery packaging, and digital touchpoints.",
+    "headline": "Petite Flamme. Grand Goût. — Understated luxury in modern Parisian dining.",
+    "description": "A distinctive restaurant identity built around a circular flame emblem, contemporary typography and a vibrant visual system. From food imagery and takeaway packaging to uniforms, stationery and storefront applications, the creative direction extends across the complete dining experience.",
     "challenge": "Establish a distinct Parisian bistro identity balancing modern culinary simplicity with quiet luxury, approachable elegance, and memorable takeaway coffee and dining collateral.",
-    "approach": "We designed an organic flame silhouette nestled inside a minimalist circular badge with the French motto 'Petite Flamme. Grand Go\u00fbt.'. The color system pairs fresh turquoise cyan with quetzal green and warm gold accents, supported by Nexa and Montserrat typography across menus, aprons, coffee cups, and mobile interfaces.",
+    "approach": "We designed an organic flame silhouette nestled inside a minimalist circular badge with the French motto 'Petite Flamme. Grand Goût.'. The color system pairs fresh turquoise cyan with quetzal green and warm gold accents, supported by Nexa and Montserrat typography across menus, aprons, coffee cups, and mobile interfaces.",
     "deliverables": [
       "Circular Flame Brandmark & Wordmark",
       "Comprehensive Brand Guidelines Book",
       "Color Palette (Tropical Cyan, Quetzal Green, True Gold)",
       "Coffee Cups & Bakery Takeaway Bags",
       "Staff Uniforms & Apron Embroidery",
-      "Digital Caf\u00e9 Mobile Ordering Interface"
+      "Digital Café Mobile Ordering Interface",
+      "Cantilever Projection Sign & Storefront Facade"
     ],
-    "coverImage": "/portfolio/branding/milli-flame/cover.webp",
+    "coverImage": "/portfolio/milli-flame/hero/restaurant-interior-booth.webp",
     "images": [
       {
-        "src": "/portfolio/branding/milli-flame/cover.webp",
+        "src": "/portfolio/milli-flame/hero/restaurant-interior-booth.webp",
         "alt": "Milli Flame Parisian Dining Atmosphere",
         "sourcePdf": "BRAND GUIDELINE FINAL_MILLI FLAME (1).pdf",
         "sourcePage": 1,
         "caption": "Modern Parisian dining interior and circular flame emblem"
       },
       {
-        "src": "/portfolio/branding/milli-flame/bistro-lifestyle.webp",
-        "alt": "Milli Flame Culinary Lifestyle & Packaging",
+        "src": "/portfolio/milli-flame/food-photography/croissants-artisan-bakery.webp",
+        "alt": "Artisan Bakery Croissants",
         "sourcePdf": "BRAND GUIDELINE FINAL_MILLI FLAME (1).pdf",
         "sourcePage": 2,
-        "caption": "Artisan pastries, gourmet burger photography, and digital app interface"
+        "caption": "Golden croissants on craft bakery paper with circular brand seal"
       },
       {
-        "src": "/portfolio/branding/milli-flame/color-typography.webp",
-        "alt": "Milli Flame Color & Typography Specifications",
+        "src": "/portfolio/milli-flame/packaging/takeaway-coffee-cups-cluster.webp",
+        "alt": "Concentric Ripple Takeaway Cups",
         "sourcePdf": "BRAND GUIDELINE FINAL_MILLI FLAME (1).pdf",
-        "sourcePage": 5,
-        "caption": "Tropical Cyan (#05AAC2) and Nexa typography hierarchy"
+        "sourcePage": 10,
+        "caption": "Takeaway coffee cups featuring concentric ripple wave patterns"
       },
       {
-        "src": "/portfolio/branding/milli-flame/brand-guidelines.webp",
-        "alt": "Milli Flame Brand Guidelines",
+        "src": "/portfolio/milli-flame/storefront/storefront-facade-paris.webp",
+        "alt": "Parisian Storefront Exterior Facade",
         "sourcePdf": "BRAND GUIDELINE FINAL_MILLI FLAME (1).pdf",
         "sourcePage": 7,
-        "caption": "Clear-space rules and logo placement across dark and light surfaces"
+        "caption": "Soft pink stone exterior with large teal brand fascia board"
       }
     ],
     "projectType": "confirmed",
