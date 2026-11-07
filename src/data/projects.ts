@@ -18,7 +18,13 @@ export const PROJECTS: PortfolioProject[] = (portfolioData as PortfolioProject[]
 }));
 
 export const getProjectBySlug = (slug: string): PortfolioProject | undefined => {
-  return PROJECTS.find((p) => p.slug === slug || p.id === slug);
+  return PROJECTS.find(
+    (p) =>
+      p.slug === slug ||
+      p.id === slug ||
+      (slug === "kakapo-streetwear-identity" && (p.slug === "kakapo" || p.id === "kakapo")) ||
+      (slug === "kakapo" && (p.slug === "kakapo-streetwear-identity" || p.id === "kakapo-streetwear-identity"))
+  );
 };
 
 export const getProjectsByCategory = (category: string): PortfolioProject[] => {

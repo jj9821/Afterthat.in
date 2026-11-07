@@ -157,12 +157,12 @@
     "featured": true
   },
   {
-    "id": "kakapo-streetwear-identity",
-    "slug": "kakapo-streetwear-identity",
-    "title": "KAKAPO Streetwear & Casuals",
-    "client": "KAKAPO (Al Yazhar Garments)",
+    "id": "kakapo",
+    "slug": "kakapo",
+    "title": "KAKAPO",
+    "client": "KAKAPO",
     "category": "branding",
-    "categoryLabel": "BRANDING & BRAND IDENTITY",
+    "categoryLabel": "BRANDING / FASHION",
     "tags": [
       "Streetwear",
       "Fashion Editorial",
@@ -172,47 +172,47 @@
     ],
     "year": "2024",
     "location": "Kerala, India",
-    "headline": "Where comfort meets style \u2014 underground streetwear with timeless confidence.",
-    "description": "KAKAPO is a contemporary casual wear and streetwear brand designed for expressive youth who embrace laid-back, effortless aesthetics. AFTER THAT developed the complete visual identity, perched parrot monogram, feather-textured typography, and minimal apparel packaging system.",
-    "challenge": "Build an authentic, high-attitude streetwear brand identity capable of commanding respect across oversized t-shirts, festival outfits, denim jackets, and minimalist retail spaces.",
-    "approach": "We integrated a stylised Kakapo bird perched atop an architectural 'K' symbol, paired with feather-inspired typographic flow. The monochromatic black-and-white identity gives the garment collection an uncompromising, timeless edge suitable for global street culture.",
+    "headline": "A visual exploration of fashion identity, typography, creative direction and clothing applications.",
+    "description": "A collection of visual explorations for KAKAPO, bringing together distinctive logo concepts, typography, fashion imagery, colour, clothing applications and packaging.",
+    "challenge": "Explore diverse creative directions, typographic systems, and fashion styling for contemporary streetwear without confining the brand to a single conventional aesthetic.",
+    "approach": "We developed a 5-chapter visual study exploring raw brush feather lettering, aerodynamic flight silhouettes, modular stacked lowercase lockups, oversized monograms, and a 7-color botanical palette translated into garments and physical retail packaging.",
     "deliverables": [
-      "Master Brandmark & Perched Bird Monogram",
-      "Feather-Flow Typography Treatment",
-      "Woven Neck Labels & Garment Swing Tags",
-      "Minimalist Apparel Shopping Bags",
-      "Retail Lightbox Store Signage",
-      "Fashion Lookbook & Editorial Layouts"
+      "Exploratory Master Marks & Monogram Architecture",
+      "Fashion Lookbook & Editorial Art Direction",
+      "NORD & Neue Kaine Typographic System",
+      "7-Tone Botanical & Obsidian Color Palette",
+      "Woven Damask Hem Labels & Satin Care Tags",
+      "FSC Kraft Monogram Shopping Bags & Lightbox Signage"
     ],
-    "coverImage": "/portfolio/branding/kakapo/cover.webp",
+    "coverImage": "/portfolio/kakapo/hero-green-editorial.webp",
     "images": [
       {
-        "src": "/portfolio/branding/kakapo/cover.webp",
-        "alt": "KAKAPO Clothing Brand Identity Overview",
-        "sourcePdf": "The AFTERTHAT Playbook (1).pdf",
-        "sourcePage": 9,
-        "caption": "Complete visual system and packaging for contemporary streetwear"
+        "src": "/portfolio/kakapo/hero-green-editorial.webp",
+        "alt": "KAKAPO Editorial Model on Botanical Green Background",
+        "sourcePdf": "KAKAPO BRAND IDENITIY copy.pdf",
+        "sourcePage": 1,
+        "caption": "Botanical Streetwear Study: female editorial model in relaxed oversized silhouette"
       },
       {
-        "src": "/portfolio/branding/kakapo/editorial-monogram.webp",
-        "alt": "KAKAPO Editorial Model & Monogram",
+        "src": "/portfolio/kakapo/editorial-white-streetwear.webp",
+        "alt": "Relaxed White Streetwear Set Model",
         "sourcePdf": "KAKAPO BRAND IDENITIY copy.pdf",
         "sourcePage": 6,
-        "caption": "High-fashion streetwear model editorial and monochrome brand asset suite"
+        "caption": "Relaxed Monochromatic Streetwear: male model in heavyweight drop-shoulder tee and shorts"
       },
       {
-        "src": "/portfolio/branding/kakapo/visual-identity.webp",
-        "alt": "KAKAPO Black and White Color Scheme",
+        "src": "/portfolio/kakapo/crop-lightbox-signage.webp",
+        "alt": "Storefront Illuminated Signage",
         "sourcePdf": "KAKAPO BRAND IDENITIY copy.pdf",
-        "sourcePage": 2,
-        "caption": "Timeless monochromatic palette reflecting versatility and durability"
+        "sourcePage": 4,
+        "caption": "Storefront Lightbox Signage: architectural retail exterior treatment"
       },
       {
-        "src": "/portfolio/branding/kakapo/apparel-story.webp",
-        "alt": "KAKAPO Lifestyle Philosophy",
+        "src": "/portfolio/kakapo/crop-black-hoodie-mockup.webp",
+        "alt": "Heavyweight Black Streetwear Hoodie",
         "sourcePdf": "KAKAPO BRAND IDENITIY copy.pdf",
         "sourcePage": 5,
-        "caption": "Apparel brand story: comfort is key and style comes naturally"
+        "caption": "450 GSM French terry black streetwear hoodie with chest placement embroidery"
       }
     ],
     "projectType": "confirmed",
