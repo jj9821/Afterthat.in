@@ -1,0 +1,344 @@
+[
+  {
+    "id": "lulu",
+    "name": "LuLu Group International",
+    "slug": "lulu",
+    "category": "Retail & Hypermarkets",
+    "logoPath": "/clients/lulu/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://www.lulugroupinternational.com/",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 236,
+      "aspectRatio": 3.39
+    },
+    "description": "Multinational retail conglomerate operating hypermarket chains and shopping malls across the Middle East, India, and Southeast Asia.",
+    "notes": "Master vector extraction from AFTER THAT Playbook Slide 7. Features the signature red ribbon emblem, green LuLu wordmark, and Where the world comes to shop tagline."
+  },
+  {
+    "id": "milma",
+    "name": "Milma",
+    "slug": "milma",
+    "category": "Dairy & FMCG",
+    "logoPath": "/clients/milma/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://www.milma.com/",
+    "sourceType": "vector_portal",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 418,
+      "aspectRatio": 1.91
+    },
+    "description": "Kerala Co-operative Milk Marketing Federation (KCMMF), the apex dairy federation serving millions of households across Kerala.",
+    "notes": "Master transparent emblem extracted with alpha mask from AFTER THAT Playbook Slide 7. Features the blue cow mark and lowercase milma wordmark."
+  },
+  {
+    "id": "au-small-finance-bank",
+    "name": "AU Small Finance Bank",
+    "slug": "au-small-finance-bank",
+    "category": "Banking & Financial Services",
+    "logoPath": "/clients/au-small-finance-bank/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://www.aubank.in/",
+    "sourceType": "official_website",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 352,
+      "aspectRatio": 2.27
+    },
+    "description": "Fortune India 500 scheduled commercial bank and India\u2019s leading small finance bank offering digital and retail banking solutions.",
+    "notes": "Master vector extraction directly from AFTER THAT Playbook Slide 7. Features signature purple background, orange AU circular emblem, and white typography."
+  },
+  {
+    "id": "nandini",
+    "name": "Nandini",
+    "slug": "nandini",
+    "category": "Dairy & FMCG",
+    "logoPath": "/clients/nandini/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://www.kmfnandini.coop/",
+    "sourceType": "official_website",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 636,
+      "aspectRatio": 1.26
+    },
+    "description": "Household dairy brand of the Karnataka Milk Federation (KMF), India\u2019s second-largest milk cooperative federation.",
+    "notes": "Master transparent oval crest extracted with alpha mask from AFTER THAT Playbook Slide 7. Features gold ribbon banners and blue cow mark."
+  },
+  {
+    "id": "pothys",
+    "name": "Pothys",
+    "slug": "pothys",
+    "category": "Fashion Retail & Silks",
+    "logoPath": "/clients/pothys/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://www.pothys.com/",
+    "sourceType": "official_website",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 727,
+      "aspectRatio": 1.1
+    },
+    "description": "Iconic textile and silk saree retail powerhouse with mega-showrooms across Tamil Nadu, Kerala, Karnataka, and Telangana.",
+    "notes": "Master transparent emblem extracted with alpha mask from AFTER THAT Playbook Slide 7. Features green P oval, red Pothys pill, and Aalayam of Silks tagline."
+  },
+  {
+    "id": "hapeats",
+    "name": "Hapeats",
+    "slug": "hapeats",
+    "category": "FMCG & Food Packaging",
+    "logoPath": "/clients/hapeats/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": "/work/hapeats-fmcg-packaging",
+    "dimensions": {
+      "width": 800,
+      "height": 200,
+      "aspectRatio": 4.0
+    },
+    "description": "Packaged snack foods and dried fruits enterprise with comprehensive FMCG packaging systems and logistics fleet branding developed by AFTER THAT.",
+    "notes": "Extracted directly from agency master source PDF BRANDING COLLATERALS HAPEATS and Playbook Slide 7. Full case study available in portfolio."
+  },
+  {
+    "id": "nolta",
+    "name": "Nolta",
+    "slug": "nolta",
+    "category": "Cookware & Home Appliances",
+    "logoPath": "/clients/nolta/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://nolta.in/",
+    "sourceType": "official_website",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 251,
+      "aspectRatio": 3.19
+    },
+    "description": "Premium German-certified cookware, tableware, and kitchen appliance brand by Kottaram Trading Company.",
+    "notes": "Acquired directly from nolta.in corporate WordPress production assets (nolta_logo-removebg-preview.png). Features official teal wordmark and lime green droplet swoosh with PREMIUM HOMEWARE tagline. Clarifies typo in initial prompt (listed as Polta)."
+  },
+  {
+    "id": "aptvel",
+    "name": "Aptvel",
+    "slug": "aptvel",
+    "category": "Technology & Digital Solutions",
+    "logoPath": "/clients/aptvel/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": "/work/aptvel-edtech-launch",
+    "dimensions": {
+      "width": 800,
+      "height": 286,
+      "aspectRatio": 2.79
+    },
+    "description": "Modern technology engineering, software consultancy, and enterprise cloud solutions provider.",
+    "notes": "Extracted with alpha channel from AFTER THAT Playbook master client showcase. Blue modern wordmark with stylized dot accent."
+  },
+  {
+    "id": "dizzire",
+    "name": "Dizzire Silk and Sarees",
+    "slug": "dizzire",
+    "category": "Luxury Fashion & Silk Retail",
+    "logoPath": "/clients/dizzire/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "official_brand_guidelines",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": "/work/dizzire-silk-and-sarees",
+    "dimensions": {
+      "width": 800,
+      "height": 243,
+      "aspectRatio": 3.29
+    },
+    "description": "Heritage fashion and bridal boutique in Kothamangalam, Kerala, featuring brand identity, packaging, store design, and fashion campaigns by AFTER THAT.",
+    "notes": "Master vector brand mark from DEZZIRE_FINAL LOGO and DIZZIRE_BRAND GUIDLINES. Full dedicated showcase on /work/dizzire-silk-and-sarees."
+  },
+  {
+    "id": "selzer-polymers",
+    "name": "Selzer Polymers",
+    "slug": "selzer-polymers",
+    "category": "Industrial Polymers & Engineering",
+    "logoPath": "/clients/selzer-polymers/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://selzer.in/",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 236,
+      "aspectRatio": 3.39
+    },
+    "description": "Specialized polymer manufacturer delivering precision rubber, plastics, and industrial polymers for automotive and industrial sectors.",
+    "notes": "Extracted from AFTER THAT Playbook Slide 7 with exact alpha mask; geometric wordmark with blue accent z flourish."
+  },
+  {
+    "id": "kairali-group",
+    "name": "Kairali Group",
+    "slug": "kairali-group",
+    "category": "Ayurvedic Wellness & Hospitality",
+    "logoPath": "/clients/kairali-group/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "https://www.kairali.com/",
+    "sourceType": "official_website",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 223,
+      "aspectRatio": 3.57
+    },
+    "description": "Renowned international Ayurvedic wellness conglomerate, operating healing villages, treatment centres, and herbal pharmaceutical laboratories.",
+    "notes": "Verified against kairali.com corporate assets and Playbook Slide 7; navy circular crest with stylized K."
+  },
+  {
+    "id": "sunrise-hospital",
+    "name": "Sunrise Hospital",
+    "slug": "sunrise-hospital",
+    "category": "Healthcare & Tertiary Hospital",
+    "logoPath": "/clients/sunrise-hospital/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "http://www.sunrisehospitalcochin.com/",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 472,
+      "aspectRatio": 1.69
+    },
+    "description": "Leading multi-specialty tertiary healthcare centre in Kakkanad, Kochi, renowned for laparoscopic surgery and international patient care.",
+    "notes": "Extracted with alpha channel from Playbook Slide 7; multi-coloured radiant sunburst over medical crest."
+  },
+  {
+    "id": "agali-herbal",
+    "name": "Agali Herbal",
+    "slug": "agali-herbal",
+    "category": "Tribal Herbal & Ayurvedic Formulations",
+    "logoPath": "/clients/agali-herbal/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 229,
+      "aspectRatio": 3.48
+    },
+    "description": "Authentic traditional tribal wellness and herbal medicine heritage brand from Attappadi, Kerala.",
+    "notes": "Extracted with alpha channel from Playbook master slide; botanical shield icon with tagline A TRIBAL LEGACY."
+  },
+  {
+    "id": "evogen",
+    "name": "Evogen",
+    "slug": "evogen",
+    "category": "Biotechnology & Diagnostics",
+    "logoPath": "/clients/evogen/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 167,
+      "aspectRatio": 4.76
+    },
+    "description": "Advanced biotechnology and clinical diagnostics organization advancing molecular healthcare.",
+    "notes": "Extracted with alpha channel from Playbook master slide; distinctive blue DNA double-helix emblem and bold wordmark."
+  },
+  {
+    "id": "tejas-solar",
+    "name": "Tejas Solar Techs",
+    "slug": "tejas-solar",
+    "category": "Renewable Energy & Solar Systems",
+    "logoPath": "/clients/tejas-solar/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 529,
+      "aspectRatio": 1.51
+    },
+    "description": "Clean tech solar energy systems engineering, rooftop photovoltaic installations, and sustainable commercial power solutions.",
+    "notes": "Extracted with alpha channel from Playbook master slide; golden yellow solar burst emblem with clean typography."
+  },
+  {
+    "id": "maharani-wedding-collections",
+    "name": "Maharani Wedding Collections",
+    "slug": "maharani-wedding-collections",
+    "category": "Bridal Fashion & Wedding Wear",
+    "logoPath": "/clients/maharani-wedding-collections/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": "/work/maharani-wedding-collections-film",
+    "dimensions": {
+      "width": 600,
+      "height": 600,
+      "aspectRatio": 1.0
+    },
+    "description": "Destination bridal boutique and luxury wedding wear emporium with tagline The Classic Bridal World.",
+    "notes": "Extracted from Playbook master slide; elegant royal magenta square badge with white bridal crown insignia."
+  },
+  {
+    "id": "quppayam-boutique",
+    "name": "Quppayam Boutique",
+    "slug": "quppayam-boutique",
+    "category": "Designer Ethnic & Haute Couture",
+    "logoPath": "/clients/quppayam-boutique/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 535,
+      "aspectRatio": 1.49
+    },
+    "description": "Boutique bridal studio and bespoke designer fashion label celebrating contemporary Kerala couture.",
+    "notes": "Extracted with alpha channel from Playbook master slide; fashion silhouette illustration and cursive lettering. Clarifies typo in prompt (listed as Uppayyam)."
+  },
+  {
+    "id": "rajakad-medical-centre",
+    "name": "Rajakad Medical Centre",
+    "slug": "rajakad-medical-centre",
+    "category": "Healthcare & Medical Services",
+    "logoPath": "/clients/rajakad-medical-centre/logo.png",
+    "originalFormat": "png",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "extracted_playbook_master",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": {
+      "width": 800,
+      "height": 314,
+      "aspectRatio": 2.55
+    },
+    "description": "Community healthcare institution in Idukki, Kerala, serving the region with trusted medical care since 1992.",
+    "notes": "Extracted with alpha channel from Playbook master slide; violet medical cross and leaf badge with tagline GENUINE CARE SINCE 1992."
+  }
+]

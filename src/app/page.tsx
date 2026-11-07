@@ -7,6 +7,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
+import TrustedBySection from "@/components/TrustedBySection";
 import HorizontalGallery from "@/components/HorizontalGallery";
 import ServicesSection from "@/components/ServicesSection";
 import FeaturedFilmSection from "@/components/FeaturedFilmSection";
@@ -69,6 +70,9 @@ export default function Home() {
 
         {/* Section 02: Company Positioning & About */}
         <AboutSection />
+
+        {/* Section 02.5: Enterprise Client Roster & Trusted By Section */}
+        <TrustedBySection />
 
         {/* Dynamic Horizontal Production Reel Gallery */}
         <HorizontalGallery />

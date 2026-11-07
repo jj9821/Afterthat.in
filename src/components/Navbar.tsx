@@ -68,6 +68,7 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
   const navLinks = [
     { label: "INDEX", href: "#hero", index: "01" },
     { label: "ABOUT", href: "#about", index: "02" },
+    { label: "CLIENTS", href: "#clients", index: "2.5" },
     { label: "SERVICES", href: "#services", index: "03" },
     { label: "FEATURED FILM", href: "#featured-film", index: "04" },
     { label: "AI AD FILMS", href: "#ai-films", index: "05" },

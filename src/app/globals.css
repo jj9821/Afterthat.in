@@ -236,6 +236,15 @@ body {
   animation-play-state: paused;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-marquee-fast {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 /* Custom interactive cursor hide default on desktop */
 @media (pointer: fine) {
   .custom-cursor-active,
