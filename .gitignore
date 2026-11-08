@@ -48,3 +48,6 @@ assets-to-import/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scratch scripts
+scratch/

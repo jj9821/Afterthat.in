@@ -5,8 +5,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/api/",
+      disallow: ["/api/"],
     },
     sitemap: "https://www.afterthat.in/sitemap.xml",
+    host: "https://www.afterthat.in",
   };
 }

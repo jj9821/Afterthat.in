@@ -328,10 +328,13 @@ export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
               </span>
             </div>
 
-            {/* Giant Architectural Word Stack: IDEAS. PEOPLE. BRANDS. BEYOND. */}
-            <div className="space-y-1">
+            {/* Giant Architectural Word Stack: Unified Semantic H1 */}
+            <h1
+              className="space-y-1 block"
+              aria-label="Ideas. Strategy. Creativity. Execution. Beyond."
+            >
               <div className="overflow-hidden">
-                <h1 className="font-anton text-6xl sm:text-8xl md:text-[9.5vw] lg:text-[8vw] leading-[0.85] tracking-tighter uppercase select-none flex flex-wrap gap-x-6 md:gap-x-10 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
+                <div className="font-anton text-6xl sm:text-8xl md:text-[9.5vw] lg:text-[8vw] leading-[0.85] tracking-tighter uppercase select-none flex flex-wrap gap-x-6 md:gap-x-10 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
                   <motion.span
                     initial={{ y: "110%" }}
                     animate={{ y: 0 }}
@@ -348,10 +351,10 @@ export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
                   >
                     PEOPLE.
                   </motion.span>
-                </h1>
+                </div>
               </div>
               <div className="overflow-hidden">
-                <h1 className="font-anton text-6xl sm:text-8xl md:text-[9.5vw] lg:text-[8vw] leading-[0.85] tracking-tighter uppercase select-none flex flex-wrap gap-x-6 md:gap-x-10 text-[#F20D18] drop-shadow-[0_10px_35px_rgba(242,13,24,0.35)]">
+                <div className="font-anton text-6xl sm:text-8xl md:text-[9.5vw] lg:text-[8vw] leading-[0.85] tracking-tighter uppercase select-none flex flex-wrap gap-x-6 md:gap-x-10 text-[#F20D18] drop-shadow-[0_10px_35px_rgba(242,13,24,0.35)]">
                   <motion.span
                     initial={{ y: "110%" }}
                     animate={{ y: 0 }}
@@ -368,9 +371,9 @@ export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
                   >
                     BEYOND.
                   </motion.span>
-                </h1>
+                </div>
               </div>
-            </div>
+            </h1>
 
             {/* Supporting Headline & Description */}
             <div className="pt-3 space-y-3 max-w-2xl">

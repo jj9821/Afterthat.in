@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
@@ -70,33 +71,39 @@ export default function Footer() {
             </span>
             <ul className="space-y-2.5">
               {[
-                { name: "HOME", href: "#hero" },
-                { name: "ABOUT", href: "#about" },
-                { name: "SERVICES", href: "#services" },
-                { name: "FEATURED FILM (EVA GOLD)", href: "#featured-film" },
-                { name: "AI AD FILMS", href: "#ai-films" },
-                { name: "SELECTED WORK", href: "#work" },
-                { name: "CREATIVE ARCHIVE", href: "#creative-archive" },
-                { name: "PITCH DECKS", href: "#pitch-decks" },
-                { name: "WHY AFTER THAT", href: "#why-us" },
-                { name: "PROCESS", href: "#process" },
-                { name: "LOCATIONS", href: "#locations" },
-                { name: "CONTACT", href: "#contact" },
+                { name: "HOME", href: "/#hero" },
+                { name: "ABOUT", href: "/#about" },
+                { name: "SERVICES", href: "/services" },
+                { name: "FEATURED FILM", href: "/#featured-film" },
+                { name: "AI AD FILMS", href: "/work/ai-ad-films" },
+                { name: "SELECTED WORK", href: "/work" },
+                { name: "CREATIVE ARCHIVE", href: "/#creative-archive" },
+                { name: "PITCH DECKS", href: "/work/pitch-decks" },
+                { name: "WHY AFTER THAT", href: "/#why-us" },
+                { name: "PROCESS", href: "/#process" },
+                { name: "LOCATIONS", href: "/#locations" },
+                { name: "CONTACT", href: "/#contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={(e) => {
-                      e.preventDefault();
-                      sound.playClick();
-                      document.querySelector(link.href)?.scrollIntoView({ behavior: "smooth" });
+                      if (link.href.includes("#")) {
+                        const hash = link.href.substring(link.href.indexOf("#"));
+                        const element = document.querySelector(hash);
+                        if (element) {
+                          e.preventDefault();
+                          sound.playClick();
+                          element.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }
                     }}
                     onMouseEnter={() => sound.playHover()}
                     className="text-white/70 hover:text-[#F20D18] transition-colors flex items-center justify-between group py-1"
                   >
                     <span>{link.name}</span>
                     <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -105,15 +112,91 @@ export default function Footer() {
           {/* Col 3: Service Verticals */}
           <div className="lg:col-span-2 space-y-3 font-mono text-xs">
             <span className="text-[#F20D18] font-bold tracking-widest uppercase block mb-4">
-              // FIVE VERTICALS
+              // SERVICE VERTICALS
             </span>
             <ul className="space-y-2 text-white/70">
-              <li className="hover:text-white transition-colors">BRANDING & IDENTITY</li>
-              <li className="hover:text-white transition-colors">ADVERTISING & PRODUCTION</li>
-              <li className="hover:text-white transition-colors">DIGITAL MARKETING</li>
-              <li className="hover:text-white transition-colors">TECHNOLOGY & APPS</li>
-              <li className="hover:text-white transition-colors">PR & EXPERIENCES</li>
-              <li className="text-[#F20D18] font-bold pt-1">AI CREATIVE TECH</li>
+              <li>
+                <Link
+                  href="/services/branding-and-identity"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  BRANDING & IDENTITY
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/advertising-and-campaigns"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  ADVERTISING & CAMPAIGNS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/film-and-video-production"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  AD FILMS & VIDEO
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/digital-marketing"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  DIGITAL MARKETING
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/website-development"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  TECH & SOFTWARE
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/mobile-app-development"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  MOBILE APPS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/influencer-marketing"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  INFLUENCER MARKETING
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/public-relations"
+                  onMouseEnter={() => sound.playHover()}
+                  className="hover:text-[#F20D18] transition-colors block py-0.5"
+                >
+                  PUBLIC RELATIONS
+                </Link>
+              </li>
+              <li className="pt-2 border-t border-white/10">
+                <Link
+                  href="/services"
+                  onMouseEnter={() => sound.playHover()}
+                  className="text-[#F20D18] font-bold hover:underline flex items-center gap-1"
+                >
+                  <span>VIEW ALL SERVICES</span>
+                  <ArrowUpRight className="w-3 h-3" />
+                </Link>
+              </li>
             </ul>
           </div>
 

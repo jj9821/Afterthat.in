@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Volume2, VolumeX, Menu, X, ArrowUpRight } from "lucide-react";
 import { sound } from "@/utils/sound";
@@ -12,6 +14,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ onSoundToggle }: NavbarProps) {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
@@ -84,9 +87,15 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
   const handleLinkClick = (href: string) => {
     sound.playClick();
     setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        router.push(`/${href}`);
+      }
+    } else {
+      router.push(href);
     }
   };
 
@@ -101,11 +110,14 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
       >
         <div className="max-w-[1720px] mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between">
           {/* Brand Logo */}
-          <a
-            href="#hero"
+          <Link
+            href="/"
             onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick("#hero");
+              const el = document.querySelector("#hero");
+              if (el) {
+                e.preventDefault();
+                handleLinkClick("#hero");
+              }
             }}
             onMouseEnter={() => sound.playHover()}
             data-cursor="AFTER THAT"
@@ -122,7 +134,7 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
                 ENTERTAINMENT LLP
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Status Bar / Quick Navigation */}
           <div className="hidden lg:flex items-center gap-6 font-mono text-[11px] text-[#888888]">

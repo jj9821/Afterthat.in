@@ -46,51 +46,74 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.afterthat.in"),
-  title: "AFTER THAT ENTERTAINMENT | Ideas. People. Brands. Beyond.",
+  title: {
+    default: "AFTER THAT | Creative, Branding, Advertising & Digital Agency India",
+    template: "%s | AFTER THAT",
+  },
   description:
-    "AFTER THAT ENTERTAINMENT is an independent integrated creative, advertising, digital marketing and technology agency operating across Kochi, Bangalore and Ahmedabad. From brand strategy and commercial ad films to performance marketing, custom software, and AI creative technology.",
+    "AFTER THAT is an independent creative agency delivering branding, advertising, digital marketing, commercial film production and technology solutions for ambitious brands across India.",
   keywords: [
+    "Creative agency in India",
+    "Creative agency India",
+    "Best creative agencies in India",
+    "Branding agency India",
+    "Brand identity agency India",
+    "Advertising agency India",
+    "Ad film production company India",
+    "Commercial video production company India",
+    "Digital marketing agency India",
+    "Performance marketing agency India",
+    "Website development company India",
+    "Custom software development company India",
+    "Mobile app development company India",
+    "Influencer marketing agency India",
+    "PR agency India",
     "AFTER THAT ENTERTAINMENT",
     "AFTER THAT",
-    "Creative advertising agency",
-    "Advertising agency in Kochi",
-    "Digital marketing agency in Kochi",
-    "Branding and brand identity services",
-    "Ad film production",
-    "AI video advertisements",
-    "Social media marketing services",
-    "Performance marketing",
-    "SEO services",
-    "Website development",
-    "E-commerce website development",
-    "Mobile app development",
-    "Custom software development",
-    "Company profile design",
-    "Investor pitch deck design",
-    "Celebrity management",
-    "Public relations and PR campaigns",
     "Kochi",
     "Bangalore",
     "Ahmedabad",
   ],
-  authors: [{ name: "AFTER THAT ENTERTAINMENT LLP" }],
+  authors: [{ name: "AFTER THAT ENTERTAINMENT LLP", url: "https://www.afterthat.in" }],
+  creator: "AFTER THAT ENTERTAINMENT LLP",
+  publisher: "AFTER THAT ENTERTAINMENT LLP",
   alternates: {
     canonical: "https://www.afterthat.in",
   },
   openGraph: {
-    title: "AFTER THAT ENTERTAINMENT | Ideas. People. Brands. Beyond.",
+    title: "AFTER THAT | Creative, Branding, Advertising & Digital Agency India",
     description:
-      "Independent integrated creative, advertising, digital marketing and technology agency. We bring strategy, creativity, advertising, marketing and technology together.",
+      "AFTER THAT is an independent creative agency delivering branding, advertising, digital marketing, film production and technology solutions for ambitious brands.",
     url: "https://www.afterthat.in",
     siteName: "AFTER THAT ENTERTAINMENT",
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/portfolio/branding/dizzire/cover.webp",
+        width: 1200,
+        height: 630,
+        alt: "AFTER THAT ENTERTAINMENT LLP - Integrated Creative & Tech Agency",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AFTER THAT ENTERTAINMENT | Integrated Creative & Tech Agency",
+    title: "AFTER THAT | Creative, Branding, Advertising & Digital Agency India",
     description:
-      "Ideas. People. Brands. Beyond. Operating across Kochi, Bangalore & Ahmedabad.",
+      "Ideas. People. Brands. Beyond. Integrated creative, advertising, digital marketing and technology agency in India.",
+    images: ["/portfolio/branding/dizzire/cover.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -99,24 +122,53 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "AdvertisingAgency",
+    "@id": "https://www.afterthat.in/#organization",
     name: "AFTER THAT ENTERTAINMENT LLP",
-    alternateName: "AFTER THAT",
+    alternateName: ["AFTER THAT", "After That Entertainment"],
+    legalName: "After That Entertainment LLP",
     url: "https://www.afterthat.in",
     logo: "https://www.afterthat.in/public/next.svg",
     description:
-      "Independent integrated creative, advertising, digital marketing and technology agency bringing strategy, creativity, media production, marketing and technology together.",
+      "Independent integrated creative, advertising, digital marketing and technology agency bringing strategy, creativity, media production, marketing and bespoke software engineering together.",
     telephone: "+91-96561-66555",
     email: "connect@afterthat.in",
     sameAs: ["https://www.instagram.com/afterthat.in/"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Kochi",
+      addressRegion: "Kerala",
+      addressCountry: "IN",
+    },
     areaServed: [
+      { "@type": "Country", name: "India" },
       { "@type": "City", name: "Kochi" },
       { "@type": "City", name: "Bangalore" },
       { "@type": "City", name: "Ahmedabad" },
     ],
-    serviceArea: "India & International",
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: "9.9312",
+        longitude: "76.2673",
+      },
+      geoRadius: "5000000",
+    },
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.afterthat.in/#website",
+    url: "https://www.afterthat.in",
+    name: "AFTER THAT ENTERTAINMENT",
+    description: "Creative, Branding, Advertising, Digital Marketing & Technology Agency in India",
+    publisher: {
+      "@id": "https://www.afterthat.in/#organization",
+    },
   };
 
   return (
@@ -127,7 +179,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className="bg-[#0A0A0A] text-white font-sans antialiased selection:bg-[#F20D18] selection:text-white overflow-x-hidden min-h-screen">

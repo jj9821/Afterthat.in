@@ -8,25 +8,91 @@ import CreativeArchiveSection from "@/components/CreativeArchiveSection";
 import PitchDecksSection from "@/components/PitchDecksSection";
 
 export const metadata: Metadata = {
-  title: "Creative Showcase & Archive | AFTER THAT ENTERTAINMENT",
+  title: "Work & Case Studies — Creative Agency India",
   description:
-    "Explore the complete creative archive of AFTER THAT ENTERTAINMENT: AI-powered advertising films, brand campaigns, pitch decks, and commercial case studies.",
+    "Explore commercial advertising campaigns, brand identity systems, AI ad film productions, and bespoke technology case studies developed by AFTER THAT across India.",
+  keywords: [
+    "Creative agency portfolio India",
+    "Advertising case studies India",
+    "Brand identity portfolio",
+    "Commercial video showcase",
+    "AI ad films India",
+    "AFTER THAT ENTERTAINMENT",
+  ],
   alternates: {
     canonical: "https://www.afterthat.in/work",
   },
   openGraph: {
-    title: "Creative Showcase & Archive | AFTER THAT ENTERTAINMENT",
+    title: "Work & Case Studies | AFTER THAT Creative Agency India",
     description:
-      "AI-powered advertising commercials, brand identity systems, strategy pitch decks, and digital experiences.",
+      "Explore commercial advertising campaigns, brand identity systems, AI ad film productions, and bespoke technology case studies developed by AFTER THAT across India.",
     url: "https://www.afterthat.in/work",
     siteName: "AFTER THAT ENTERTAINMENT",
+    locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/portfolio/branding/dizzire/cover.webp",
+        width: 1200,
+        height: 630,
+        alt: "AFTER THAT ENTERTAINMENT — Master Creative Archive",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work & Case Studies | AFTER THAT Creative Agency India",
+    description:
+      "Commercial advertising campaigns, brand identity systems, and bespoke digital experiences by AFTER THAT.",
+    images: ["/portfolio/branding/dizzire/cover.webp"],
   },
 };
 
 export default function WorkHubPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.afterthat.in",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Work",
+        item: "https://www.afterthat.in/work",
+      },
+    ],
+  };
+
+  const collectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://www.afterthat.in/work#collection",
+    name: "AFTER THAT Creative Archive & Portfolio",
+    description:
+      "Comprehensive repository of commercial advertising films, brand design systems, and digital engineering case studies.",
+    url: "https://www.afterthat.in/work",
+    publisher: {
+      "@type": "AdvertisingAgency",
+      name: "AFTER THAT ENTERTAINMENT LLP",
+      url: "https://www.afterthat.in",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#F20D18] selection:text-white relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
       <CustomCursor />
       <Navbar />
 

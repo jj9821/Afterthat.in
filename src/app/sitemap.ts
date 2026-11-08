@@ -1,10 +1,12 @@
 import { MetadataRoute } from "next";
 import { PROJECTS } from "@/data/projects";
+import { SEO_SERVICE_SLUGS } from "@/data/seo-services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.afterthat.in";
   const lastModified = new Date();
 
+  // Core Indexable Pages
   const coreRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -13,58 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/#about`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#services`,
+      url: `${baseUrl}/services`,
       lastModified,
       changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#ai-tech`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#work`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#why-us`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#process`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/#philosophy`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#locations`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/work`,
@@ -102,14 +56,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/work/kakapo`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/work/dizzire-silk-and-sarees`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/work/milli-flame-bistro-paris`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
   ];
 
-  const projectRoutes: MetadataRoute.Sitemap = PROJECTS.map((project) => ({
-    url: `${baseUrl}/work/${project.slug}`,
+  // Dedicated National Service Landing Pages (8 Core Verticals)
+  const serviceRoutes: MetadataRoute.Sitemap = SEO_SERVICE_SLUGS.map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
     lastModified,
     changeFrequency: "monthly",
-    priority: 0.85,
+    priority: 0.9,
   }));
 
-  return [...coreRoutes, ...projectRoutes];
+  // Dynamic Case Studies from Projects Manifest
+  // Filter out any standalone custom slugs to avoid duplicate entries
+  const standaloneSlugs = new Set(["kakapo", "dizzire-silk-and-sarees", "milli-flame-bistro-paris", "dizzire", "milli-flame"]);
+  const dynamicProjectRoutes: MetadataRoute.Sitemap = PROJECTS
+    .filter((project) => !standaloneSlugs.has(project.slug))
+    .map((project) => ({
+      url: `${baseUrl}/work/${project.slug}`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    }));
+
+  return [...coreRoutes, ...serviceRoutes, ...dynamicProjectRoutes];
 }
