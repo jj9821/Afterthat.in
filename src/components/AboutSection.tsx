@@ -303,7 +303,7 @@ export default function AboutSection() {
                   <div className="pt-4 border-t border-white/10 flex items-center justify-between font-mono text-xs">
                     <span className="text-white/40">EDITORIAL FEATURE</span>
                     <a
-                      href="https://entrepreneurethics.com"
+                      href="https://entrepreneurethics.com/meet-struggling-actor-anand-bhairavv/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#F20D18] font-bold hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform"
@@ -336,7 +336,7 @@ export default function AboutSection() {
                   <div className="pt-4 border-t border-white/10 flex items-center justify-between font-mono text-xs">
                     <span className="text-white/40">NATIONAL COVERAGE</span>
                     <a
-                      href="https://r9news.in"
+                      href="https://r9news.in/2024/09/17/a-journey-of-innovation-and-excellence-after-that-entertainment-led-by-anand-bhairav/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#F20D18] font-bold hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform"
