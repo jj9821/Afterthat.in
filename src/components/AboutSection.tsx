@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Layers, Target, Cpu, CheckCircle2, MapPin } from "lucide-react";
+import { Layers, Target, Cpu, CheckCircle2, MapPin, Film, ExternalLink, Newspaper } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import TiltCard from "@/components/motion/TiltCard";
 import ScrambleText from "@/components/motion/ScrambleText";
@@ -192,6 +192,161 @@ export default function AboutSection() {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Dedicated: Leadership & Cinema Pedigree Section */}
+        <div className="pt-16 md:pt-20 border-t border-white/10 space-y-12">
+          {/* Eyebrow & Headline */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
+                <Film className="w-4 h-4 text-[#F20D18]" />
+                <span>// FOUNDER & DIRECTION // CINEMA PEDIGREE</span>
+              </div>
+              <h3 className="font-anton text-3xl sm:text-5xl md:text-6xl uppercase tracking-tight text-white">
+                LEADERSHIP & <span className="text-[#F20D18]">CINEMA PEDIGREE</span>
+              </h3>
+            </div>
+            <div className="max-w-md font-mono text-xs text-[#888888] leading-relaxed">
+              <p>
+                ENGINEERED WITH TECHNICAL RIGOR. NURTURED ON 35MM CELLULOID.
+                DIRECTED FOR COMMERCIAL DOMINANCE.
+              </p>
+            </div>
+          </div>
+
+          {/* Main Leadership Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+            {/* Left 7 cols: Founder Narrative & Cinema Track Record */}
+            <div className="lg:col-span-7 bg-[#111111] border border-white/10 p-8 sm:p-10 space-y-8 flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-6">
+                  <div>
+                    <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase block">
+                      FOUNDER & CREATIVE DIRECTOR
+                    </span>
+                    <h4 className="font-anton text-3xl sm:text-4xl text-white tracking-wide uppercase mt-1">
+                      ANAND BHAIRAVV
+                    </h4>
+                  </div>
+                  <div className="px-3 py-1.5 bg-white/5 border border-white/10 font-mono text-xs text-white/80 uppercase">
+                    ECE ENGINEER × CINEMA PRACTITIONER
+                  </div>
+                </div>
+
+                <div className="space-y-4 font-space text-[#cccccc] text-sm sm:text-base leading-relaxed">
+                  <p>
+                    Trained as an Electronics & Communication Engineer, Anand Bhairavv took the unconventional path of applying mathematical precision and systems architecture to the visceral realm of storytelling. Over seven intensive years in Indian cinema, he mastered the complex machinery of commercial film sets, high-budget multi-camera shoots, and dramatic narrative structure.
+                  </p>
+                  <p>
+                    Having worked as an actor and producer alongside powerhouse talents such as legendary Hindi/Marathi theatre and cinema actor <span className="text-white font-semibold">Makarand Deshpande</span>, cricketer turned pan-Indian star <span className="text-white font-semibold">S. Sreesanth</span>, and leading South Indian actress <span className="text-white font-semibold">Nikki Galrani</span>, Bhairavv infuses AFTER THAT with authentic cinematic grammar.
+                  </p>
+                  <p>
+                    Under his leadership, AFTER THAT operates not as a standard design boutique, but as a full-spectrum film production studio and brand laboratory—uniting feature-film aesthetics with modern software engineering and data-driven advertising.
+                  </p>
+                </div>
+              </div>
+
+              {/* Three Pillared Achievements */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-white/10">
+                <div className="p-3.5 bg-black/60 border border-white/5 space-y-1">
+                  <span className="font-mono text-[10px] text-[#F20D18] tracking-widest uppercase block">
+                    FOUNDATION
+                  </span>
+                  <span className="font-anton text-lg text-white block">ECE DEGREE</span>
+                  <span className="font-mono text-[11px] text-[#888888] block">Systems & Tech Pedigree</span>
+                </div>
+                <div className="p-3.5 bg-black/60 border border-white/5 space-y-1">
+                  <span className="font-mono text-[10px] text-[#F20D18] tracking-widest uppercase block">
+                    CINEMA EXPERIENCE
+                  </span>
+                  <span className="font-anton text-lg text-white block">7+ YEARS</span>
+                  <span className="font-mono text-[11px] text-[#888888] block">Actor & Film Producer</span>
+                </div>
+                <div className="p-3.5 bg-black/60 border border-white/5 space-y-1">
+                  <span className="font-mono text-[10px] text-[#F20D18] tracking-widest uppercase block">
+                    KEY COLLABORATIONS
+                  </span>
+                  <span className="font-anton text-lg text-white block">PAN-INDIA</span>
+                  <span className="font-mono text-[11px] text-[#888888] block">Makarand, Sreesanth, Nikki</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right 5 cols: Press & Media Citation Cards */}
+            <div className="lg:col-span-5 flex flex-col gap-5">
+              <div className="flex items-center gap-2 font-mono text-xs text-[#888888] uppercase tracking-widest">
+                <Newspaper className="w-4 h-4 text-[#F20D18]" />
+                <span>VERIFIED PRESS & EDITORIAL CITATIONS</span>
+              </div>
+
+              {/* Press Citation Card 1: Entrepreneur Ethics */}
+              <TiltCard intensity={8} glare={true} className="flex-1">
+                <div className="h-full bg-[#111111] border border-white/10 hover:border-[#F20D18] transition-colors p-6 sm:p-7 flex flex-col justify-between space-y-5 group">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-[11px] px-2.5 py-1 bg-[#F20D18]/10 text-[#F20D18] font-bold border border-[#F20D18]/30 uppercase tracking-widest">
+                        ENTREPRENEUR ETHICS
+                      </span>
+                      <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-[#F20D18] transition-colors" />
+                    </div>
+                    <h5 className="font-anton text-xl sm:text-2xl text-white uppercase tracking-tight group-hover:text-[#F20D18] transition-colors">
+                      &ldquo;Struggle and Success – On My Terms – Anand Bhairavv&rdquo;
+                    </h5>
+                    <p className="font-space text-xs sm:text-sm text-[#888888] leading-relaxed">
+                      Featured profile exploring Anand Bhairavv&apos;s journey from an engineering graduate to on-screen cinema roles and founding AFTER THAT ENTERTAINMENT LLP as an independent creative agency.
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between font-mono text-xs">
+                    <span className="text-white/40">EDITORIAL FEATURE</span>
+                    <a
+                      href="https://entrepreneurethics.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#F20D18] font-bold hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                    >
+                      <span>READ CITATION</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </TiltCard>
+
+              {/* Press Citation Card 2: R9 News */}
+              <TiltCard intensity={8} glare={true} className="flex-1">
+                <div className="h-full bg-[#111111] border border-white/10 hover:border-[#F20D18] transition-colors p-6 sm:p-7 flex flex-col justify-between space-y-5 group">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-[11px] px-2.5 py-1 bg-[#F20D18]/10 text-[#F20D18] font-bold border border-[#F20D18]/30 uppercase tracking-widest">
+                        R9 NEWS
+                      </span>
+                      <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-[#F20D18] transition-colors" />
+                    </div>
+                    <h5 className="font-anton text-xl sm:text-2xl text-white uppercase tracking-tight group-hover:text-[#F20D18] transition-colors">
+                      &ldquo;A Journey of Innovation and Excellence: After That Entertainment&rdquo;
+                    </h5>
+                    <p className="font-space text-xs sm:text-sm text-[#888888] leading-relaxed">
+                      National business coverage on AFTER THAT ENTERTAINMENT&apos;s integrated model uniting cinema production, branding systems, performance marketing, and generative AI workflows.
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between font-mono text-xs">
+                    <span className="text-white/40">NATIONAL COVERAGE</span>
+                    <a
+                      href="https://r9news.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#F20D18] font-bold hover:underline flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                    >
+                      <span>READ CITATION</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </TiltCard>
             </div>
           </div>
         </div>

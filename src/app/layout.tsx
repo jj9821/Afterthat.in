@@ -130,7 +130,7 @@ export default function RootLayout({
     alternateName: ["AFTER THAT", "After That Entertainment"],
     legalName: "After That Entertainment LLP",
     url: "https://www.afterthat.in",
-    logo: "https://www.afterthat.in/public/next.svg",
+    logo: "https://www.afterthat.in/next.svg",
     description:
       "Independent integrated creative, advertising, digital marketing and technology agency bringing strategy, creativity, media production, marketing and bespoke software engineering together.",
     telephone: "+91-96561-66555",

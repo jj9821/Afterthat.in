@@ -312,6 +312,7 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
                     alt={`${project.title} - ${project.role}`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   />
                   <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-sm px-2.5 py-1 font-mono text-[9px] text-white tracking-widest uppercase border border-white/10">
                     {project.category}

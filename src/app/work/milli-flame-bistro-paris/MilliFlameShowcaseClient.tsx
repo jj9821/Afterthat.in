@@ -343,7 +343,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/logo/primary-logo-tropical-cyan.webp"
                   alt="Primary Logo on Tropical Cyan"
                   fill
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-xs text-white/60">
@@ -372,7 +373,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/logo/primary-logo-riviera-teal.webp"
                   alt="Primary Logo on Riviera Teal"
                   fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-xs text-white/60">
@@ -397,7 +399,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/logo/primary-logo-true-gold.webp"
                   alt="Primary Logo on True Gold"
                   fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-xs text-white/60">
@@ -422,7 +425,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/logo/secondary-logo-quetzal-green.webp"
                   alt="Secondary Logo in Quetzal Green"
                   fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-xs text-white/60">
@@ -447,7 +451,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/identity/logo-construction-equation.webp"
                   alt="Logo Construction Equation"
                   fill
-                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-[11px] text-white/60">
@@ -469,7 +474,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/logo/circular-emblem-color-variations.webp"
                   alt="Circular Emblem Color Variations"
                   fill
-                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-[11px] text-white/60">
@@ -491,7 +497,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/identity/logo-safe-area-grid.webp"
                   alt="Logo Safe Area Grid"
                   fill
-                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-[11px] text-white/60">
@@ -513,7 +520,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/identity/logo-incorrect-usage-matrix.webp"
                   alt="Logo Incorrect Usage Matrix"
                   fill
-                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-[11px] text-white/60">
@@ -632,7 +640,8 @@ export default function MilliFlameShowcaseClient() {
                     src="/portfolio/milli-flame/colour-and-typography/font-specimen-nexa.webp"
                     alt="Nexa Typeface Specimen"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -660,7 +669,8 @@ export default function MilliFlameShowcaseClient() {
                     src="/portfolio/milli-flame/colour-and-typography/font-specimen-montserrat.webp"
                     alt="Montserrat Typeface Specimen"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -722,7 +732,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/brand-patterns/concentric-ripples-flame-teal.webp"
                   alt="Concentric Ripple Pattern"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-xs text-white/60">
@@ -747,7 +758,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/brand-patterns/circular-emblem-wallpaper-gold.webp"
                   alt="Circular Emblem Wallpaper on True Gold"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-xs text-white/60">
@@ -772,7 +784,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/brand-patterns/swirled-butter-gold-motto.webp"
                   alt="Artisanal Butter Swirl with Gold Slogan"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-xs text-white/60">
@@ -797,7 +810,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/brand-patterns/horizontal-flame-brandmark-line.webp"
                   alt="Horizontal Flame Line Device"
                   fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <p className="font-mono text-xs text-white/60">
@@ -916,7 +930,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/gourmet-burger-plate.webp"
                   alt="Gourmet Burger on Blue Plate"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">CHAR-GRILLED GOURMET BURGER</h4>
@@ -936,7 +951,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/lattice-apple-pie.webp"
                   alt="Lattice Apple Pie on Stone Table"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">LATTICE FRUIT TART</h4>
@@ -956,7 +972,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/roast-chicken-drumstick.webp"
                   alt="Flame-Roasted Chicken Drumsticks"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">OPEN-FIRE ROAST POULTRY</h4>
@@ -976,7 +993,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/tiramisu-dessert-ladyfingers.webp"
                   alt="Artisanal Cocoa Tiramisu"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">ARTISANAL COCOA TIRAMISU</h4>
@@ -999,7 +1017,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/strawberry-milkshakes-whipped-cream.webp"
                   alt="Strawberry Milkshakes with Whipped Cream"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">HANDCRAFTED MILKSHAKES</h4>
@@ -1019,7 +1038,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/breakfast-burger-egg-bacon.webp"
                   alt="Gourmet Breakfast Burger with Egg & Bacon"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">SUNNY-SIDE BREAKFAST BURGER</h4>
@@ -1039,7 +1059,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/brand-tone-burger-bite.webp"
                   alt="Guest Biting Into Burger with Gold Slogan"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">THE PURE SENSATION OF TASTE</h4>
@@ -1133,7 +1154,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/food-photography/lemon-iced-beverage-coasters.webp"
                   alt="Drink Coasters with Iced Drink"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">ABSORBENT COASTERS</h4>
@@ -1156,7 +1178,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/packaging/business-cards-wood-block.webp"
                   alt="Business Cards Stack on Cedar Block"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">EMBOSSED RIPPLE BACK</h4>
@@ -1179,7 +1202,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/packaging/business-card-front-mockup.webp"
                   alt="Business Card Front Mockup"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">QUETZAL GREEN PRINT</h4>
@@ -1202,7 +1226,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/stationery/letterhead-trifold-wood.webp"
                   alt="Letterhead on Wood Table"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">TRI-FOLD LETTERHEAD</h4>
@@ -1322,7 +1347,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/uniforms/staff-tshirt-white-front-back.webp"
                   alt="Staff Crewneck T-Shirt Front & Back"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">STAFF CREWNECK T-SHIRT</h4>
@@ -1342,7 +1368,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/uniforms/staff-cap-riviera-teal.webp"
                   alt="Staff Baseball Cap in Riviera Teal"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-white">TWILL BASEBALL CAP</h4>
@@ -1362,7 +1389,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/uniforms/staff-model-white-uniform.webp"
                   alt="Staff Uniform Lookbook Model"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h4 className="font-anton text-lg uppercase text-black">UNIFORM LOOKBOOK MODEL</h4>
@@ -1416,7 +1444,8 @@ export default function MilliFlameShowcaseClient() {
                   src="/portfolio/milli-flame/digital/mobile-ordering-splash-screen.webp"
                   alt="Mobile Ordering App Splash Screen"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 

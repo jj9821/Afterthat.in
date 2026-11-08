@@ -28,7 +28,15 @@ export const getProjectBySlug = (slug: string): PortfolioProject | undefined => 
       (slug === "kakapo-streetwear-identity" && (p.slug === "kakapo" || p.id === "kakapo")) ||
       (slug === "kakapo" && (p.slug === "kakapo-streetwear-identity" || p.id === "kakapo-streetwear-identity")) ||
       (slug === "milli-flame" && (p.slug === "milli-flame-bistro-paris" || p.id === "milli-flame-bistro-paris")) ||
-      (slug === "milli-flame-bistro-paris" && (p.slug === "milli-flame" || p.id === "milli-flame"))
+      (slug === "milli-flame-bistro-paris" && (p.slug === "milli-flame" || p.id === "milli-flame")) ||
+      ((slug === "eva-gold-broadcast-tvc" || slug === "eva-gold-commercial-cinema" || slug === "eva-gold") &&
+        (p.slug === "eva-gold-and-diamonds-broadcast-tvc" || p.id === "eva-gold-and-diamonds-broadcast-tvc")) ||
+      ((slug === "au-small-finance-bank" || slug === "au-bank" || slug === "au-small-finance-bank-festive-films") &&
+        (p.slug === "au-small-finance-bank-festive-films" || p.id === "au-small-finance-bank-festive-films")) ||
+      ((slug === "excel-diagnostic-centre" || slug === "excel-lab" || slug === "excel-diagnostic-centre-tvc") &&
+        (p.slug === "excel-diagnostic-centre-tvc" || p.id === "excel-diagnostic-centre-tvc")) ||
+      ((slug === "international-apparel-production" || slug === "international-models-apparel" || slug === "international-apparel") &&
+        (p.slug === "international-models-9-category-apparel" || p.id === "international-models-9-category-apparel"))
   );
 };
 

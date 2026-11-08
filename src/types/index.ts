@@ -33,6 +33,8 @@ export interface PortfolioProject {
   verified: boolean;
   featured: boolean;
   videoUrl?: string;
+  youtubeId?: string;
+  youtubeIds?: Record<string, string>;
 
   // National-Level 10-Part Case Study Architecture
   clientBackground?: string;

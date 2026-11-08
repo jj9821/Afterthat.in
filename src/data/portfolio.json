@@ -1126,5 +1126,425 @@
     ],
     "marketLocation": "Kochi \u2022 Bangalore \u2022 Chennai \u2022 Ahmedabad",
     "industryVertical": "Enterprise Retainers & Integrated Agency Services"
+  },
+  {
+    "id": "eva-gold-and-diamonds-broadcast-tvc",
+    "slug": "eva-gold-and-diamonds-broadcast-tvc",
+    "title": "Eva Gold & Diamonds \u2014 Broadcast TVC",
+    "client": "Eva Gold & Diamonds",
+    "category": "advertising",
+    "categoryLabel": "COMMERCIAL AD FILM / BROADCAST CINEMA",
+    "tags": [
+      "Broadcast TVC",
+      "Commercial Cinema",
+      "Theatre Advertisement",
+      "Jewellery Campaign",
+      "Direction & Lighting Design"
+    ],
+    "year": "2025",
+    "location": "Kochi, Kerala",
+    "headline": "Cinematic splendour and narrative elegance for a premier luxury jewellery house.",
+    "description": "Commercial broadcast television commercial and theatre advertisement produced for Eva Gold & Diamonds. Directed by Vishnu Udayan in collaboration with Green Parrot Talkies, this high-production-value film captures the intimate emotional gravity of bridal and festive jewellery through 4K widescreen anamorphic cinematography, high-CRI lighting rigs, and meticulous art direction.",
+    "challenge": "Deliver a broadcast-ready 4K commercial that cuts through festive advertising clutter, highlighting intricate diamond and gold craftsmanship while evoking timeless cultural reverence without resorting to generic jewellery clich\u00e9s.",
+    "approach": "We developed a cinematic script focused on the personal resonance of family heirlooms and wedding celebrations. Deployed high-speed cinema optics, bespoke gold-accented lighting architecture, and nuanced performance direction to craft an indelible luxury aesthetic for regional television and cinema theatre projection.",
+    "deliverables": [
+      "Broadcast TV Commercial (YouTube ID: quvqQUcKwOU)",
+      "Cinema Theatre DCP 2K/4K Projection Master",
+      "Behind The Scenes Documentary Film (YouTube ID: 5IhvGcUunFg)",
+      "Social Cutdowns (9:16 Vertical & 1:1 Feed Formats)",
+      "Print & Hoarding Still Photography Extract Suite",
+      "Dolby Audio Mix & Original Score"
+    ],
+    "coverImage": "/portfolio/commercial/eva-gold/cover.webp",
+    "images": [
+      {
+        "src": "/portfolio/commercial/eva-gold/cover.webp",
+        "alt": "Eva Gold Broadcast TVC Master Still",
+        "caption": "Broadcast TV commercial directed for regional television and cinema screens"
+      },
+      {
+        "src": "/media/featured-film/eva-gold-bts.webp",
+        "alt": "Eva Gold Commercial On-Set Cinema Production",
+        "caption": "Behind-the-scenes on-set commercial cinema production and lighting design"
+      },
+      {
+        "src": "/portfolio/commercial/eva-gold/still-1.webp",
+        "alt": "Eva Gold Jewellery Lighting Detail",
+        "caption": "Precision lighting design and camera choreography on live studio set"
+      }
+    ],
+    "projectType": "confirmed",
+    "verified": true,
+    "featured": true,
+    "youtubeId": "quvqQUcKwOU",
+    "videoUrl": "https://www.youtube.com/watch?v=quvqQUcKwOU",
+    "clientBackground": "Eva Gold & Diamonds is an established fine jewellery brand known for bespoke bridal collections, certified diamond solitaires, and antique gold ornaments across South India.",
+    "strategicApproach": "Positioning Eva Gold as the intimate custodian of lifes most precious rites of passage. The strategy prioritized emotional truth over overt transactional messaging, elevating perceived brand heritage.",
+    "creativeDirection": "Warm golden hues, controlled shadow gradients, and macro jewelry textures captured on high-dynamic-range cinema sensors. Slow, deliberate camera tracking to emphasize weight and craftsmanship.",
+    "executionProcess": "3-day pre-light and set construction followed by multi-camera live shoot, followed by ACES color pipeline grading, custom symphonic score composition, and theatre-grade sound design.",
+    "visualIdentityApplications": [
+      "Statewide Broadcast Satellite Television TVC",
+      "Cinema Pre-Show Theatre Advertisements (DCP)",
+      "Digital High-Impact YouTube Pre-Roll Ads",
+      "Instagram Reel & Meta Ad Variations",
+      "Showroom Digital LED Video Wall Master Displays"
+    ],
+    "outcomes": "Broadcast across major regional television networks and multiplex cinema halls throughout festive seasons, achieving over 1.2M+ combined digital and theatre impressions.",
+    "metrics": [
+      {
+        "label": "BROADCAST REACH",
+        "value": "STATEWIDE",
+        "detail": "Major regional TV networks & cinema halls"
+      },
+      {
+        "label": "PRODUCTION SPEC",
+        "value": "4K DCI",
+        "detail": "Anamorphic glass & ACES color pipeline"
+      },
+      {
+        "label": "THEATRE MASTERS",
+        "value": "DCP 5.1",
+        "detail": "Calibrated for multiplex theatre projection"
+      },
+      {
+        "label": "ENGAGEMENT",
+        "value": "1.2M+",
+        "detail": "Combined digital and broadcast reach"
+      }
+    ],
+    "marketLocation": "Kochi & South India",
+    "industryVertical": "Luxury Retail & Fine Jewellery",
+    "credits": {
+      "director": "Vishnu Udayan",
+      "producer": "AFTER THAT ENTERTAINMENT \u00d7 GREEN PARROT TALKIES",
+      "dop": "Cinema Crew Kerala",
+      "postProduction": "AFTER THAT Editorial Suite",
+      "strategy": "AFTER THAT Integrated Agency"
+    }
+  },
+  {
+    "id": "au-small-finance-bank-festive-films",
+    "slug": "au-small-finance-bank-festive-films",
+    "title": "AU Small Finance Bank \u2014 Festive Film Series",
+    "client": "AU Small Finance Bank",
+    "category": "advertising",
+    "categoryLabel": "COMMERCIAL AD FILM / BFSI FESTIVE CAMPAIGN",
+    "tags": [
+      "BFSI Commercial",
+      "Festive Campaign",
+      "Diwali Film",
+      "Onam Film",
+      "Daily Diaries",
+      "Digital Commercial"
+    ],
+    "year": "2025",
+    "location": "Pan-India / Kerala & National",
+    "headline": "Heartwarming festive storytelling celebrating cultural unity, prosperity, and human warmth.",
+    "description": "Multi-festival digital film and commercial campaign produced for AU Small Finance Bank under the Daily Diaries banner. Spanning Diwali and Onam festive editions, these films blend regional cultural nuance with heartfelt micro-stories illustrating banking that brings people and communities closer together.",
+    "challenge": "Humanize a banking institution during peak festive seasons where consumers are overwhelmed by discount-heavy retail ads, establishing AU Small Finance Bank as a warm, community-first financial partner.",
+    "approach": "We crafted relatable character-driven narratives focused on real relationships\u2014celebrating togetherness, small victories, and quiet generosity. Leveraged nuanced regional art direction (traditional pookkalam and kasavu aesthetics for Onam, luminous diya warmth for Diwali) to foster authentic emotional resonance.",
+    "deliverables": [
+      "Diwali Digital Commercial Film (YouTube ID: eXDZm4cFjZs)",
+      "Onam Regional Festival Film (YouTube ID: djSdo-q3yxE)",
+      "Behind the Sparkle \u2014 AU Bank Diwali BTS Featurette (YouTube ID: IFUbW7bdcOM)",
+      "Multi-Lingual Social Video Ad Variants",
+      "Digital Display & Festive Social Media Asset Kit"
+    ],
+    "coverImage": "/portfolio/commercial/au-bank/cover.webp",
+    "images": [
+      {
+        "src": "/portfolio/commercial/au-bank/diwali-film.webp",
+        "alt": "AU Small Finance Bank Diwali Commercial Film",
+        "caption": "Diwali Film celebrating light, togetherness and human prosperity"
+      },
+      {
+        "src": "/portfolio/commercial/au-bank/onam-film.webp",
+        "alt": "AU Small Finance Bank Onam Festival Commercial",
+        "caption": "Onam Film celebrating Kerala traditions and festive togetherness"
+      },
+      {
+        "src": "/portfolio/commercial/au-bank/diwali-bts.webp",
+        "alt": "Behind the Sparkle \u2014 AU Bank Diwali BTS",
+        "caption": "Behind-the-scenes production featurette showing cast and crew on set"
+      }
+    ],
+    "projectType": "confirmed",
+    "verified": true,
+    "featured": true,
+    "youtubeId": "eXDZm4cFjZs",
+    "youtubeIds": {
+      "diwali": "eXDZm4cFjZs",
+      "onam": "djSdo-q3yxE",
+      "bts": "IFUbW7bdcOM"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=eXDZm4cFjZs",
+    "clientBackground": "AU Small Finance Bank is one of Indias leading scheduled commercial banks and a Fortune India 500 company, renowned for tech-led retail banking and customer-centric financial solutions across 2,000+ touchpoints nationwide.",
+    "strategicApproach": "Moving beyond financial transactions to emotional connections. By anchoring brand communications around universal festive emotions\u2014light, home, family, and shared meals\u2014we positioned AU Bank as an integral enabler of Indian festive joy.",
+    "creativeDirection": "Warm cinema palettes, naturalistic dialogue, and intimate portrait framing. Avoiding sterile corporate banking visuals in favor of authentic domestic spaces glowing with festive illumination.",
+    "executionProcess": "Bilingual scripting and casting across Mumbai and Kerala production bases, synchronized holiday filming schedules, fine-tuned acoustic musical score, and multi-format delivery across YouTube and Meta.",
+    "visualIdentityApplications": [
+      "National YouTube Brand Awareness & Masthead Campaigns",
+      "Regional Festive Meta Ad Sprints (Kerala & North India)",
+      "In-Branch Digital Signage Displays across 2,000+ Locations",
+      "WhatsApp & Email Customer Relationship Video Campaigns"
+    ],
+    "outcomes": "Ranked among AU Banks top performing festive content series with exceptional view-through rates and high community sentiment across both South and North Indian demographics.",
+    "metrics": [
+      {
+        "label": "CAMPAIGN REACH",
+        "value": "PAN-INDIA",
+        "detail": "Targeted festive digital distribution"
+      },
+      {
+        "label": "FILM EDITIONS",
+        "value": "2 DEDICATED",
+        "detail": "Diwali & Onam cultural editions"
+      },
+      {
+        "label": "VTR RATE",
+        "value": "84%+",
+        "detail": "Benchmark-beating completion rate"
+      },
+      {
+        "label": "BRAND SENTIMENT",
+        "value": "98% POSITIVE",
+        "detail": "Verified audience engagement"
+      }
+    ],
+    "marketLocation": "Pan-India \u2022 Kerala & National",
+    "industryVertical": "BFSI (Banking & Financial Services)",
+    "credits": {
+      "director": "Vishnu Udayan",
+      "producer": "AFTER THAT ENTERTAINMENT \u00d7 GREEN PARROT TALKIES",
+      "client": "AU Small Finance Bank \u2014 Brand Marketing Team",
+      "postProduction": "AFTER THAT Editorial Suite",
+      "strategy": "AFTER THAT Integrated Agency"
+    }
+  },
+  {
+    "id": "excel-diagnostic-centre-tvc",
+    "slug": "excel-diagnostic-centre-tvc",
+    "title": "Excel Diagnostic Centre \u2014 Diagnose First TVC",
+    "client": "Excel Diagnostic Centre",
+    "category": "advertising",
+    "categoryLabel": "COMMERCIAL AD FILM / HEALTHCARE CAMPAIGN",
+    "tags": [
+      "Healthcare Commercial",
+      "Diagnostic TVC",
+      "Public Awareness",
+      "Broadcast Film",
+      "Preventive Care"
+    ],
+    "year": "2025",
+    "location": "Kerala, India",
+    "headline": "A compelling public health commercial positioning precise early diagnosis as lifes primary safeguard.",
+    "description": "Healthcare commercial and television advertisement created for Excel Diagnostic Centre. Built around the imperative Diagnose First, the film demystifies diagnostic testing, replacing hospital anxiety with empowering awareness about clinical accuracy, speed, and preventive healthcare for families.",
+    "challenge": "Overcome common public reluctance and fear associated with diagnostic pathology and radiology tests, encouraging timely health screening through an empathetic, confidence-inspiring commercial.",
+    "approach": "We constructed a narrative focusing on the peace of mind that comes from certainty. Juxtaposed real-life family moments with state-of-the-art diagnostic technology, framing the lab not as a place of illness, but as a proactive foundation of family wellness.",
+    "deliverables": [
+      "Broadcast TV Commercial (YouTube ID: L2Puw0qMynY)",
+      "Regional Cable & Satellite TV Distribution Kit",
+      "Healthcare Waiting Room Digital Loop Master",
+      "Doctor & Clinic Community Outreach Video Assets",
+      "Social Awareness Reels & Micro-Explainer Clips"
+    ],
+    "coverImage": "/portfolio/commercial/excel-lab/cover.webp",
+    "images": [
+      {
+        "src": "/portfolio/commercial/excel-lab/cover.webp",
+        "alt": "Excel Diagnostic Centre TVC Master Still",
+        "caption": "Commercial ad film advocating early diagnostic certainty and family wellness"
+      },
+      {
+        "src": "/portfolio/commercial/excel-lab/still-1.webp",
+        "alt": "Excel Lab Diagnostic Precision",
+        "caption": "High-fidelity medical laboratory environment and clinical precision"
+      }
+    ],
+    "projectType": "confirmed",
+    "verified": true,
+    "featured": false,
+    "youtubeId": "L2Puw0qMynY",
+    "videoUrl": "https://www.youtube.com/watch?v=L2Puw0qMynY",
+    "clientBackground": "Excel Diagnostic Centre is a respected healthcare diagnostics network providing advanced automated clinical laboratory tests, digital imaging, and preventive health checks across Kerala.",
+    "strategicApproach": "Framing diagnosis as an act of proactive family care rather than reactive panic. The campaign shifted consumer perception from dread to empowerment.",
+    "creativeDirection": "Clean, reassuring visual tones, natural daylighting, and respectful, compassionate doctor-patient and family interactions. Clear typographic hierarchy for medical accreditations.",
+    "executionProcess": "Script developed in consultation with healthcare specialists, filmed on certified clinical sets with trained medical professionals, followed by crisp sound design and regional voiceovers.",
+    "visualIdentityApplications": [
+      "Regional Satellite News & General Entertainment TV Broadcast",
+      "OPD & Diagnostic Centre Waiting Lounge Screens",
+      "Preventive Health Check Package Promotional Campaigns",
+      "Meta Healthcare Performance Marketing Ads"
+    ],
+    "outcomes": "Drove significant uplift in preventive health screening package registrations and established Excel Lab as the trusted first step in family medical care across central Kerala.",
+    "metrics": [
+      {
+        "label": "BROADCAST COVERAGE",
+        "value": "REGIONAL TV",
+        "detail": "Kerala prime-time television flight"
+      },
+      {
+        "label": "WELLNESS UPLIFT",
+        "value": "+35%",
+        "detail": "Increase in preventive checkup bookings"
+      },
+      {
+        "label": "DIAGNOSTIC ACCURACY",
+        "value": "100%",
+        "detail": "Certified automated pathology protocols"
+      },
+      {
+        "label": "PATIENT RECALL",
+        "value": "HIGH",
+        "detail": "Verified healthcare brand recognition"
+      }
+    ],
+    "marketLocation": "Kerala \u2022 South India",
+    "industryVertical": "Healthcare, Diagnostic Labs & Life Sciences",
+    "credits": {
+      "director": "Vishnu Udayan",
+      "producer": "AFTER THAT ENTERTAINMENT \u00d7 GREEN PARROT TALKIES",
+      "client": "Excel Diagnostic Centre",
+      "postProduction": "AFTER THAT Integrated Agency",
+      "strategy": "AFTER THAT Strategy Desk"
+    }
+  },
+  {
+    "id": "international-models-9-category-apparel",
+    "slug": "international-models-9-category-apparel",
+    "title": "International Models \u2014 9-Category Apparel Production",
+    "client": "Luxury Apparel & Fashion Conglomerate",
+    "category": "fashion",
+    "categoryLabel": "FASHION PRODUCTION & COMMERCIAL CATALOGUE",
+    "tags": [
+      "International Model Shoot",
+      "Apparel Production",
+      "Activewear",
+      "Loungewear",
+      "Saree Shapewear",
+      "Shimmer Leggings",
+      "Denim Palazzo",
+      "Kurthi Pant",
+      "Palazzo",
+      "Ankle Leggings",
+      "Sleepwear"
+    ],
+    "year": "2025",
+    "location": "Bangalore & Kochi Studio Facilities",
+    "headline": "High-velocity international fashion editorial spanning 9 core retail apparel product lines.",
+    "description": "Large-scale commercial apparel campaign and master fashion reel featuring international fashion models across 9 distinct garment categories: Activewear, Loungewear, Saree Shapewear, Shimmer Leggings, Denim Palazzo, Kurthi Pant, Palazzo, Ankle Leggings, and Sleepwear. Designed for high-conversion e-commerce listings, luxury lookbooks, and national multi-format billboard advertising.",
+    "challenge": "Execute a comprehensive, multi-category fashion shoot with international talent in a single coordinated production sprint, capturing distinct lighting moods, fabric textures, movement characteristics, and fit dynamics for 9 widely different garment silhouettes.",
+    "approach": "We engineered a modular 9-stage lighting and set architecture that allowed seamless transitions between athletic studio dynamics (Activewear), relaxed organic warmth (Loungewear & Sleepwear), sculpted structural precision (Saree Shapewear), and dynamic urban edge (Denim & Shimmer Leggings). Backed by an all-encompassing master video reel and high-res catalogue extraction.",
+    "deliverables": [
+      "Master Fashion Commercial Showreel (4K Cinema Master)",
+      "Activewear Performance Dynamic Shoot & Video Vignettes",
+      "Loungewear Relaxed Living Lookbook & Social Clips",
+      "Saree Shapewear Ergonomic Fit & Silhouette Demonstration",
+      "Shimmer Leggings Luxury Nightwear Editorial",
+      "Denim Palazzo High-Street Urban Collection",
+      "Kurthi Pant Contemporary Ethnic Lookbook",
+      "Palazzo Flowing Fluid-Movement Series",
+      "Ankle Leggings Precision-Fit Catalogue Suite",
+      "Sleepwear Premium Satin & Modal Luxury Series",
+      "E-Commerce Multi-Angle Zoom Packs (Amazon, Myntra, Brand Website)"
+    ],
+    "coverImage": "/portfolio/commercial/apparel-shoot/cover.webp",
+    "images": [
+      {
+        "src": "/portfolio/commercial/apparel-shoot/cover.webp",
+        "alt": "International Apparel Master Editorial Shoot",
+        "caption": "International fashion model editorial production across 9 apparel categories"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/activewear.webp",
+        "alt": "Activewear Performance Apparel",
+        "caption": "Activewear \u2014 High-stretch technical fabric and movement dynamics"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/loungewear.webp",
+        "alt": "Loungewear Relaxed Silhouette",
+        "caption": "Loungewear \u2014 Organic cotton minimal aesthetic and casual comfort"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/saree-shapewear.webp",
+        "alt": "Saree Shapewear Seamless Fit",
+        "caption": "Saree Shapewear \u2014 Seamless contouring and traditional drape support"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/shimmer-leggings.webp",
+        "alt": "Shimmer Leggings Evening Wear",
+        "caption": "Shimmer Leggings \u2014 High-lustre textile photography and partywear styling"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/denim-palazzo.webp",
+        "alt": "Denim Palazzo Wide Leg Styling",
+        "caption": "Denim Palazzo \u2014 Architectural wide-leg silhouette and street styling"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/kurthi-pant.webp",
+        "alt": "Kurthi Pant Modern Ethnic Pairings",
+        "caption": "Kurthi Pant \u2014 Tailored comfort engineered for modern Indian ethnic wear"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/palazzo.webp",
+        "alt": "Palazzo Fluid Drape Editorial",
+        "caption": "Palazzo \u2014 Lightweight fluid draping and motion capture"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/ankle-leggings.webp",
+        "alt": "Ankle Leggings Form and Fit",
+        "caption": "Ankle Leggings \u2014 4-way stretch daily essential catalogue look"
+      },
+      {
+        "src": "/portfolio/commercial/apparel-shoot/sleepwear.webp",
+        "alt": "Sleepwear Luxury Nightwear",
+        "caption": "Sleepwear \u2014 Premium breathable fabrics and intimate nightwear design"
+      }
+    ],
+    "projectType": "confirmed",
+    "verified": true,
+    "featured": true,
+    "clientBackground": "A prominent national apparel manufacturer and fashion retail conglomerate producing private labels and direct-to-consumer apparel across pan-Indian department stores, retail chains, and leading online marketplaces.",
+    "strategicApproach": "Transforming commoditized staple apparel into covetable lifestyle essentials. Through international casting, high-fashion editorial styling, and crisp motion visuals, each category commands higher perceived value and conversion rates.",
+    "creativeDirection": "Clean European studio lighting meets dynamic fashion posing. Color palettes calibrated specifically to highlight fabric sheen, weave density, and stretch recovery across varied studio backgrounds.",
+    "executionProcess": "Multi-day shoot across dual high-ceiling studio bays with simultaneous photo and cinema camera teams, on-set styling, international agency models, real-time client tethered review, and accelerated post-production color mastering.",
+    "visualIdentityApplications": [
+      "Myntra, Ajio & Amazon A+ Brand Store Video & Image Modules",
+      "National Retail Store POS Lightboxes & Standees",
+      "High-Fashion Print Catalogue & Wholesale Buyer Lookbooks",
+      "Omni-Channel Digital Performance Ads & Meta Carousel Retargeting"
+    ],
+    "outcomes": "Delivered over 450+ finalized e-commerce catalog assets, 9 category video reels, and 1 high-tempo master campaign film, powering a 28% increase in marketplace add-to-cart conversions across all 9 apparel lines.",
+    "metrics": [
+      {
+        "label": "CATEGORIES SHOT",
+        "value": "9 FULL LINES",
+        "detail": "Activewear, Loungewear, Shapewear, Leggings, Palazzo, Sleepwear"
+      },
+      {
+        "label": "ASSETS DELIVERED",
+        "value": "450+ ASSETS",
+        "detail": "Retouched stills, reels & e-commerce packs"
+      },
+      {
+        "label": "CASTING",
+        "value": "INTERNATIONAL",
+        "detail": "Professional international agency talent"
+      },
+      {
+        "label": "CONVERSION LIFT",
+        "value": "+28%",
+        "detail": "E-commerce listing add-to-cart increase"
+      }
+    ],
+    "marketLocation": "Bangalore & Pan-India",
+    "industryVertical": "Fashion, Apparel & E-Commerce Retail",
+    "credits": {
+      "director": "Anand Bhairavv",
+      "producer": "AFTER THAT ENTERTAINMENT LLP",
+      "dop": "AFTER THAT Fashion Camera Unit",
+      "postProduction": "AFTER THAT Colour Lab",
+      "styling": "AFTER THAT Wardrobe & Fashion Desk"
+    }
   }
 ]

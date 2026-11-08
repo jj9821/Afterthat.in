@@ -640,7 +640,8 @@ export default function KakapoShowcaseClient() {
                     src="/portfolio/kakapo/logo-brush-feather-casual.webp"
                     alt="Raw Brush Feather Casual Logo"
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -673,7 +674,8 @@ export default function KakapoShowcaseClient() {
                     src="/portfolio/kakapo/logo-bird-flight-white.webp"
                     alt="Bird in Flight Light Logo"
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -706,7 +708,8 @@ export default function KakapoShowcaseClient() {
                     src="/portfolio/kakapo/logo-bird-flight-dark.webp"
                     alt="Bird in Flight Dark Logo"
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -739,7 +742,8 @@ export default function KakapoShowcaseClient() {
                     src="/portfolio/kakapo/logo-stacked-typo-white.webp"
                     alt="Stacked Lowercase White Logo"
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -772,7 +776,8 @@ export default function KakapoShowcaseClient() {
                     src="/portfolio/kakapo/logo-stacked-typo-dark.webp"
                     alt="Stacked Lowercase Dark Logo"
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -805,7 +810,8 @@ export default function KakapoShowcaseClient() {
                     src="/portfolio/kakapo/editorial-page3-construction.webp"
                     alt="Logo Construction Placard"
                     fill
-                    className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -969,7 +975,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/editorial-black-turtleneck-monogram.webp"
                   alt="Turtleneck and Oversized KK Monogram"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-5 space-y-1">
@@ -996,7 +1003,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/editorial-green-model-backprint.webp"
                   alt="Oversized Tee Back Print"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-5 space-y-1">
@@ -1023,7 +1031,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/editorial-navy-sweatshirt.webp"
                   alt="Navy Crewneck Oversized Fleece"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-5 space-y-1">
@@ -1182,7 +1191,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/design-typography-colour-board.webp"
                   alt="Typography & Colour Board"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[11px] text-white">
@@ -1213,7 +1223,8 @@ export default function KakapoShowcaseClient() {
                     src="/portfolio/kakapo/design-brand-cards-pattern.webp"
                     alt="Brand Pattern and Value Cards"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <p className="font-mono text-xs text-white/60">
@@ -1233,6 +1244,7 @@ export default function KakapoShowcaseClient() {
                       src="/portfolio/kakapo/texture-cotton-weave.webp"
                       alt="Organic Heavyweight Cotton Knit Macro"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
@@ -1254,6 +1266,7 @@ export default function KakapoShowcaseClient() {
                       src="/portfolio/kakapo/texture-floating-silk.webp"
                       alt="Fluid Flowing Silk Macro"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
@@ -1320,7 +1333,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/crop-lightbox-signage.webp"
                   alt="Storefront Lightbox Signage"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="space-y-1">
@@ -1350,7 +1364,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/crop-black-hoodie-mockup.webp"
                   alt="Heavyweight Black Hoodie Mockup"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="space-y-1">
@@ -1380,7 +1395,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/application-woven-hem-label.webp"
                   alt="Woven Damask Hem Label"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="space-y-1">
@@ -1410,7 +1426,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/application-folded-tee-hangtag.webp"
                   alt="Folded Tee with Garment Hangtag"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="space-y-1">
@@ -1440,7 +1457,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/crop-bag-kk-monogram.webp"
                   alt="Minimalist Retail Carrier Bag"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="space-y-1">
@@ -1470,7 +1488,8 @@ export default function KakapoShowcaseClient() {
                   src="/portfolio/kakapo/application-care-wash-tags.webp"
                   alt="Garment Care & Wash Documentation"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="space-y-1">
@@ -1557,6 +1576,7 @@ export default function KakapoShowcaseClient() {
                       src={alt.image}
                       alt={alt.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
