@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Film, ShieldCheck } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 import { sound } from "@/utils/sound";
 import { useScrollLock } from "@/utils/scrollLock";
 

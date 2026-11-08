@@ -16,7 +16,6 @@ import {
   Pause,
   Volume2,
   VolumeX,
-  Maximize2
 } from "lucide-react";
 import { Project } from "@/types";
 import { sound } from "@/utils/sound";
@@ -45,7 +44,7 @@ export default function ProjectModal({
   useEffect(() => {
     if (project) {
       sound.playHeavyImpact();
-      setIsPlaying(true);
+      setTimeout(() => setIsPlaying(true), 0);
       // Reset modal content scroll position to top when a new project loads
       if (contentRef.current) {
         contentRef.current.scrollTop = 0;

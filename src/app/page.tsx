@@ -33,7 +33,7 @@ export default function Home() {
     if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get("skipLoader") === "true") {
-        setLoading(false);
+        setTimeout(() => setLoading(false), 0);
       }
     }
   }, []);

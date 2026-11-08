@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Layers, Target, Cpu, CheckCircle2, MapPin, ArrowRight } from "lucide-react";
+import { Layers, Target, Cpu, CheckCircle2, MapPin } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
-import { sound } from "@/utils/sound";
 import TiltCard from "@/components/motion/TiltCard";
 import ScrambleText from "@/components/motion/ScrambleText";
 

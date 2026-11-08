@@ -45,11 +45,7 @@ export default function InteractiveCanvasNoise() {
       alpha: Math.random() * 0.35 + 0.1,
     }));
 
-    let time = 0;
-
     const render = () => {
-      time += 0.015;
-
       // Smooth mouse follow
       mouseX += (targetX - mouseX) * 0.08;
       mouseY += (targetY - mouseY) * 0.08;

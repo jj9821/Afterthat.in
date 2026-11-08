@@ -9,9 +9,6 @@ import {
   Mail,
   Phone,
   MessageSquare,
-  Globe,
-  MapPin,
-  Clock,
   Sparkles,
 } from "lucide-react";
 import confetti from "canvas-confetti";
@@ -37,6 +34,47 @@ function InstagramIcon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+const SERVICE_OPTIONS = [
+  "Brand Strategy & Identity",
+  "Advertising & Media Production",
+  "Digital Marketing & Growth",
+  "Website, App & Software Development",
+  "PR, Celebrity & Brand Experiences",
+  "AI Advertising & Creative Technology",
+  "Integrated Multi-Vertical Enterprise Partnership",
+];
+
+const BUDGET_OPTIONS = [
+  "₹3L – ₹10 Lakhs (Sprint)",
+  "₹10L – ₹25 Lakhs (Core Project)",
+  "₹25L – ₹50 Lakhs (Integrated Campaign)",
+  "₹50L – ₹1 Crore (Comprehensive National)",
+  "₹1 Crore+ (Enterprise Flagship)",
+  "Flexible / Exploratory Phase",
+];
+
+const CONTACT_METHODS = [
+  "WhatsApp",
+  "Phone Call",
+  "Google Meet Video",
+  "In-Person Hub Meeting",
+];
+
+const TIMELINE_OPTIONS = [
+  "Immediate Priority (< 30 Days)",
+  "1–3 Months (Q2 Launch)",
+  "3–6 Months (Strategic Build)",
+  "Q3 / Q4 Strategic Roadmap",
+  "Flexible / Discovery Phase",
+];
+
+const HUB_OPTIONS = [
+  "Remote / Pan-India Mandate",
+  "Kochi Flagship Studio (Kerala)",
+  "Bangalore Technology Lab (Karnataka)",
+  "Ahmedabad Commercial Hub (Gujarat)",
+];
+
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -54,53 +92,12 @@ export default function ContactSection() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const serviceOptions = [
-    "Brand Strategy & Identity",
-    "Advertising & Media Production",
-    "Digital Marketing & Growth",
-    "Website, App & Software Development",
-    "PR, Celebrity & Brand Experiences",
-    "AI Advertising & Creative Technology",
-    "Integrated Multi-Vertical Enterprise Partnership",
-  ];
-
-  const budgetOptions = [
-    "₹3L – ₹10 Lakhs (Sprint)",
-    "₹10L – ₹25 Lakhs (Core Project)",
-    "₹25L – ₹50 Lakhs (Integrated Campaign)",
-    "₹50L – ₹1 Crore (Comprehensive National)",
-    "₹1 Crore+ (Enterprise Flagship)",
-    "Flexible / Exploratory Phase",
-  ];
-
-  const contactMethods = [
-    "WhatsApp",
-    "Phone Call",
-    "Google Meet Video",
-    "In-Person Hub Meeting",
-  ];
-
-  const timelineOptions = [
-    "Immediate Priority (< 30 Days)",
-    "1–3 Months (Q2 Launch)",
-    "3–6 Months (Strategic Build)",
-    "Q3 / Q4 Strategic Roadmap",
-    "Flexible / Discovery Phase",
-  ];
-
-  const hubOptions = [
-    "Remote / Pan-India Mandate",
-    "Kochi Flagship Studio (Kerala)",
-    "Bangalore Technology Lab (Karnataka)",
-    "Ahmedabad Commercial Hub (Gujarat)",
-  ];
-
   // Listen for custom event or hash query params to pre-populate service
   useEffect(() => {
     const handleSelectService = (e: Event) => {
       const customEvent = e as CustomEvent<{ service?: string }>;
       if (customEvent.detail && customEvent.detail.service) {
-        const found = serviceOptions.find((opt) =>
+        const found = SERVICE_OPTIONS.find((opt) =>
           opt.toLowerCase().includes(customEvent.detail.service!.toLowerCase())
         );
         if (found) {
@@ -116,11 +113,13 @@ export default function ContactSection() {
       const params = new URLSearchParams(window.location.search);
       const srvParam = params.get("service");
       if (srvParam) {
-        const match = serviceOptions.find((opt) =>
+        const match = SERVICE_OPTIONS.find((opt) =>
           opt.toLowerCase().includes(srvParam.toLowerCase())
         );
         if (match) {
-          setFormData((prev) => ({ ...prev, service: match }));
+          setTimeout(() => {
+            setFormData((prev) => ({ ...prev, service: match }));
+          }, 0);
         }
       }
     }
@@ -305,7 +304,7 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
                 >
-                  {serviceOptions.map((opt) => (
+                  {SERVICE_OPTIONS.map((opt) => (
                     <option key={opt} value={opt} className="bg-[#121212] text-white">
                       {opt}
                     </option>
@@ -324,7 +323,7 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
                   >
-                    {budgetOptions.map((b) => (
+                    {BUDGET_OPTIONS.map((b) => (
                       <option key={b} value={b} className="bg-[#121212] text-white">
                         {b}
                       </option>
@@ -341,7 +340,7 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
                   >
-                    {timelineOptions.map((t) => (
+                    {TIMELINE_OPTIONS.map((t) => (
                       <option key={t} value={t} className="bg-[#121212] text-white">
                         {t}
                       </option>
@@ -363,7 +362,7 @@ export default function ContactSection() {
                     }
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
                   >
-                    {contactMethods.map((m) => (
+                    {CONTACT_METHODS.map((m) => (
                       <option key={m} value={m} className="bg-[#121212] text-white">
                         {m}
                       </option>
@@ -380,7 +379,7 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, preferredHub: e.target.value })}
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
                   >
-                    {hubOptions.map((h) => (
+                    {HUB_OPTIONS.map((h) => (
                       <option key={h} value={h} className="bg-[#121212] text-white">
                         {h}
                       </option>

@@ -3,21 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import {
-  FileText,
   Layers,
   Download,
   ArrowUpRight,
   Filter,
   Eye,
-  CheckCircle2,
-  Lock,
-  Sparkles
 } from "lucide-react";
 import { PITCH_DECKS } from "@/data/creative-archive";
 import { PitchDeck } from "@/types/creative-archive";
 import { sound } from "@/utils/sound";
 import PitchDeckViewerModal from "@/components/archive/PitchDeckViewerModal";
-import TiltCard from "@/components/motion/TiltCard";
 import MagneticButton from "@/components/motion/MagneticButton";
 
 export default function PitchDecksSection() {

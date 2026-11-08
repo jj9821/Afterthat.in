@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Play, Film, ExternalLink, Clapperboard, Sparkles, Clock, CheckCircle2 } from "lucide-react";
+import { Play, ExternalLink, Clapperboard, Clock } from "lucide-react";
 import { sound } from "@/utils/sound";
 import YouTubePlayerModal from "@/components/archive/YouTubePlayerModal";
 import TiltCard from "@/components/motion/TiltCard";
 import MagneticButton from "@/components/motion/MagneticButton";
-import ScrambleText from "@/components/motion/ScrambleText";
 
 export default function FeaturedFilmSection() {
   const [modalOpen, setModalOpen] = useState(false);

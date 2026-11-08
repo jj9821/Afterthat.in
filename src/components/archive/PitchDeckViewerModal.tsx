@@ -8,10 +8,7 @@ import {
   ChevronRight,
   Maximize2,
   Minimize2,
-  FileText,
   Download,
-  Layers,
-  Sparkles
 } from "lucide-react";
 import { PitchDeck } from "@/types/creative-archive";
 import { sound } from "@/utils/sound";
@@ -34,7 +31,7 @@ export default function PitchDeckViewerModal({ deck, onClose }: PitchDeckViewerM
   // Reset slide index when opening a new deck
   useEffect(() => {
     if (deck) {
-      setCurrentSlideIndex(0);
+      setTimeout(() => setCurrentSlideIndex(0), 0);
       sound.playHeavyImpact();
     }
   }, [deck]);

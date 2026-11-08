@@ -5,26 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
-  ArrowUpRight,
   Maximize2,
   Copy,
   Check,
-  Sparkles,
-  Layers,
   Palette,
-  Shirt,
-  Compass,
-  Eye,
   Info,
-  ChevronDown,
-  ExternalLink,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import TiltCard from "@/components/motion/TiltCard";
-import MagneticButton from "@/components/motion/MagneticButton";
-import ScrambleText from "@/components/motion/ScrambleText";
 import { sound } from "@/utils/sound";
 import KakapoLightbox, { KakapoImageItem } from "./KakapoLightbox";
 

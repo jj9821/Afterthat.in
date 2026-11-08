@@ -55,7 +55,7 @@ export async function POST(request: Request) {
       },
       { status: 200 }
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to process enquiry. Please email connect@afterthat.in directly or WhatsApp +91 96561 66555." },
       { status: 500 }

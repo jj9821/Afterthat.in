@@ -5,26 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
-  ArrowUpRight,
   Maximize2,
   Copy,
   Check,
   Palette,
-  UtensilsCrossed,
-  Layers,
-  Shirt,
-  Smartphone,
-  BookOpen,
-  Info,
-  Store,
-  FileText,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import TiltCard from "@/components/motion/TiltCard";
-import MagneticButton from "@/components/motion/MagneticButton";
-import ScrambleText from "@/components/motion/ScrambleText";
 import { sound } from "@/utils/sound";
 import MilliFlameLightbox, { MilliFlameImageItem } from "./MilliFlameLightbox";
 import milliFlameData from "@/data/milli-flame.json";

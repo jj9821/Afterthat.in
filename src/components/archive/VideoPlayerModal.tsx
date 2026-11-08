@@ -12,8 +12,6 @@ import {
   RotateCcw,
   RotateCw,
   Sparkles,
-  Layers,
-  Clock
 } from "lucide-react";
 import { AIAdFilm } from "@/types/creative-archive";
 import { sound } from "@/utils/sound";
@@ -31,7 +29,6 @@ export default function VideoPlayerModal({ video, onClose }: VideoPlayerModalPro
 
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
-  const [volume, setVolume] = useState(0.85);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(video?.duration || 30);
   const [isFullscreen, setIsFullscreen] = useState(false);

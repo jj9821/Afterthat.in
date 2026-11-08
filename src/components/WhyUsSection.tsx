@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Compass, ShieldCheck, Target, Users, Zap, Layers, CheckCircle2 } from "lucide-react";
+import { Compass, ShieldCheck, Target, Users, Zap, Layers } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
 import TiltCard from "@/components/motion/TiltCard";

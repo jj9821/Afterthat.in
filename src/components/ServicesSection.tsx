@@ -12,9 +12,7 @@ import {
   Sparkles,
   Layers,
   ArrowRight,
-  ExternalLink,
   Briefcase,
-  ShieldCheck,
   TrendingUp,
 } from "lucide-react";
 import { SERVICES, VerticalService } from "@/data/services";

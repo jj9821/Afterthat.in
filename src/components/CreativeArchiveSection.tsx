@@ -2,19 +2,11 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  Film,
-  Camera,
-  FileText,
-  Sparkles,
   Play,
-  Eye,
   Maximize2,
-  ArrowUpRight,
   Filter,
   Layers,
-  Disc
 } from "lucide-react";
 import { AI_AD_FILMS, PITCH_DECKS, PHOTOGRAPHY } from "@/data/creative-archive";
 import { AIAdFilm, PitchDeck, PhotographyItem } from "@/types/creative-archive";

@@ -21,7 +21,6 @@ import {
   Crosshair,
   Layers,
   Sparkles,
-  ExternalLink,
 } from "lucide-react";
 import { PortfolioProject } from "@/types";
 import { sound } from "@/utils/sound";

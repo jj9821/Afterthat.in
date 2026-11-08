@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
 import ScrambleText from "@/components/motion/ScrambleText";

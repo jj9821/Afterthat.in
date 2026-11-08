@@ -1,33 +1,22 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import {
   Play,
   Film,
-  Sparkles,
-  Clock,
-  Layers,
-  ArrowUpRight,
   Filter,
-  Maximize2,
   Cpu,
-  Zap,
-  ShieldCheck,
-  CheckCircle2,
 } from "lucide-react";
 import { AI_AD_FILMS } from "@/data/creative-archive";
 import { AIAdFilm } from "@/types/creative-archive";
 import { sound } from "@/utils/sound";
 import VideoPlayerModal from "@/components/archive/VideoPlayerModal";
-import TiltCard from "@/components/motion/TiltCard";
 import MagneticButton from "@/components/motion/MagneticButton";
-import ScrambleText from "@/components/motion/ScrambleText";
 
 export default function AIAdFilmsSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
   const [activeVideo, setActiveVideo] = useState<AIAdFilm | null>(null);
-  const [hoveredVideoId, setHoveredVideoId] = useState<string | null>(null);
 
   const categories = [
     { label: "ALL FILMS", key: "ALL" },

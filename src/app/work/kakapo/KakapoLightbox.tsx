@@ -11,7 +11,6 @@ import {
   ZoomIn,
   ZoomOut,
   Info,
-  Download,
 } from "lucide-react";
 import { sound } from "@/utils/sound";
 import { useScrollLock } from "@/utils/scrollLock";

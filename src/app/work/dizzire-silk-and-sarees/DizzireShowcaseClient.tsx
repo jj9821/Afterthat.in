@@ -9,17 +9,8 @@ import {
   Maximize2,
   Copy,
   Check,
-  Palette,
   Sparkles,
-  Layers,
-  Shirt,
-  Smartphone,
-  BookOpen,
-  Info,
-  Store,
-  ShoppingBag,
   Eye,
-  FileText,
   BadgeCheck,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -27,7 +18,6 @@ import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 import TiltCard from "@/components/motion/TiltCard";
 import MagneticButton from "@/components/motion/MagneticButton";
-import ScrambleText from "@/components/motion/ScrambleText";
 import { sound } from "@/utils/sound";
 import DizzireLightbox, { DizzireImageItem } from "./DizzireLightbox";
 import dizzireData from "@/data/dizzire.json";

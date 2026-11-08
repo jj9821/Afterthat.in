@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Filter, Disc, Play, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowUpRight, Filter, Disc, ShieldCheck } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
 import { Project } from "@/types";
 import { sound } from "@/utils/sound";
@@ -17,7 +17,6 @@ interface WorkSectionProps {
 
 export default function WorkSection({ onSelectProject }: WorkSectionProps) {
   const [selectedFilter, setSelectedFilter] = useState<string>("ALL WORK");
-  const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
 
   const categories = [
     { label: "ALL WORK", key: "ALL WORK" },
@@ -116,7 +115,6 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
               ? "md:col-span-7"
               : "md:col-span-5";
 
-            const isHovered = hoveredProjectId === project.id;
             const projectNumber = index < 9 ? `0${index + 1}` : `${index + 1}`;
 
             return (
@@ -125,9 +123,7 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
                 className={`${colSpan} group relative bg-[#0e0e0e] border border-white/10 hover:border-[#F20D18] transition-all duration-500 flex flex-col justify-between shadow-2xl`}
                 onMouseEnter={() => {
                   sound.playHover();
-                  setHoveredProjectId(project.id);
                 }}
-                onMouseLeave={() => setHoveredProjectId(null)}
                 data-cursor="CASE STUDY"
                 data-preview-img={project.coverImage}
               >

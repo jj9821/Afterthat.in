@@ -74,7 +74,7 @@ const CAMERA_FEEDS: CameraFeed[] = [
   },
 ];
 
-export default function Hero({ onOpenProject }: HeroProps) {
+export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
   const containerRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activeFeed, setActiveFeed] = useState<CameraFeed>(CAMERA_FEEDS[0]);

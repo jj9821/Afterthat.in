@@ -1,13 +1,13 @@
 "use client";
 
-import { MapPin, Globe, Compass, ArrowUpRight } from "lucide-react";
+import { Globe } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
 import TiltCard from "@/components/motion/TiltCard";
 import ScrambleText from "@/components/motion/ScrambleText";
 
 export default function LocationsSection() {
-  const { headline, description, cities } = COMPANY_INFO.locations;
+  const { description, cities } = COMPANY_INFO.locations;
 
   return (
     <section
