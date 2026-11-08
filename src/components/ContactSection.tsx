@@ -1,12 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowUpRight, Send, CheckCircle2, AlertCircle, Mail, Phone, MessageSquare, Globe, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
+import {
+  ArrowUpRight,
+  Send,
+  CheckCircle2,
+  AlertCircle,
+  Mail,
+  Phone,
+  MessageSquare,
+  Globe,
+  MapPin,
+  Clock,
+  Sparkles,
+} from "lucide-react";
 import confetti from "canvas-confetti";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
 import MagneticButton from "@/components/motion/MagneticButton";
-import ScrambleText from "@/components/motion/ScrambleText";
 
 function InstagramIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
@@ -33,7 +44,10 @@ export default function ContactSection() {
     email: "",
     phone: "",
     service: "Brand Strategy & Identity",
-    budget: "₹15L – ₹35L",
+    budget: "₹10L – ₹25 Lakhs",
+    preferredContactMethod: "WhatsApp",
+    timeline: "1–3 Months (Q2 Launch)",
+    preferredHub: "Remote / Pan-India Mandate",
     description: "",
   });
 
@@ -47,17 +61,74 @@ export default function ContactSection() {
     "Website, App & Software Development",
     "PR, Celebrity & Brand Experiences",
     "AI Advertising & Creative Technology",
-    "Integrated Multi-Vertical Partnership",
+    "Integrated Multi-Vertical Enterprise Partnership",
   ];
 
   const budgetOptions = [
-    "Under ₹10 Lakhs",
-    "₹10L – ₹25 Lakhs",
-    "₹25L – ₹50 Lakhs",
-    "₹50L – ₹1 Crore",
-    "₹1 Crore+",
-    "Flexible / Discussion Phase",
+    "₹3L – ₹10 Lakhs (Sprint)",
+    "₹10L – ₹25 Lakhs (Core Project)",
+    "₹25L – ₹50 Lakhs (Integrated Campaign)",
+    "₹50L – ₹1 Crore (Comprehensive National)",
+    "₹1 Crore+ (Enterprise Flagship)",
+    "Flexible / Exploratory Phase",
   ];
+
+  const contactMethods = [
+    "WhatsApp",
+    "Phone Call",
+    "Google Meet Video",
+    "In-Person Hub Meeting",
+  ];
+
+  const timelineOptions = [
+    "Immediate Priority (< 30 Days)",
+    "1–3 Months (Q2 Launch)",
+    "3–6 Months (Strategic Build)",
+    "Q3 / Q4 Strategic Roadmap",
+    "Flexible / Discovery Phase",
+  ];
+
+  const hubOptions = [
+    "Remote / Pan-India Mandate",
+    "Kochi Flagship Studio (Kerala)",
+    "Bangalore Technology Lab (Karnataka)",
+    "Ahmedabad Commercial Hub (Gujarat)",
+  ];
+
+  // Listen for custom event or hash query params to pre-populate service
+  useEffect(() => {
+    const handleSelectService = (e: Event) => {
+      const customEvent = e as CustomEvent<{ service?: string }>;
+      if (customEvent.detail && customEvent.detail.service) {
+        const found = serviceOptions.find((opt) =>
+          opt.toLowerCase().includes(customEvent.detail.service!.toLowerCase())
+        );
+        if (found) {
+          setFormData((prev) => ({ ...prev, service: found }));
+        }
+      }
+    };
+
+    window.addEventListener("afterthat:select-service", handleSelectService);
+
+    // Also parse window.location.search or hash
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const srvParam = params.get("service");
+      if (srvParam) {
+        const match = serviceOptions.find((opt) =>
+          opt.toLowerCase().includes(srvParam.toLowerCase())
+        );
+        if (match) {
+          setFormData((prev) => ({ ...prev, service: match }));
+        }
+      }
+    }
+
+    return () => {
+      window.removeEventListener("afterthat:select-service", handleSelectService);
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,8 +155,8 @@ export default function ContactSection() {
       // Launch celebratory particle confetti
       try {
         confetti({
-          particleCount: 120,
-          spread: 80,
+          particleCount: 140,
+          spread: 85,
           origin: { y: 0.6 },
           colors: ["#F20D18", "#ffffff", "#0A0A0A"],
         });
@@ -100,7 +171,10 @@ export default function ContactSection() {
         email: "",
         phone: "",
         service: "Brand Strategy & Identity",
-        budget: "₹15L – ₹35L",
+        budget: "₹10L – ₹25 Lakhs",
+        preferredContactMethod: "WhatsApp",
+        timeline: "1–3 Months (Q2 Launch)",
+        preferredHub: "Remote / Pan-India Mandate",
         description: "",
       });
     } catch (err: unknown) {
@@ -117,7 +191,7 @@ export default function ContactSection() {
     >
       {/* Background Graphic Grid */}
       <div className="absolute inset-0 subtle-grid opacity-20 pointer-events-none" />
-      <div className="absolute left-1/3 bottom-0 w-[500px] h-[500px] bg-[#F20D18]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute left-1/3 bottom-0 w-[550px] h-[550px] bg-[#F20D18]/12 rounded-full blur-[170px] pointer-events-none" />
 
       <div className="max-w-[1720px] mx-auto w-full relative z-10 space-y-16 md:space-y-24">
         {/* Section Header */}
@@ -127,21 +201,21 @@ export default function ContactSection() {
               <span>// SECTION 12</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
-                START A PROJECT · ENQUIRY TERMINAL
+                COMMISSION TERMINAL · START A PROJECT
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
-              HAVE A PROJECT <span className="text-[#F20D18]">IN MIND?</span>
+              START A <span className="text-[#F20D18]">PROJECT</span>
             </h2>
             <p className="font-syne text-xl sm:text-2xl text-white/90 font-bold max-w-2xl leading-snug">
-              Let&apos;s turn your next idea into something worth paying attention to.
+              Let&apos;s build work that commands national attention and delivers measurable business impact.
             </p>
           </div>
 
           <div className="max-w-md font-mono text-xs text-[#888888] leading-relaxed">
             <p>
-              WHETHER YOU ARE LAUNCHING A BRAND, PRODUCING AN AD FILM, SCALING DIGITAL
-              MARKETING, OR BUILDING A HIGH-PERFORMANCE WEB PLATFORM, WE ARE READY TO COLLABORATE.
+              WHETHER YOU ARE LAUNCHING A CONSUMER BRAND, PRODUCING A CINEMATIC AD FILM, SCALING
+              PAID MEDIA, OR ENGINEERING BESPOKE SOFTWARE, OUR LEADERSHIP IS READY TO COLLABORATE.
             </p>
           </div>
         </div>
@@ -151,11 +225,12 @@ export default function ContactSection() {
           {/* Left Column: Comprehensive Project Enquiry Form */}
           <div className="lg:col-span-7 bg-[#111111] border border-white/15 p-6 sm:p-10 md:p-12 shadow-2xl space-y-8">
             <div className="space-y-2 border-b border-white/10 pb-4">
-              <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase block">
-                PROJECT ENQUIRY TERMINAL
+              <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5" />
+                PROJECT COMMISSION BRIEF
               </span>
               <p className="font-space text-sm text-[#aaaaaa]">
-                Tell us about your brand, objectives, and required capabilities. We respond within 24 business hours.
+                Detail your brand challenge, required vertical, and target timeline. The AFTER THAT leadership team reviews and responds within 24 business hours.
               </p>
             </div>
 
@@ -182,7 +257,7 @@ export default function ContactSection() {
                   </label>
                   <input
                     type="text"
-                    placeholder="e.g. Apex Ventures"
+                    placeholder="e.g. Apex Consumer Brands"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm placeholder-white/30 focus:outline-none focus:border-[#F20D18] transition-colors"
@@ -194,7 +269,7 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
-                    EMAIL ADDRESS *
+                    BUSINESS EMAIL *
                   </label>
                   <input
                     type="email"
@@ -220,7 +295,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Row 3: Service Required (5 Verticals + AI) */}
+              {/* Row 3: Service Required */}
               <div className="space-y-2">
                 <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                   SERVICE REQUIRED *
@@ -238,33 +313,91 @@ export default function ContactSection() {
                 </select>
               </div>
 
-              {/* Row 4: Estimated Budget (Optional) */}
-              <div className="space-y-2">
-                <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
-                  ESTIMATED BUDGET (OPTIONAL)
-                </label>
-                <select
-                  value={formData.budget}
-                  onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                  className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
-                >
-                  {budgetOptions.map((b) => (
-                    <option key={b} value={b} className="bg-[#121212] text-white">
-                      {b}
-                    </option>
-                  ))}
-                </select>
+              {/* Row 4: Budget & Timeline */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                    APPROXIMATE BUDGET BRACKET
+                  </label>
+                  <select
+                    value={formData.budget}
+                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                    className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
+                  >
+                    {budgetOptions.map((b) => (
+                      <option key={b} value={b} className="bg-[#121212] text-white">
+                        {b}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                    TARGET LAUNCH WINDOW
+                  </label>
+                  <select
+                    value={formData.timeline}
+                    onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
+                    className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
+                  >
+                    {timelineOptions.map((t) => (
+                      <option key={t} value={t} className="bg-[#121212] text-white">
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
-              {/* Row 5: Project Description */}
+              {/* Row 5: Preferred Contact Method & Hub */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                    PREFERRED CONTACT METHOD
+                  </label>
+                  <select
+                    value={formData.preferredContactMethod}
+                    onChange={(e) =>
+                      setFormData({ ...formData, preferredContactMethod: e.target.value })
+                    }
+                    className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
+                  >
+                    {contactMethods.map((m) => (
+                      <option key={m} value={m} className="bg-[#121212] text-white">
+                        {m}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                    PREFERRED OPERATING HUB
+                  </label>
+                  <select
+                    value={formData.preferredHub}
+                    onChange={(e) => setFormData({ ...formData, preferredHub: e.target.value })}
+                    className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
+                  >
+                    {hubOptions.map((h) => (
+                      <option key={h} value={h} className="bg-[#121212] text-white">
+                        {h}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Row 6: Project Scope & Objectives */}
               <div className="space-y-2">
                 <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
-                  PROJECT DESCRIPTION & OBJECTIVES *
+                  PROJECT DESCRIPTION & STRATEGIC OBJECTIVES *
                 </label>
                 <textarea
                   required
                   rows={4}
-                  placeholder="Outline your brand challenges, target timeline, deliverables, or creative direction..."
+                  placeholder="Tell us about your brand, current challenges, desired deliverables, target timeline, or creative ambition..."
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm placeholder-white/30 focus:outline-none focus:border-[#F20D18] transition-colors resize-none"
@@ -276,7 +409,7 @@ export default function ContactSection() {
                 <div className="p-4 bg-[#F20D18]/15 border border-[#F20D18] flex items-center gap-3 font-mono text-xs text-white">
                   <CheckCircle2 className="w-5 h-5 text-[#F20D18] shrink-0" />
                   <span>
-                    TRANSMISSION SUCCESSFUL. Your enquiry has reached our team. We will review and contact you shortly.
+                    TRANSMISSION SUCCESSFUL. Your enquiry has reached the AFTER THAT leadership team. We will review and contact you within 24 business hours.
                   </span>
                 </div>
               )}
@@ -297,7 +430,7 @@ export default function ContactSection() {
                   className="w-full py-4 px-8 bg-[#F20D18] text-white font-anton text-base tracking-wider uppercase hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(242,13,24,0.4)] disabled:opacity-50"
                 >
                   <Send className="w-4 h-4" />
-                  <span>{status === "submitting" ? "TRANSMITTING..." : "START A PROJECT"}</span>
+                  <span>{status === "submitting" ? "TRANSMITTING BRIEF..." : "COMMISSION PROJECT"}</span>
                 </button>
               </MagneticButton>
             </form>
@@ -312,7 +445,7 @@ export default function ContactSection() {
                   DIRECT TRANSMISSION CHANNELS
                 </span>
                 <h3 className="font-anton text-2xl text-white uppercase">
-                  TALK TO OUR LEADERSHIP
+                  AGENCY LEADERSHIP ACCESS
                 </h3>
               </div>
 
@@ -367,9 +500,9 @@ export default function ContactSection() {
                   <div className="flex items-center gap-3">
                     <MessageSquare className="w-4 h-4 text-[#F20D18]" />
                     <div>
-                      <span className="text-[10px] text-white/50 block">INSTANT WHATSAPP CHAT</span>
+                      <span className="text-[10px] text-white/50 block">DIRECT WHATSAPP DESK</span>
                       <span className="text-white font-bold group-hover:text-[#F20D18] transition-colors">
-                        +91 96561 66555
+                        Connect with Agency Directors
                       </span>
                     </div>
                   </div>
@@ -388,7 +521,7 @@ export default function ContactSection() {
                   <div className="flex items-center gap-3">
                     <InstagramIcon className="w-4 h-4 text-[#F20D18]" />
                     <div>
-                      <span className="text-[10px] text-white/50 block">INSTAGRAM FLAGSHIP</span>
+                      <span className="text-[10px] text-white/50 block">OFFICIAL INSTAGRAM</span>
                       <span className="text-white font-bold group-hover:text-[#F20D18] transition-colors">
                         {COMPANY_INFO.contact.instagramHandle}
                       </span>
@@ -399,18 +532,31 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Entity Verification Badge */}
-            <div className="p-6 bg-[#121212] border border-[#F20D18]/40 space-y-3 font-mono text-xs">
-              <div className="flex items-center justify-between">
-                <span className="text-white font-bold">{COMPANY_INFO.legalName}</span>
-                <span className="text-[#F20D18]">REGISTERED ENTITY</span>
-              </div>
-              <p className="text-[#888888] text-[11px] leading-relaxed">
-                Integrated creative strategy, media production, performance marketing and technology development across Kochi, Bangalore and Ahmedabad.
-              </p>
-              <div className="pt-2 text-[10px] text-white/50 flex justify-between">
-                <span>OFFICIAL DOMAIN:</span>
-                <span className="text-white font-bold">{COMPANY_INFO.contact.websiteDisplay}</span>
+            {/* Operating Presence Overview */}
+            <div className="bg-[#111111] border border-white/15 p-6 space-y-4">
+              <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase block">
+                REGIONAL OPERATIONAL HUBS
+              </span>
+              <div className="space-y-3 font-mono text-xs">
+                {COMPANY_INFO.locations.cities.map((city, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3 bg-black/40 border border-white/10 flex items-start justify-between gap-3"
+                  >
+                    <div>
+                      <span className="text-white font-bold text-sm block">
+                        {city.name}, {city.state}
+                      </span>
+                      <span className="text-white/60 text-[11px] block">{city.role}</span>
+                      <span className="text-white/40 text-[10px] block mt-0.5">
+                        {city.description}
+                      </span>
+                    </div>
+                    <span className="px-2 py-0.5 bg-[#F20D18]/20 border border-[#F20D18]/40 text-[#F20D18] text-[9px] uppercase font-bold shrink-0">
+                      {city.tag}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

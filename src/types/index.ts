@@ -6,6 +6,12 @@ export interface PortfolioImage {
   caption?: string;
 }
 
+export interface MetricItem {
+  label: string;
+  value: string;
+  detail?: string;
+}
+
 export interface PortfolioProject {
   id: string;
   slug: string;
@@ -27,6 +33,23 @@ export interface PortfolioProject {
   verified: boolean;
   featured: boolean;
   videoUrl?: string;
+
+  // National-Level 10-Part Case Study Architecture
+  clientBackground?: string;
+  strategicApproach?: string;
+  creativeDirection?: string;
+  executionProcess?: string;
+  visualIdentityApplications?: string[];
+  outcomes?: string;
+  metrics?: MetricItem[];
+  marketLocation?: string;
+  industryVertical?: string;
+  quote?: {
+    text: string;
+    author: string;
+    role: string;
+  };
+
   credits?: {
     director?: string;
     producer?: string;
@@ -49,6 +72,14 @@ export interface PortfolioProject {
 
 export type Project = PortfolioProject;
 
+export interface ProjectReference {
+  title: string;
+  client: string;
+  slug: string;
+  role: string;
+  image: string;
+}
+
 export interface VerticalService {
   number: string;
   id: string;
@@ -59,6 +90,14 @@ export interface VerticalService {
   services: string[];
   bgImage: string;
   tagline: string;
+
+  // National-Level Enhanced Service Fields
+  editorialIntro?: string;
+  strategicValue?: string;
+  keyCapabilities?: string[];
+  deliverablesList?: string[];
+  projectReferences?: ProjectReference[];
+  engagementModels?: string[];
 }
 
 export type Service = VerticalService;

@@ -3,7 +3,18 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, company, email, phone, service, description, budget } = body;
+    const {
+      name,
+      company,
+      email,
+      phone,
+      service,
+      budget,
+      description,
+      preferredContactMethod,
+      timeline,
+      preferredHub,
+    } = body;
 
     // Validation
     if (!name || !email || !description) {
@@ -16,12 +27,12 @@ export async function POST(request: Request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: "Please provide a valid email address." },
+        { error: "Please provide a valid business or personal email address." },
         { status: 400 }
       );
     }
 
-    // Server-side logging
+    // Server-side logging for national-level enquiry tracking
     console.log("PROJECT ENQUIRY TRANSMISSION RECEIVED:", {
       name,
       company: company || "Not Provided",
@@ -29,6 +40,9 @@ export async function POST(request: Request) {
       phone: phone || "Not Provided",
       service: service || "General Agency Inquiry",
       budget: budget || "Flexible",
+      preferredContactMethod: preferredContactMethod || "Email / WhatsApp",
+      timeline: timeline || "Standard Launch Runway",
+      preferredHub: preferredHub || "Remote / Pan-India",
       description,
       timestamp: new Date().toISOString(),
       recipient: "connect@afterthat.in",
@@ -37,7 +51,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: true,
-        message: "Your project enquiry has been logged and transmitted to AFTER THAT ENTERTAINMENT.",
+        message: "Your project commission enquiry has been logged and transmitted to the AFTER THAT leadership team.",
       },
       { status: 200 }
     );

@@ -126,28 +126,27 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
 
           {/* Desktop Status Bar / Quick Navigation */}
           <div className="hidden lg:flex items-center gap-6 font-mono text-[11px] text-[#888888]">
-            <nav className="flex items-center gap-6 font-mono text-[11px] font-bold tracking-widest uppercase text-white/70">
+            <nav className="flex items-center gap-5 font-mono text-[11px] font-bold tracking-widest uppercase text-white/70">
+              <button
+                onClick={() => handleLinkClick("#about")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors"
+              >
+                ABOUT
+              </button>
+              <button
+                onClick={() => handleLinkClick("#clients")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors"
+              >
+                CLIENTS
+              </button>
               <button
                 onClick={() => handleLinkClick("#services")}
                 onMouseEnter={() => sound.playHover()}
                 className="hover:text-[#F20D18] transition-colors"
               >
                 SERVICES
-              </button>
-              <button
-                onClick={() => handleLinkClick("#featured-film")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors flex items-center gap-1.5"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F20D18] animate-pulse" />
-                FEATURED FILM
-              </button>
-              <button
-                onClick={() => handleLinkClick("#ai-films")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors"
-              >
-                AI FILMS
               </button>
               <button
                 onClick={() => handleLinkClick("#work")}
@@ -157,6 +156,14 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
                 WORK
               </button>
               <button
+                onClick={() => handleLinkClick("#ai-films")}
+                onMouseEnter={() => sound.playHover()}
+                className="hover:text-[#F20D18] transition-colors flex items-center gap-1"
+              >
+                <span className="w-1 h-1 rounded-full bg-[#F20D18]" />
+                AI FILMS
+              </button>
+              <button
                 onClick={() => handleLinkClick("#creative-archive")}
                 onMouseEnter={() => sound.playHover()}
                 className="hover:text-[#F20D18] transition-colors"
@@ -164,11 +171,11 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
                 ARCHIVE
               </button>
               <button
-                onClick={() => handleLinkClick("#pitch-decks")}
+                onClick={() => handleLinkClick("#locations")}
                 onMouseEnter={() => sound.playHover()}
                 className="hover:text-[#F20D18] transition-colors"
               >
-                DECKS
+                HUBS
               </button>
             </nav>
             <div className="h-3 w-[1px] bg-white/20" />

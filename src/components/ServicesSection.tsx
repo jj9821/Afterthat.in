@@ -3,7 +3,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, Plus, Minus, CheckCircle2, Sparkles, Layers, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import {
+  ArrowUpRight,
+  Plus,
+  Minus,
+  CheckCircle2,
+  Sparkles,
+  Layers,
+  ArrowRight,
+  ExternalLink,
+  Briefcase,
+  ShieldCheck,
+  TrendingUp,
+} from "lucide-react";
 import { SERVICES, VerticalService } from "@/data/services";
 import { sound } from "@/utils/sound";
 import ScrambleText from "@/components/motion/ScrambleText";
@@ -20,6 +33,18 @@ export default function ServicesSection() {
     setActiveService(id);
   };
 
+  const handleCommissionClick = (serviceTitle: string) => {
+    sound.playClick();
+    const contactElem = document.querySelector("#contact");
+    if (contactElem) {
+      contactElem.scrollIntoView({ behavior: "smooth" });
+      // Dispatch a custom event to update the service dropdown in ContactSection
+      window.dispatchEvent(
+        new CustomEvent("afterthat:select-service", { detail: { service: serviceTitle } })
+      );
+    }
+  };
+
   return (
     <section
       id="services"
@@ -27,6 +52,7 @@ export default function ServicesSection() {
     >
       {/* Background Grid */}
       <div className="absolute inset-0 subtle-grid opacity-20 pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#F20D18]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-[1720px] mx-auto w-full relative z-10 space-y-16 md:space-y-24">
         {/* Section Header */}
@@ -36,23 +62,23 @@ export default function ServicesSection() {
               <span>// SECTION 03</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
-                OUR FIVE SERVICE VERTICALS
+                NATIONAL CAPABILITIES · FIVE CORE VERTICALS
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
-              INTEGRATED <span className="text-[#F20D18]">CAPABILITIES</span>
+              INTEGRATED <span className="text-[#F20D18]">DISCIPLINES</span>
             </h2>
           </div>
 
           <div className="max-w-md font-mono text-xs text-[#888888] leading-relaxed">
             <p>
-              WE BRING BRAND STRATEGY, COMMERCIAL ADVERTISING, DIGITAL MARKETING,
-              CUSTOM SOFTWARE & PR TOGETHER UNDER ONE ACCOUNTABLE ROOF.
+              WE UNITE BRAND STRATEGY, COMMERCIAL AD FILMS, PERFORMANCE MARKETING,
+              CUSTOM SOFTWARE & PR UNDER ONE ACCOUNTABLE ROOF. NO FRAGMENTED HANDOFFS.
             </p>
           </div>
         </div>
 
-        {/* Split View: Interactive Vertical Accordion + Sticky Cinematic Stage */}
+        {/* Split View: Interactive Vertical Accordion + Sticky Editorial Stage */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Interactive Service Accordion Items */}
           <div className="lg:col-span-7 space-y-4">
@@ -127,7 +153,7 @@ export default function ServicesSection() {
                         transition={{ duration: 0.35, ease: "easeInOut" }}
                         className="overflow-hidden px-6 sm:px-8 pb-8 pt-2 border-t border-white/5 space-y-6"
                       >
-                        {/* Headline */}
+                        {/* Headline & Objective */}
                         <div className="bg-white/[0.02] border-l-2 border-[#F20D18] p-4">
                           <span className="font-mono text-[10px] text-[#F20D18] font-bold uppercase tracking-widest block mb-1">
                             OBJECTIVE & PROMISE
@@ -137,47 +163,146 @@ export default function ServicesSection() {
                           </h4>
                         </div>
 
-                        {/* Description */}
-                        <p className="font-space text-white/80 text-base sm:text-lg leading-relaxed">
-                          {service.description}
-                        </p>
+                        {/* Editorial Introduction */}
+                        {service.editorialIntro && (
+                          <div className="space-y-2">
+                            <span className="font-mono text-[10px] text-white/50 tracking-widest uppercase block">
+                              // STRATEGIC APPROACH
+                            </span>
+                            <p className="font-space text-white/90 text-sm sm:text-base leading-relaxed">
+                              {service.editorialIntro}
+                            </p>
+                          </div>
+                        )}
 
-                        {/* Full Detailed Services List (No omissions) */}
+                        {/* Strategic Commercial Value */}
+                        {service.strategicValue && (
+                          <div className="p-3 bg-red-950/20 border border-red-900/40 font-mono text-xs text-red-200 flex items-start gap-2.5">
+                            <TrendingUp className="w-4 h-4 text-[#F20D18] shrink-0 mt-0.5" />
+                            <div>
+                              <span className="text-[#F20D18] font-bold uppercase block">
+                                COMMERCIAL IMPACT:
+                              </span>
+                              <span>{service.strategicValue}</span>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Project References Cards */}
+                        {service.projectReferences && service.projectReferences.length > 0 && (
+                          <div className="space-y-3 pt-2">
+                            <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase flex items-center gap-2">
+                              <Briefcase className="w-3.5 h-3.5" />
+                              CASE STUDY REFERENCES & ARCHIVE PROOF
+                            </span>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                              {service.projectReferences.map((ref, i) => (
+                                <Link
+                                  key={i}
+                                  href={`/work/${ref.slug}`}
+                                  onClick={() => sound.playClick()}
+                                  onMouseEnter={() => sound.playHover()}
+                                  data-cursor="CASE STUDY"
+                                  className="group/card bg-black/60 border border-white/10 hover:border-[#F20D18] p-3 space-y-2 transition-all block"
+                                >
+                                  <div className="relative aspect-video w-full overflow-hidden bg-black">
+                                    <Image
+                                      src={ref.image}
+                                      alt={ref.title}
+                                      fill
+                                      className="object-cover group-hover/card:scale-105 transition-transform duration-500"
+                                      sizes="240px"
+                                    />
+                                  </div>
+                                  <div>
+                                    <span className="font-mono text-[9px] text-[#F20D18] uppercase tracking-wider block">
+                                      {ref.client}
+                                    </span>
+                                    <h5 className="font-anton text-sm uppercase text-white group-hover/card:text-[#F20D18] transition-colors truncate">
+                                      {ref.title}
+                                    </h5>
+                                    <span className="font-mono text-[10px] text-white/50 block truncate">
+                                      {ref.role}
+                                    </span>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Key Capabilities */}
+                        {service.keyCapabilities && (
+                          <div className="space-y-2 pt-2">
+                            <span className="font-mono text-xs text-white/50 tracking-widest uppercase block">
+                              CORE COMPETENCIES & ADVANCED DELIVERABLES
+                            </span>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-xs">
+                              {service.keyCapabilities.map((cap, i) => (
+                                <div
+                                  key={i}
+                                  className="flex items-start gap-2 bg-white/[0.02] p-2.5 border border-white/5 text-white/90"
+                                >
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-[#F20D18] shrink-0 mt-0.5" />
+                                  <span>{cap}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Full Detailed Services Matrix */}
                         <div className="space-y-3 pt-2">
                           <span className="font-mono text-xs text-[#F20D18] font-bold tracking-widest uppercase flex items-center gap-2">
                             <Sparkles className="w-3.5 h-3.5" />
-                            SPECIALIZED DISCIPLINES & DELIVERABLES ({service.services.length})
+                            FULL SCOPE & SPECIALIZED DELIVERABLES ({service.services.length})
                           </span>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {service.services.map((item, i) => (
                               <div
                                 key={i}
-                                className="flex items-start gap-2.5 font-mono text-xs text-white/90 bg-white/[0.03] p-2.5 border border-white/10 hover:border-[#F20D18] transition-colors"
+                                className="flex items-start gap-2.5 font-mono text-xs text-white/80 bg-white/[0.02] p-2 border border-white/5 hover:border-[#F20D18] transition-colors"
                               >
-                                <CheckCircle2 className="w-3.5 h-3.5 text-[#F20D18] shrink-0 mt-0.5" />
+                                <span className="text-[#F20D18] font-bold">•</span>
                                 <span>{item}</span>
                               </div>
                             ))}
                           </div>
                         </div>
 
-                        {/* CTA Row inside accordion for mobile / quick access */}
-                        <div className="pt-4 flex items-center justify-between border-t border-white/10">
+                        {/* Engagement Models */}
+                        {service.engagementModels && (
+                          <div className="pt-2 border-t border-white/10 space-y-2">
+                            <span className="font-mono text-[11px] text-white/50 tracking-widest uppercase block">
+                              RECOMMENDED ENGAGEMENT MODELS
+                            </span>
+                            <div className="flex flex-wrap gap-2 font-mono text-[11px]">
+                              {service.engagementModels.map((model, i) => (
+                                <span
+                                  key={i}
+                                  className="px-2.5 py-1 bg-white/5 border border-white/15 text-white/80 uppercase tracking-wider"
+                                >
+                                  {model}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Contextual Commission CTA */}
+                        <div className="pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-white/10">
                           <span className="font-mono text-xs text-white/50">
-                            READY TO DEPLOY THIS VERTICAL?
+                            READY TO COMMISSION {service.shortTitle}?
                           </span>
-                          <a
-                            href="#contact"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              sound.playClick();
-                              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-                            }}
-                            className="inline-flex items-center gap-1.5 font-anton text-xs uppercase tracking-wider text-[#F20D18] hover:text-white transition-colors"
+                          <button
+                            onClick={() => handleCommissionClick(service.title)}
+                            onMouseEnter={() => sound.playHover()}
+                            data-cursor="COMMISSION"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-[#F20D18] text-white font-anton text-xs uppercase tracking-wider hover:bg-white hover:text-black transition-colors"
                           >
-                            <span>START PROJECT ENQUIRY</span>
+                            <span>COMMISSION THIS VERTICAL</span>
                             <ArrowRight className="w-3.5 h-3.5" />
-                          </a>
+                          </button>
                         </div>
                       </motion.div>
                     )}
@@ -187,7 +312,7 @@ export default function ServicesSection() {
             })}
           </div>
 
-          {/* Right Column: Dynamic Showcase Stage */}
+          {/* Right Column: Dynamic Editorial Stage */}
           <div className="lg:col-span-5 sticky top-28 hidden lg:block">
             <div className="bg-[#111111] border border-white/15 p-6 space-y-6 shadow-2xl">
               {/* Media Preview Window */}
@@ -221,7 +346,7 @@ export default function ServicesSection() {
                 {/* Bottom Overlay Info */}
                 <div className="absolute bottom-4 left-4 right-4 font-mono">
                   <span className="text-[10px] text-[#F20D18] font-bold tracking-widest block uppercase">
-                    CORE PROMISE
+                    CORE STRATEGIC MANDATE
                   </span>
                   <span className="text-sm font-bold text-white uppercase block line-clamp-1">
                     {currentService.headline}
@@ -239,24 +364,17 @@ export default function ServicesSection() {
                 </span>
               </div>
 
-              {/* Action Button */}
+              {/* Action Button with Contextual Pre-selection */}
               <MagneticButton strength={0.25} className="w-full">
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    sound.playClick();
-                    document
-                      .querySelector("#contact")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
+                <button
+                  onClick={() => handleCommissionClick(currentService.title)}
                   onMouseEnter={() => sound.playHover()}
-                  data-cursor="INQUIRE"
+                  data-cursor="COMMISSION"
                   className="w-full flex items-center justify-between px-5 py-4 bg-[#F20D18] text-white font-anton text-sm tracking-wider uppercase hover:bg-white hover:text-black transition-colors shadow-[0_0_20px_rgba(242,13,24,0.4)]"
                 >
-                  <span>COMMISSION THIS CAPABILITY</span>
+                  <span>COMMISSION {currentService.shortTitle}</span>
                   <ArrowUpRight className="w-4 h-4" />
-                </a>
+                </button>
               </MagneticButton>
             </div>
           </div>

@@ -54,7 +54,7 @@ const CAMERA_FEEDS: CameraFeed[] = [
     tag: "DIZZIRE SILKS & SAREES REBRAND",
     url: "/videos/monsoon-noir-reel.mp4",
     poster: "/portfolio/branding/dizzire/cover.webp",
-    projectId: "dizzire-silks-and-sarees",
+    projectId: "dizzire-silk-and-sarees",
   },
   {
     id: "cam-4",
@@ -63,6 +63,14 @@ const CAMERA_FEEDS: CameraFeed[] = [
     url: "/videos/motorsport-reel.mp4",
     poster: "/portfolio/technology/aptvel/cover.webp",
     projectId: "aptvel-edtech-launch",
+  },
+  {
+    id: "cam-5",
+    name: "05 // AI AD FILMS",
+    tag: "BAKERS POINT AI CREATIVE SUITE",
+    url: "/videos/hero-cinematic-reel.mp4",
+    poster: "/portfolio/ai-advertising/bakers-point/cover.webp",
+    projectId: "bakers-point-ai-creative-suite",
   },
 ];
 
@@ -73,9 +81,23 @@ export default function Hero({ onOpenProject }: HeroProps) {
   const [timecode, setTimecode] = useState("00:00:24:18");
   const [showFullReelModal, setShowFullReelModal] = useState(false);
   const [viewfinderActive, setViewfinderActive] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   // Global scroll lock when full reel modal is open
   useScrollLock(showFullReelModal);
+
+  // 5-second automatic capability showcase sequence
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => {
+      setActiveFeed((current) => {
+        const currentIndex = CAMERA_FEEDS.findIndex((f) => f.id === current.id);
+        const nextIndex = (currentIndex + 1) % CAMERA_FEEDS.length;
+        return CAMERA_FEEDS[nextIndex];
+      });
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
 
   useEffect(() => {
     if (!showFullReelModal) return;
@@ -131,6 +153,7 @@ export default function Hero({ onOpenProject }: HeroProps) {
 
   const handleSwitchFeed = (feed: CameraFeed) => {
     sound.playShutter();
+    setIsAutoPlaying(false);
     setActiveFeed(feed);
   };
 
@@ -245,26 +268,38 @@ export default function Hero({ onOpenProject }: HeroProps) {
           />
         </div>
 
-        {/* Right Camera Feed Switcher Buttons */}
+        {/* Right Camera Feed Switcher Buttons with Live Sequence Indicators */}
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
           <span className="text-white/40 uppercase tracking-widest text-[10px] mr-1 hidden sm:inline">
-            CAMERA FEED:
+            CAPABILITY SEQUENCE:
           </span>
-          {CAMERA_FEEDS.map((feed) => (
-            <button
-              key={feed.id}
-              onClick={() => handleSwitchFeed(feed)}
-              onMouseEnter={() => sound.playHover()}
-              data-cursor="SWITCH FEED"
-              className={`px-2.5 py-1 text-[10px] font-mono tracking-wider transition-all duration-200 border ${
-                activeFeed.id === feed.id
-                  ? "bg-[#F20D18] border-[#F20D18] text-white font-extrabold shadow-[0_0_12px_rgba(242,13,24,0.6)]"
-                  : "bg-black/60 border-white/20 text-white/70 hover:border-white hover:text-white"
-              }`}
-            >
-              {feed.name.split("//")[0]}
-            </button>
-          ))}
+          {CAMERA_FEEDS.map((feed) => {
+            const isActive = activeFeed.id === feed.id;
+            return (
+              <button
+                key={feed.id}
+                onClick={() => handleSwitchFeed(feed)}
+                onMouseEnter={() => sound.playHover()}
+                data-cursor="SWITCH FEED"
+                className={`relative overflow-hidden px-2.5 py-1 text-[10px] font-mono tracking-wider transition-all duration-200 border ${
+                  isActive
+                    ? "bg-[#F20D18] border-[#F20D18] text-white font-extrabold shadow-[0_0_12px_rgba(242,13,24,0.6)]"
+                    : "bg-black/60 border-white/20 text-white/70 hover:border-white hover:text-white"
+                }`}
+              >
+                <span>{feed.name.split("//")[0]}</span>
+                {isActive && isAutoPlaying && (
+                  <motion.div
+                    key={feed.id}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 5, ease: "linear" }}
+                    className="absolute bottom-0 left-0 h-[2px] bg-white shadow-[0_0_6px_#fff]"
+                  />
+                )}
+              </button>
+            );
+          })}
           <button
             onClick={() => setViewfinderActive(!viewfinderActive)}
             title="Toggle Viewfinder Reticles"

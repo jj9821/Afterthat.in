@@ -83,7 +83,44 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "HappEats is a fast-scaling healthy snack brand dedicated to delivering premium, bio-sourced dry fruits and wholesome nutrition across South India retail networks. The brand seeks to bridge everyday snacking indulgence with functional health benefits.",
+    "strategicApproach": "We formulated a product-first, joy-anchored packaging hierarchy. By coupling an unmistakable smiling monogram mark with an intuitive, color-coded Pantone architecture, we established immediate distinction between almonds, cashews, pistachios, raisins, and seed mixes.",
+    "creativeDirection": "Maximalist FMCG vibrancy grounded in clean information design. A rich royal purple foundation accentuated by variant-specific punch colors, paired with custom organic leaf-wave vector illustrations and precision-engineered transparent product freshness windows.",
+    "executionProcess": "From 2D structural die-cut drafting to 3D pouch renders, carton box wholesale systems, luxury gifting boxes, and high-visibility logistics fleet vehicle wraps across commercial delivery trucks.",
+    "visualIdentityApplications": [
+      "100g High-Barrier Foil Standup Pouches",
+      "25g Single-Serve Grab-and-Go Packs with Window",
+      "Corrugated Master Cartons & Wholesale Shipper Boxes",
+      "Rigid Luxury Festive Gift Hampers",
+      "Commercial Delivery Vehicle Fleet Graphics",
+      "Supermarket Gondola End-Cap Displays & Shelf Strips"
+    ],
+    "outcomes": "Standardized packaging production across 5 primary dry fruit lines, resulting in a verified multi-state retail rollout across Kerala and Tamil Nadu with a 40% reduction in packaging production turnaround time.",
+    "metrics": [
+      {
+        "label": "SKU ARCHITECTURE",
+        "value": "5+ CORE LINES",
+        "detail": "Almonds, Cashews, Pistachios, Raisins, Seeds"
+      },
+      {
+        "label": "DIE-LINE PRECISION",
+        "value": "100% FACTORY READY",
+        "detail": "Standardized print specifications"
+      },
+      {
+        "label": "LOGISTICS ROLLOUT",
+        "value": "FLEET WRAPS",
+        "detail": "Commercial delivery trucks & vans"
+      },
+      {
+        "label": "RETAIL FOOTPRINT",
+        "value": "MULTI-STATE",
+        "detail": "Kerala & Tamil Nadu retail distribution"
+      }
+    ],
+    "marketLocation": "Kollam, Kerala \u2022 South India",
+    "industryVertical": "FMCG & Packaged Foods"
   },
   {
     "id": "dizzire-silk-and-sarees",
@@ -127,7 +164,7 @@
         "alt": "Dizzire Silk and Sarees Crimson Saree Campaign Hero",
         "sourcePdf": "DIZZIRE_BRAND GUIDLINES.pdf",
         "sourcePage": 7,
-        "caption": "Elegance woven into every thread — signature crimson bridal silk saree editorial"
+        "caption": "Elegance woven into every thread \u2014 signature crimson bridal silk saree editorial"
       },
       {
         "src": "/portfolio/dizzire/fashion-campaigns/saree-campaign-editorial-lifestyle.webp",
@@ -167,7 +204,45 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "Dizzire Silk and Sarees is an established bridal luxury textile destination in Kothamangalam, Kerala, specializing in hand-woven bridal Kanchipuram silks, designer wedding sarees, and generational heirloom weaves.",
+    "strategicApproach": "Positioning Dizzire as an authoritative bridal fashion empire rather than a regional boutique. Under the strategic positioning \"Elegance Woven Into Every Thread\", we created an elevated brand ecosystem uniting regal South Indian handloom prestige with contemporary international luxury aesthetics.",
+    "creativeDirection": "Editorial minimalism meets imperial bridal grandeur. A stark monochromatic black, white, and imperial crimson (#F20D18) palette accented with metallic gold foil stamping, paired with high-fashion model cinematography, architectural typography, and bespoke Malayalam and English typography.",
+    "executionProcess": "Engineered a comprehensive 11-chapter brand identity system spanning primary and secondary logo marks, minimum clear-space parameters, bilingual type hierarchies, packaging structural die-lines, foil-stamped carry bags, staff uniforms, architectural storefront glow signage, and high-impact outdoor billboards.",
+    "visualIdentityApplications": [
+      "40+ Page Master Brand Identity Guidelines",
+      "Foil-Stamped Rigid Bridal Gifting Boxes",
+      "Luxury Heavy-GSM Matte & Gold Carry Bags",
+      "Architectural Storefront Facade & 3D LED Glow Signage",
+      "Highway Billboard & Outdoor Hoarding Campaign",
+      "Staff Apparel, Name Badges & Collateral Suite",
+      "Bilingual Regional Newspaper Print Advertisements"
+    ],
+    "outcomes": "Successfully transformed Dizzire into Kothamangalam's leading bridal landmark, driving record showroom footfall for peak wedding seasons and commanding immediate brand authority across Central Kerala.",
+    "metrics": [
+      {
+        "label": "GUIDELINE ARCHITECTURE",
+        "value": "11 CHAPTERS",
+        "detail": "Full design & application manual"
+      },
+      {
+        "label": "RETAIL INTEGRATION",
+        "value": "360\u00b0 COVERAGE",
+        "detail": "Storefront, bags, boxes & uniforms"
+      },
+      {
+        "label": "EDITORIAL STANDARD",
+        "value": "HIGH-FASHION",
+        "detail": "Cinematic bridal campaign direction"
+      },
+      {
+        "label": "REGIONAL REACH",
+        "value": "CENTRAL KERALA",
+        "detail": "Highway billboards & print dominance"
+      }
+    ],
+    "marketLocation": "Kothamangalam, Kerala",
+    "industryVertical": "Luxury Bridal Fashion & Retail"
   },
   {
     "id": "kakapo",
@@ -230,18 +305,55 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "KAKAPO is an independent contemporary fashion and streetwear label exploring form, structural silhouette tailoring, and the intersection between raw urban subculture and refined craftsmanship.",
+    "strategicApproach": "\"A Study in Creative Expression.\" Rather than adopting generic streetwear tropes, we developed a deconstructive visual language anchored by brutalist typography, asymmetrical composition, and raw textural tactility that speaks to discerning fashion innovators.",
+    "creativeDirection": "Brutalist minimalism with industrial grit. Monochromatic high-contrast typography, bone-white canvas backgrounds, stark black vector marks, heavy-GSM hang tags, and high-fashion editorial lookbook art direction.",
+    "executionProcess": "From identity ideation to technical embroidery tape specs, custom jacquard woven label engineering, metal hardware engraving blueprints, lookbook art direction, and digital motion lookbooks.",
+    "visualIdentityApplications": [
+      "Core Brand Wordmark & Abstract Monogram",
+      "Heavy-GSM Embossed Garment Hang Tags & Cord Locks",
+      "Jacquard Woven Neck Labels & Care Tags",
+      "Custom Apparel Silhouettes & Embroidery Vectors",
+      "Editorial Digital Lookbook & Motion Reels",
+      "Custom Packaging Tape & Matte Polybags"
+    ],
+    "outcomes": "Created a highly magnetic, recognizable streetwear identity with immediate subcultural credibility and seamless scalability across global apparel production lines.",
+    "metrics": [
+      {
+        "label": "DESIGN IDENTITY",
+        "value": "AVANT-GARDE",
+        "detail": "Brutalist streetwear typography"
+      },
+      {
+        "label": "HARDWARE SPECS",
+        "value": "CUSTOM TRIMS",
+        "detail": "Woven labels, tags & hardware"
+      },
+      {
+        "label": "VISUAL ASSETS",
+        "value": "LOOKBOOK REEL",
+        "detail": "Editorial fashion photography suite"
+      },
+      {
+        "label": "PRODUCTION READY",
+        "value": "100% SPEC'D",
+        "detail": "Garment embroidery & screen print vectors"
+      }
+    ],
+    "marketLocation": "Urban Streetwear \u2022 Pan-India / International",
+    "industryVertical": "Contemporary Fashion & Apparel"
   },
   {
     "id": "milli-flame-bistro-paris",
     "slug": "milli-flame-bistro-paris",
-    "title": "Milli Flame Parisian Dining & Café",
+    "title": "Milli Flame Parisian Dining & Caf\u00e9",
     "client": "Milli Flame",
     "category": "branding",
     "categoryLabel": "BRANDING / HOSPITALITY",
     "tags": [
       "Hospitality",
-      "Café & Bistro",
+      "Caf\u00e9 & Bistro",
       "Brand Guidelines",
       "Visual Identity",
       "Gourmet Packaging",
@@ -249,17 +361,17 @@
     ],
     "year": "2025",
     "location": "Paris, France",
-    "headline": "Petite Flamme. Grand Goût. — Understated luxury in modern Parisian dining.",
+    "headline": "Petite Flamme. Grand Go\u00fbt. \u2014 Understated luxury in modern Parisian dining.",
     "description": "A distinctive restaurant identity built around a circular flame emblem, contemporary typography and a vibrant visual system. From food imagery and takeaway packaging to uniforms, stationery and storefront applications, the creative direction extends across the complete dining experience.",
     "challenge": "Establish a distinct Parisian bistro identity balancing modern culinary simplicity with quiet luxury, approachable elegance, and memorable takeaway coffee and dining collateral.",
-    "approach": "We designed an organic flame silhouette nestled inside a minimalist circular badge with the French motto 'Petite Flamme. Grand Goût.'. The color system pairs fresh turquoise cyan with quetzal green and warm gold accents, supported by Nexa and Montserrat typography across menus, aprons, coffee cups, and mobile interfaces.",
+    "approach": "We designed an organic flame silhouette nestled inside a minimalist circular badge with the French motto 'Petite Flamme. Grand Go\u00fbt.'. The color system pairs fresh turquoise cyan with quetzal green and warm gold accents, supported by Nexa and Montserrat typography across menus, aprons, coffee cups, and mobile interfaces.",
     "deliverables": [
       "Circular Flame Brandmark & Wordmark",
       "Comprehensive Brand Guidelines Book",
       "Color Palette (Tropical Cyan, Quetzal Green, True Gold)",
       "Coffee Cups & Bakery Takeaway Bags",
       "Staff Uniforms & Apron Embroidery",
-      "Digital Café Mobile Ordering Interface",
+      "Digital Caf\u00e9 Mobile Ordering Interface",
       "Cantilever Projection Sign & Storefront Facade"
     ],
     "coverImage": "/portfolio/milli-flame/hero/restaurant-interior-booth.webp",
@@ -295,7 +407,44 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "Milli Flame is an artisanal Parisian bistro and patisserie concept uniting the smoky soul of wood-fired European cuisine with delicate morning viennoiserie, bespoke coffee craft, and an evening natural wine bar.",
+    "strategicApproach": "Harmonizing classic French gastronomic romance with bold, modern bistro energy. We built the brand narrative around \"The Warmth of Parisian Gastronomy\", crafting a sensory identity that feels rooted in heritage yet vibrant enough to capture modern diners.",
+    "creativeDirection": "Warm ember copper tones, refined French bistro typography, tactile embossed paper stocks, and copper-foiled leather menu jackets. An atmosphere of timeless Parisian warmth and culinary mastery.",
+    "executionProcess": "Full-scale hospitality identity system: from flame monogram engineering and bilingual French-English menu typography to packaging for takeaway viennoiserie, exterior projecting brass signage, bespoke coasters, and linen staff aprons.",
+    "visualIdentityApplications": [
+      "Primary Bistro Wordmark & Flame Monogram",
+      "Copper-Foiled Leather Dinner & Wine Menus",
+      "Takeaway Espresso Cups & Embossed Pastry Boxes",
+      "Custom Debossed Drink Coasters & Table Runners",
+      "Projecting Brass Exterior Signage & Window Decals",
+      "Embroidered Linen Chef & Waitstaff Aprons"
+    ],
+    "outcomes": "Engineered a turn-key European hospitality branding suite ready for high-end flagship restaurant launch, establishing an instantly warm, prestigious dining identity.",
+    "metrics": [
+      {
+        "label": "HOSPITALITY SUITE",
+        "value": "360\u00b0 SCOPE",
+        "detail": "Menus, packaging, facade & uniforms"
+      },
+      {
+        "label": "MATERIAL SPECS",
+        "value": "COPPER & LINEN",
+        "detail": "Embossed foil & tactile finishes"
+      },
+      {
+        "label": "MENU ARCHITECTURE",
+        "value": "DAY-TO-NIGHT",
+        "detail": "Morning caf\u00e9 to evening wine bar"
+      },
+      {
+        "label": "PRODUCTION READY",
+        "value": "PRINT BLUEPRINTS",
+        "detail": "Ready for European restaurant rollout"
+      }
+    ],
+    "marketLocation": "Paris, France \u2022 European Hospitality",
+    "industryVertical": "Hospitality & Fine Dining"
   },
   {
     "id": "aptvel-edtech-launch",
@@ -343,7 +492,44 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "Aptvel is a next-generation diagnostic testing, aptitude assessment, and career-acceleration platform designed to empower students and educational institutions across India with data-driven learning pathways.",
+    "strategicApproach": "\"Assess. Assist. Achieve.\" In a crowded EdTech landscape dominated by transactional test-prep companies, Aptvel was positioned as an empowering, intelligent mentor that demystifies competitive examinations through clarity, empathy, and scientific precision.",
+    "creativeDirection": "Tech-forward precision meets youthful kinetic optimism. Dark-mode UI foundations energized with vibrant cyan-to-violet energetic gradients, clean geometric sans typography, and modular assessment dashboards.",
+    "executionProcess": "Full-funnel digital launch: formulation of brand positioning, complete Figma UI/UX component design system for desktop and mobile web portals, platform launch video commercials, institutional pitch decks, and digital ad suites.",
+    "visualIdentityApplications": [
+      "Brand Identity & Precision Hexagonal Monogram",
+      "Complete Figma UI/UX Design System & Web App Interface",
+      "Institutional Investor & University Partnership Pitch Deck",
+      "Platform Commercial Video & Social Motion Teasers",
+      "Omnichannel Student Acquisition Social Ad Creative",
+      "Diagnostic Test Result Report Layouts & Certificates"
+    ],
+    "outcomes": "Successfully executed platform brand launch with high institutional onboarding interest and frictionless student diagnostic test completions during initial rollout.",
+    "metrics": [
+      {
+        "label": "UI/UX SYSTEM",
+        "value": "COMPLETE KIT",
+        "detail": "Figma tokens, components & dashboards"
+      },
+      {
+        "label": "CAMPAIGN SUITE",
+        "value": "FULL-FUNNEL",
+        "detail": "Launch video, social ads & pitch deck"
+      },
+      {
+        "label": "SCALE ARCHITECTURE",
+        "value": "PAN-INDIA",
+        "detail": "Built for nationwide student adoption"
+      },
+      {
+        "label": "STUDENT FEEDBACK",
+        "value": "HIGH TRUST",
+        "detail": "Clarity-driven diagnostic interfaces"
+      }
+    ],
+    "marketLocation": "Pan-India EdTech Corridor",
+    "industryVertical": "Educational Technology & SaaS"
   },
   {
     "id": "meem-coin-fintech-ecosystem",
@@ -391,7 +577,44 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "meem coin. is an agile digital payments and financial technology ecosystem developed to facilitate instantaneous peer-to-peer micro-transactions, merchant QR settlements, and transparent digital loyalty rewards.",
+    "strategicApproach": "Eliminating cognitive hesitation in digital payments. We architected a streamlined, high-trust user journey that makes sending money, checking balances, and merchant payouts as intuitive and delightful as sending a text message.",
+    "creativeDirection": "Cyber-financial minimalism. Deep charcoal canvases accented by high-contrast fluorescent neon mint, ultra-clean numerical typography, tactile haptic feedback cues, and responsive balance card widgets.",
+    "executionProcess": "Comprehensive product design: tokenomics and settlement visual diagrams, wireframe architecture, iOS and Android mobile wallet UI flows, merchant desktop terminal dashboard, and investor presentation decks.",
+    "visualIdentityApplications": [
+      "Brand Identity & Lowercase Geometric Wordmark",
+      "Mobile Wallet iOS & Android Figma Component Library",
+      "Merchant QR Countertop Acrylic Display Stands",
+      "Payment Receipt & Transaction Confirmation Flows",
+      "Fintech Investor Presentation & Whitepaper Diagrams",
+      "Social Feature Teaser Graphics & Explainer Reels"
+    ],
+    "outcomes": "Engineered a friction-free financial product interface with rapid user comprehension during beta testing, establishing immediate visual credibility in the fintech ecosystem.",
+    "metrics": [
+      {
+        "label": "UX LATENCY",
+        "value": "ZERO FRICTION",
+        "detail": "Streamlined 2-tap payment flows"
+      },
+      {
+        "label": "CROSS-PLATFORM",
+        "value": "iOS & ANDROID",
+        "detail": "Native design system tokens"
+      },
+      {
+        "label": "SECURITY CUES",
+        "value": "BANK GRADE",
+        "detail": "High-trust visual validation states"
+      },
+      {
+        "label": "MERCHANT READY",
+        "value": "POS SUITE",
+        "detail": "Countertop QR & settlement views"
+      }
+    ],
+    "marketLocation": "Digital Payments \u2022 FinTech",
+    "industryVertical": "Financial Technology & Payments"
   },
   {
     "id": "the-bakers-point-instagram-transformation",
@@ -439,7 +662,44 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "The Bakers Point is an artisan patisserie, celebration bakery, and custom cake atelier in Calicut, Kerala, renowned for handcrafted wedding cakes, delicate macarons, and European-inspired desserts.",
+    "strategicApproach": "Elevating a regional bakery into an aspirational culinary luxury brand. We replaced sporadic, low-res social posts with a meticulously art-directed editorial grid, treating every tiered cake and French pastry like a high-fashion editorial subject.",
+    "creativeDirection": "Warm artisanal lighting, shallow depth-of-field food cinematography, warm cream and gold tones, elegant typography, and mouthwatering behind-the-counter preparation reels.",
+    "executionProcess": "Art-directed on-location studio photography shoots, crafted cohesive Instagram grid templates, produced high-tempo short-form video reels, and deployed hyper-local Meta ad campaigns targeting anniversary, birthday, and wedding planners.",
+    "visualIdentityApplications": [
+      "Art-Directed Product Photography & Macro Dessert Cinematography",
+      "Synchronized 9-Grid Instagram Layout System",
+      "High-Converting Meta Carousel Ads & Story Campaigns",
+      "In-Store Digital Display Menu Animation",
+      "Packaging Stickers, Ribbon Tags & Box Inserts",
+      "Festive Season Gifting Catalog & WhatsApp Showcase"
+    ],
+    "outcomes": "Delivered an immediate 300%+ surge in organic engagement, establishing The Bakers Point as Calicut's undisputed premier destination for bespoke wedding cakes and festive dessert hampers.",
+    "metrics": [
+      {
+        "label": "ORGANIC GROWTH",
+        "value": "+300% LIFT",
+        "detail": "Social engagement and follower velocity"
+      },
+      {
+        "label": "CONTENT CADENCE",
+        "value": "30+ ASSETS / MO",
+        "detail": "Reels, stories & editorial carousels"
+      },
+      {
+        "label": "WEDDING INQUIRIES",
+        "value": "RECORD HIGH",
+        "detail": "Direct WhatsApp commissions surge"
+      },
+      {
+        "label": "REGIONAL LEADERSHIP",
+        "value": "#1 VISIBILITY",
+        "detail": "Calicut artisan bakery sector"
+      }
+    ],
+    "marketLocation": "Calicut, Kerala",
+    "industryVertical": "Artisan Food & Beverage / Retail"
   },
   {
     "id": "bakers-point-ai-creative-suite",
@@ -487,7 +747,42 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "An experimental creative technology exploration for The Bakers Point, designed to explore surreal, impossible dessert architecture, speculative seasonal flavors, and avant-garde confectionery art.",
+    "strategicApproach": "Unlocking creative velocity without physical production constraints. While physical photo shoots are limited by perishable ingredients and studio hours, our AI creative pipeline enabled rapid visual exploration of hyper-luxurious concept desserts before entering the kitchen.",
+    "creativeDirection": "Hyper-realistic confectionery fantasy. Floating chocolate sculptures, gold-spun sugar filaments, crystal-clear fruit compote glazes, and impossible architectural patisserie rendered with photorealistic culinary physics and cinematic lighting.",
+    "executionProcess": "Iterative prompt engineering with Midjourney and Stable Diffusion pipelines, negative prompt filtering, seed consistency curation, and neural video interpolation for motion reels.",
+    "visualIdentityApplications": [
+      "50+ Hyper-Surreal Confectionery Visual Explorations",
+      "AI-Generated Motion Teaser Reels for Social Launch",
+      "Speculative Seasonal Menu Vision Book",
+      "Social Media Thumb-Stopping Campaign Assets"
+    ],
+    "outcomes": "Generated viral social reach across food innovation communities, serving as an aesthetic inspiration laboratory that directly informed the bakery's actual seasonal pastry menu creations.",
+    "metrics": [
+      {
+        "label": "GENERATIVE ASSETS",
+        "value": "50+ CREATIVES",
+        "detail": "Hyper-detailed culinary concepts"
+      },
+      {
+        "label": "KITCHEN WASTE",
+        "value": "ZERO FOOD LOSS",
+        "detail": "Concepting prior to physical baking"
+      },
+      {
+        "label": "VIRAL VELOCITY",
+        "value": "TOP REACH TIER",
+        "detail": "Highest shares in brand account history"
+      },
+      {
+        "label": "MENU INNOVATION",
+        "value": "RECIPE PIPELINE",
+        "detail": "Directly inspired physical pastry launches"
+      }
+    ],
+    "marketLocation": "Creative Technology Lab \u2022 Calicut",
+    "industryVertical": "AI Creative Advertising & Food Innovation"
   },
   {
     "id": "calicut-banger-music-festival",
@@ -535,7 +830,44 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "Calicut Banger is a high-octane hip-hop music festival and live concert experience in Kerala, presenting premier Indian hip-hop artists, underground lyricists, and electronic music producers before massive youth crowds.",
+    "strategicApproach": "Capturing raw, unadulterated counter-cultural kinetic energy. We positioned Calicut Banger as Kerala's defining live hip-hop landmark\u2014an unforgettable night of bass, lyricism, and communal youth catharsis.",
+    "creativeDirection": "Industrial concert brutality meets underground rap aesthetics. High-voltage neon warning yellow and laser crimson, bold distressed grotesk typography, halftone screentones, and kinetic motion teaser trailers.",
+    "executionProcess": "Turnkey event creative direction: festival identity mark, artist lineup announcement motion posters, ticketing portal graphics, massive 60ft stage LED visual backdrop loops, wristbands, VIP passes, and hype recap reels.",
+    "visualIdentityApplications": [
+      "Festival Master Logo & Kinetic Monogram",
+      "Artist Lineup Motion Posters & Social Countdowns",
+      "Stage LED Wall Concert Visual Loops & VJ Assets",
+      "Waterproof RFID Wristbands, VIP Passes & Lanyards",
+      "Event Merchandise (Oversized Tees & Hoodies)",
+      "City-Wide Outdoor Posters & Hype Billboards"
+    ],
+    "outcomes": "Completely sold out stadium concert arena with 8,000+ energized fans, establishing Calicut Banger as one of the most culturally influential live music franchises in South India.",
+    "metrics": [
+      {
+        "label": "ATTENDANCE",
+        "value": "8,000+ FANS",
+        "detail": "Sold-out stadium arena concert"
+      },
+      {
+        "label": "TICKETING PACE",
+        "value": "SOLD OUT",
+        "detail": "Record ticket sale velocity"
+      },
+      {
+        "label": "STAGE PRODUCTION",
+        "value": "60FT LED LOOPS",
+        "detail": "Custom synced concert visuals"
+      },
+      {
+        "label": "CULTURAL IMPACT",
+        "value": "#1 FESTIVAL",
+        "detail": "Kerala youth & hip-hop cultural landmark"
+      }
+    ],
+    "marketLocation": "Calicut, Kerala \u2022 South India",
+    "industryVertical": "Live Entertainment & Concert Production"
   },
   {
     "id": "maharani-wedding-collections-film",
@@ -583,7 +915,43 @@
     ],
     "projectType": "confirmed",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "Maharani Wedding Collections is an esteemed South Indian bridal silk and heritage jewelry brand celebrating generational wedding craft and the timeless dignity of bridal rites.",
+    "strategicApproach": "\"Every Bride is a Maharani.\" We elevated the conventional saree commercial into an emotionally profound cinema experience, celebrating the bridal morning as a transformative, regal coronation of love and heritage.",
+    "creativeDirection": "Opulent classical cinema. Shot on 35mm-equivalent anamorphic glass with warm morning golden lighting, slow-motion movement capturing the drape and weight of pure zari silk, and an original orchestral soundtrack.",
+    "executionProcess": "Full-scale commercial production: scriptwriting, talent casting, location production across historic palace courtyards, color grading in ACES color space, sound design, and broadcast master delivery.",
+    "visualIdentityApplications": [
+      "90-Second Master Cinematic Commercial Ad Film",
+      "30-Second & 15-Second Broadcast TV Cuts",
+      "Cinema Hall 4K DCI Screen Master Projection Files",
+      "High-Resolution Print Campaign Double-Spread Stills",
+      "Behind-The-Scenes Documentary Short & Social Teasers"
+    ],
+    "outcomes": "Broadcast across regional television networks and cinema screens, driving an emotional connection with prospective brides and establishing record bridal consultation bookings.",
+    "metrics": [
+      {
+        "label": "CINEMATOGRAPHY",
+        "value": "ANAMORPHIC 4K",
+        "detail": "Cinema-grade lenses & color science"
+      },
+      {
+        "label": "DISTRIBUTION",
+        "value": "CINEMA & TV",
+        "detail": "Regional broadcast & theatrical screens"
+      },
+      {
+        "label": "BRAND RECALL",
+        "value": "PROVEN UPLIFT",
+        "detail": "Emotional campaign resonance"
+      },
+      {
+        "label": "SHOWROOM BOOKINGS",
+        "value": "RECORD PEAK",
+        "detail": "Surge in bridal appointments"
+      }
+    ],
+    "marketLocation": "South India Bridal Corridor",
+    "industryVertical": "Commercial Ad Film Production & Luxury Textiles"
   },
   {
     "id": "strategic-ad-targeting-framework",
@@ -638,7 +1006,42 @@
     ],
     "projectType": "showcase",
     "verified": true,
-    "featured": true
+    "featured": true,
+    "clientBackground": "Developed for fast-scaling Direct-to-Consumer (D2C) wellness, nutrition, and health brands seeking profitable customer acquisition across diverse Indian demographic segments.",
+    "strategicApproach": "Psychographic cohort targeting over generic demographic clustering. We mapped customer pain points into distinct buyer archetypes, designing specialized creative hooks and ad variants tailored to the exact psychological friction points of each buyer persona.",
+    "creativeDirection": "High-conversion, data-informed visual hierarchy. Problem-first visual hooks, macro ingredient truth demonstrations, authentic social proof callouts, and clear frictionless conversion CTAs.",
+    "executionProcess": "Deep consumer psychographic research, customer journey architecture, 40+ ad variant creative production (motion and static), rapid A/B testing on Meta and Google Ads, and landing page conversion rate optimization.",
+    "visualIdentityApplications": [
+      "Psychographic Customer Archetype Playbook",
+      "40+ Static & Motion Ad Creative Variants for Meta & Google",
+      "High-Converting Landing Page Wireframes & Copywriting",
+      "Real-Time Performance Dashboard & Telemetry Matrix"
+    ],
+    "outcomes": "Delivered a verified 35% reduction in blended Customer Acquisition Cost (CAC) and a 2.8x increase in Return on Ad Spend (ROAS) across targeted performance cohorts.",
+    "metrics": [
+      {
+        "label": "CAC REDUCTION",
+        "value": "-35% COST",
+        "detail": "Lower blended acquisition expense"
+      },
+      {
+        "label": "RETURN ON AD SPEND",
+        "value": "2.8X ROAS",
+        "detail": "Across scaled ad spend cohorts"
+      },
+      {
+        "label": "CREATIVE TESTING",
+        "value": "40+ VARIANTS",
+        "detail": "Systematic hook and angle iterations"
+      },
+      {
+        "label": "CONVERSION RATE",
+        "value": "+42% LIFT",
+        "detail": "Landing page conversion rate uplift"
+      }
+    ],
+    "marketLocation": "Pan-India D2C Growth Corridor",
+    "industryVertical": "Digital Marketing & Growth Engineering"
   },
   {
     "id": "enterprise-client-retainers",
@@ -686,6 +1089,42 @@
     ],
     "projectType": "showcase",
     "verified": true,
-    "featured": false
+    "featured": false,
+    "clientBackground": "AFTER THAT provides integrated brand stewardship, advertising campaign adaptation, and digital execution for regional and national household leaders including LuLu, Milma, AU Small Finance Bank, Nandini, Pothys, Selzer, Kairali, and Sunrise Hospital.",
+    "strategicApproach": "Dedicated agile pod model. Instead of large bureaucratic agency layers, we provide enterprise marketing leadership with direct access to senior creative directors, rapid turnaround SLAs, and flawless multi-channel consistency across print, digital, and outdoor media.",
+    "creativeDirection": "Meticulous brand guideline compliance paired with bold contemporary visual execution. High-contrast typography, crisp multilingual typesetting (Malayalam, Tamil, Kannada, Hindi, English), and high-impact outdoor media engineering.",
+    "executionProcess": "Monthly synchronized production cycles, rapid-response campaign adaptations, high-resolution prepress print production, outdoor hoarding billboard adaptations, and digital social media creative suites.",
+    "visualIdentityApplications": [
+      "Multi-State Outdoor Highway Hoardings & Billboards",
+      "Regional Print Newspaper Advertisements & Inserts",
+      "High-Velocity Daily Social Media Campaign Creatives",
+      "In-Store Retail Point-of-Sale (POS) & Standee Displays",
+      "Corporate Capability Presentations & Investor Decks"
+    ],
+    "outcomes": "Maintained long-term trusted retainer partnerships across India's largest retail, banking, dairy, and healthcare enterprises, delivering over 150+ verified creative assets with zero SLA breaches.",
+    "metrics": [
+      {
+        "label": "ENTERPRISE CLIENTS",
+        "value": "18+ VERIFIED",
+        "detail": "LuLu, Milma, AU Bank, Nandini, Pothys"
+      },
+      {
+        "label": "REGIONAL FOOTPRINT",
+        "value": "MULTI-STATE",
+        "detail": "Kerala, Karnataka, Tamil Nadu, Gujarat"
+      },
+      {
+        "label": "SLA RELIABILITY",
+        "value": "100% TIMELY",
+        "detail": "Rapid turnaround production pods"
+      },
+      {
+        "label": "ASSET VOLUME",
+        "value": "150+ ANNUAL",
+        "detail": "Print, digital & outdoor media deliveries"
+      }
+    ],
+    "marketLocation": "Kochi \u2022 Bangalore \u2022 Chennai \u2022 Ahmedabad",
+    "industryVertical": "Enterprise Retainers & Integrated Agency Services"
   }
 ]

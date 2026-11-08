@@ -1,14 +1,5 @@
-export interface VerticalService {
-  number: string;
-  id: string;
-  title: string;
-  shortTitle: string;
-  headline: string;
-  description: string;
-  services: string[];
-  bgImage: string;
-  tagline: string;
-}
+import { VerticalService } from "@/types";
+export type { VerticalService };
 
 export const SERVICES: VerticalService[] = [
   {
@@ -18,7 +9,11 @@ export const SERVICES: VerticalService[] = [
     shortTitle: "BRANDING & IDENTITY",
     headline: "BUILD A BRAND PEOPLE RECOGNISE, TRUST AND REMEMBER.",
     description:
-      "We help businesses define how they look, communicate and position themselves in the market. From strategic brand development to visual identity and corporate communication, we create consistent brand experiences.",
+      "We help businesses define how they look, communicate and position themselves in the market. From strategic brand development to visual identity, packaging systems and corporate communication, we create enduring, commercially powerful brand assets.",
+    editorialIntro:
+      "A great brand is not a decoration; it is an economic moat. At AFTER THAT, identity begins with deep commercial intelligence—interrogating the product truth, buyer psychology, and competitive landscape. We distill this understanding into razor-sharp naming, architectural design systems, and packaging that commands absolute shelf and digital dominance.",
+    strategicValue:
+      "Transforms commoditized offerings into defensible market leaders, commanding premium pricing power and unwavering customer loyalty.",
     services: [
       "Brand strategy and positioning.",
       "Brand naming and concept development.",
@@ -33,6 +28,40 @@ export const SERVICES: VerticalService[] = [
       "Sales presentations and capability decks.",
       "Brand identity for digital and physical platforms.",
     ],
+    keyCapabilities: [
+      "Competitive Landscape & White-Space Positioning",
+      "Multi-SKU Packaging Die-Lines & Production Blueprints",
+      "Comprehensive Multi-Lingual Brand Guidelines (40+ Pages)",
+      "High-Impact Investor Decks & Institutional Proposals",
+    ],
+    projectReferences: [
+      {
+        title: "DIZZIRE SILK AND SAREES",
+        client: "Dizzire Silk and Sarees",
+        slug: "dizzire-silk-and-sarees",
+        role: "Luxury Bridal Brand Identity & Guidelines",
+        image: "/portfolio/branding/dizzire/cover.webp",
+      },
+      {
+        title: "HappEats Dry Fruits & Snacks",
+        client: "HappEats (Premium Bio Ingredients)",
+        slug: "hapeats-fmcg-packaging",
+        role: "FMCG Packaging Architecture & Fleet Branding",
+        image: "/portfolio/branding/hapeats/cover.webp",
+      },
+      {
+        title: "KAKAPO Streetwear Identity",
+        client: "KAKAPO",
+        slug: "kakapo",
+        role: "Avant-Garde Fashion Identity & Trims",
+        image: "/portfolio/branding/kakapo/cover.webp",
+      },
+    ],
+    engagementModels: [
+      "Full Brand Launch Sprint (4–8 Weeks)",
+      "Enterprise Identity Architecture Retainer",
+      "Multi-SKU Packaging Design System",
+    ],
     bgImage:
       "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1600&auto=format&fit=crop",
     tagline: "Strategic clarity meets high-impact visual identity.",
@@ -44,7 +73,11 @@ export const SERVICES: VerticalService[] = [
     shortTitle: "ADVERTISING & PRODUCTION",
     headline: "TURN IDEAS INTO POWERFUL VISUAL EXPERIENCES.",
     description:
-      "We conceptualise, develop and produce advertising and visual content that captures attention, communicates brand stories and supports marketing objectives.",
+      "We conceptualise, develop and produce commercial advertising and high-craft visual content that captures immediate attention, communicates emotional brand stories, and supports measurable commercial objectives.",
+    editorialIntro:
+      "Attention is the rarest currency in the modern economy. We craft commercial cinema, broadcast ad films, high-fashion editorial imagery, and AI-accelerated video production designed to halt the thumb and stir the soul. Operating our own production and post-production suites across South India, we bring cinematic discipline from treatment to the final color grade.",
+    strategicValue:
+      "Replaces generic corporate messaging with culturally resonant cinematic storytelling that multiplies ad recall and brand equity.",
     services: [
       "Television and digital advertisements.",
       "Commercial ad films and brand films.",
@@ -63,6 +96,40 @@ export const SERVICES: VerticalService[] = [
       "Hoardings, billboards and LED wall advertisements.",
       "Event branding and promotional displays.",
     ],
+    keyCapabilities: [
+      "Full-Scale Commercial Ad Film Direction & Production",
+      "Anamorphic 35mm Cinema Optics & ACES Color Grading",
+      "Generative AI Video Production & High-Speed Concepting",
+      "Outdoor Billboard Takeovers & Stadium LED Visuals",
+    ],
+    projectReferences: [
+      {
+        title: "Calicut Banger Concert & Hip-Hop Festival",
+        client: "Maxxo presents Calicut Banger",
+        slug: "calicut-banger-music-festival",
+        role: "Concert Visuals, Promos & Stage Motion",
+        image: "/portfolio/events-pr/calicut-banger/cover.webp",
+      },
+      {
+        title: "Maharani Wedding Collections Film",
+        client: "Maharani Wedding Collections",
+        slug: "maharani-wedding-collections-film",
+        role: "Cinematic Broadcast Commercial Film",
+        image: "/portfolio/advertising/maharani/cover.webp",
+      },
+      {
+        title: "The Bakers Point AI Creative Suite",
+        client: "The Bakers Point",
+        slug: "bakers-point-ai-creative-suite",
+        role: "AI Video Commercials & Neural Art",
+        image: "/portfolio/ai-advertising/bakers-point/cover.webp",
+      },
+    ],
+    engagementModels: [
+      "Turnkey Commercial Film Production",
+      "High-Velocity Monthly Video Content Retainer",
+      "AI Commercial Production Pipeline",
+    ],
     bgImage:
       "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1600&auto=format&fit=crop",
     tagline: "Commercial cinema, high-fashion storytelling & AI-powered visuals.",
@@ -74,7 +141,11 @@ export const SERVICES: VerticalService[] = [
     shortTitle: "DIGITAL MARKETING",
     headline: "MAKE YOUR DIGITAL PRESENCE WORK HARDER.",
     description:
-      "We develop digital marketing strategies and execute campaigns that help businesses improve visibility, engage relevant audiences and generate meaningful business opportunities.",
+      "We develop digital marketing strategies and execute performance-driven campaigns that help businesses improve visibility, engage high-intent audiences, and generate sustainable revenue pipelines.",
+    editorialIntro:
+      "Traffic without commercial intent is a vanity metric. We bridge the divide between high-calibre creative production and quantitative performance engineering. By pairing psychographic audience segmentation with aggressive creative testing across Meta, Google Ads, and organic search, we construct scalable customer acquisition funnels.",
+    strategicValue:
+      "Lowers Customer Acquisition Cost (CAC) while improving Lifetime Value (LTV) through systematic creative testing and funnel optimization.",
     services: [
       "Digital marketing strategy.",
       "Social media marketing and management.",
@@ -94,6 +165,40 @@ export const SERVICES: VerticalService[] = [
       "Influencer marketing and creator collaborations.",
       "Online brand reputation and digital communication support.",
     ],
+    keyCapabilities: [
+      "Psychographic Buyer Archetype Mapping & Cohort Targeting",
+      "Omnichannel Meta Ads & Google Search / P-Max Campaign Scaling",
+      "High-Velocity Social Content Engines (30+ Creatives / Mo)",
+      "Conversion Rate Optimization (CRO) & Funnel Telemetry",
+    ],
+    projectReferences: [
+      {
+        title: "Psychographic Ad Architecture Framework",
+        client: "Consumer Health & Wellness Brands",
+        slug: "strategic-ad-targeting-framework",
+        role: "Ad Testing Matrix (-35% CAC, 2.8x ROAS)",
+        image: "/portfolio/advertising/targeting/cover.webp",
+      },
+      {
+        title: "The Bakers Point Social Transformation",
+        client: "The Bakers Point",
+        slug: "the-bakers-point-instagram-transformation",
+        role: "Editorial Social Brand & Lead Generation",
+        image: "/portfolio/digital-marketing/bakers-point/cover.webp",
+      },
+      {
+        title: "Enterprise Client Retainers",
+        client: "LuLu, Milma, AU Bank, Nandini",
+        slug: "enterprise-client-retainers",
+        role: "Multi-Market Digital Growth & Campaign Adaptation",
+        image: "/portfolio/advertising/retainers/cover.webp",
+      },
+    ],
+    engagementModels: [
+      "Monthly Growth Engine Retainer (Paid Media + Content)",
+      "Quarterly Performance Scale Blitz",
+      "Organic SEO & Social Architecture Sprints",
+    ],
     bgImage:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
     tagline: "Performance-driven growth, paid media & organic visibility.",
@@ -105,7 +210,11 @@ export const SERVICES: VerticalService[] = [
     shortTitle: "TECH & SOFTWARE",
     headline: "BUILD DIGITAL EXPERIENCES THAT MOVE YOUR BUSINESS FORWARD.",
     description:
-      "We develop digital platforms and technology solutions that help businesses establish their online presence, improve customer experiences and streamline operations.",
+      "We develop digital platforms, custom web applications and bespoke software solutions that help businesses establish an unshakeable online presence, elevate customer journeys, and streamline mission-critical operations.",
+    editorialIntro:
+      "A company's digital platform is its ultimate flagship store and technical engine. We reject sluggish off-the-shelf templates in favor of bespoke, highly engineered web architectures, native mobile applications, and resilient business software. Designed with modern frameworks, cinematic micro-interactions, and enterprise-grade performance.",
+    strategicValue:
+      "Provides zero-friction digital infrastructure that converts visitors into customers, automates operations, and scales with enterprise growth.",
     services: [
       "Business and corporate website development.",
       "E-commerce website development.",
@@ -124,6 +233,40 @@ export const SERVICES: VerticalService[] = [
       "Website performance optimisation.",
       "Domain, hosting and deployment coordination.",
     ],
+    keyCapabilities: [
+      "Next.js / React High-Performance Flagship Web Engineering",
+      "Figma-to-Code Design Systems & Component Libraries",
+      "Cross-Platform iOS & Android Native Mobile Apps",
+      "Custom Enterprise Dashboards, CRMs & Cloud APIs",
+    ],
+    projectReferences: [
+      {
+        title: "Aptvel EdTech Platform Brand Launch",
+        client: "Aptvel (Assess. Assist. Achieve.)",
+        slug: "aptvel-edtech-launch",
+        role: "Web & Mobile App UI/UX Design System",
+        image: "/portfolio/technology/aptvel/cover.webp",
+      },
+      {
+        title: "meem coin. Digital Payments Ecosystem",
+        client: "meem coin.",
+        slug: "meem-coin-fintech-ecosystem",
+        role: "Fintech Mobile Wallet UI & Settlement Architecture",
+        image: "/portfolio/technology/meem-coin/cover.webp",
+      },
+      {
+        title: "Milli Flame Parisian Bistro Digital Suite",
+        client: "Milli Flame",
+        slug: "milli-flame-bistro-paris",
+        role: "Bespoke Hospitality Platform & Digital Menus",
+        image: "/portfolio/branding/milli-flame/cover.webp",
+      },
+    ],
+    engagementModels: [
+      "Flagship Web Build (Fixed Scope & Deliverable)",
+      "Custom Mobile App Development (iOS & Android)",
+      "Enterprise Tech Architecture & SLA Maintenance",
+    ],
     bgImage:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop",
     tagline: "Custom web flagships, mobile apps & scalable business software.",
@@ -135,7 +278,11 @@ export const SERVICES: VerticalService[] = [
     shortTitle: "PR & EXPERIENCES",
     headline: "CREATE VISIBILITY. BUILD CONNECTIONS. MAKE AN IMPRESSION.",
     description:
-      "We help brands connect with audiences through publicity, talent collaborations, promotional activities and experiences that extend beyond conventional advertising.",
+      "We help brands connect with audiences through high-profile publicity, talent collaborations, promotional activities, and immersive physical experiences that extend far beyond conventional advertising.",
+    editorialIntro:
+      "Cultural impact cannot be bought through ad inventory alone; it must be earned through memorable moments and trusted authority. We orchestrate strategic media placements, celebrity endorsements, influencer partnerships, and large-scale live experiential productions that embed brands into the cultural conversation.",
+    strategicValue:
+      "Leverages third-party authority and cultural icons to rapidly build consumer trust, amplify press coverage, and drive offline engagement.",
     services: [
       "Public relations and PR campaigns.",
       "Brand and product launch publicity.",
@@ -150,6 +297,40 @@ export const SERVICES: VerticalService[] = [
       "Event branding and communication.",
       "Sponsorship visibility and promotional coordination.",
       "Brand activations and experiential campaigns.",
+    ],
+    keyCapabilities: [
+      "A-List Celebrity Management & Strategic Endorsement Deals",
+      "Large-Scale Live Event Conceptualization & Stage Scenography",
+      "High-Impact Print, Digital & Broadcast Press Placement",
+      "KOL & Influencer Collaborative Campaign Rollouts",
+    ],
+    projectReferences: [
+      {
+        title: "Calicut Banger Hip-Hop Concert Arena",
+        client: "Maxxo presents Calicut Banger",
+        slug: "calicut-banger-music-festival",
+        role: "8,000+ Attendee Arena Music Event & PR Campaign",
+        image: "/portfolio/events-pr/calicut-banger/cover.webp",
+      },
+      {
+        title: "DIZZIRE Silk Flagship Store Launch",
+        client: "Dizzire Silk and Sarees",
+        slug: "dizzire-silk-and-sarees",
+        role: "Grand Showroom Activation, Hoardings & PR",
+        image: "/portfolio/branding/dizzire/cover.webp",
+      },
+      {
+        title: "Corporate & Enterprise Retainers",
+        client: "LuLu, Milma, AU Bank, Nandini, Pothys",
+        slug: "enterprise-client-retainers",
+        role: "Regional PR Coordination & Brand Visibility",
+        image: "/portfolio/advertising/retainers/cover.webp",
+      },
+    ],
+    engagementModels: [
+      "Turnkey Event & Brand Activation Production",
+      "Celebrity & Brand Ambassador Retainer",
+      "National PR & Media Placement Campaign",
     ],
     bgImage:
       "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop",
