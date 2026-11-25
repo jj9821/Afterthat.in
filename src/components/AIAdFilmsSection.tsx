@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Play,
   Film,
   Filter,
   Cpu,
+  ArrowUpRight,
 } from "lucide-react";
 import { AI_AD_FILMS } from "@/data/creative-archive";
 import { AIAdFilm } from "@/types/creative-archive";
@@ -14,7 +16,12 @@ import { sound } from "@/utils/sound";
 import VideoPlayerModal from "@/components/archive/VideoPlayerModal";
 import MagneticButton from "@/components/motion/MagneticButton";
 
-export default function AIAdFilmsSection() {
+interface AIAdFilmsSectionProps {
+  /** When true: shows 1 featured + 2 grid cards + "See All" CTA. No category filters. */
+  preview?: boolean;
+}
+
+export default function AIAdFilmsSection({ preview = false }: AIAdFilmsSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
   const [activeVideo, setActiveVideo] = useState<AIAdFilm | null>(null);
 
@@ -33,7 +40,10 @@ export default function AIAdFilmsSection() {
       : AI_AD_FILMS.filter((f) => f.categoryKey === selectedCategory);
 
   const featuredFilm = AI_AD_FILMS[0]; // Quppayam Royal Bridal Walk 4K
-  const gridFilms = filteredFilms.filter((f) => f.id !== (selectedCategory === "ALL" ? featuredFilm.id : ""));
+  const allGridFilms = filteredFilms.filter((f) => f.id !== (selectedCategory === "ALL" ? featuredFilm.id : ""));
+
+  // Preview mode: cap grid at 2 cards (+ 1 featured = 3 total)
+  const gridFilms = preview ? allGridFilms.slice(0, 2) : allGridFilms;
 
   const handleOpenVideo = (film: AIAdFilm) => {
     sound.playClick();
@@ -73,7 +83,7 @@ export default function AIAdFilmsSection() {
               Full-scale high-cadence commercial advertising films produced with multi-agent diffusion pipelines, custom character consistency, and broadcast-grade color mastering.
             </p>
             <div className="flex items-center gap-4 text-[#F20D18] font-bold">
-              <span>• 10 AD FILMS ARCHIVED</span>
+              <span>• {AI_AD_FILMS.length} AD FILMS ARCHIVED</span>
               <span>• ZERO STOCK FOOTAGE</span>
             </div>
           </div>
@@ -140,30 +150,32 @@ export default function AIAdFilmsSection() {
           </div>
         </div>
 
-        {/* Filter Navigation Bar */}
-        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2">
-          <span className="font-mono text-xs text-white/40 uppercase tracking-widest mr-3 flex items-center gap-1.5 shrink-0">
-            <Filter className="w-3.5 h-3.5 text-[#F20D18]" /> CATEGORIES:
-          </span>
-          {categories.map((cat) => (
-            <MagneticButton key={cat.key} strength={0.2}>
-              <button
-                onClick={() => {
-                  sound.playClick();
-                  setSelectedCategory(cat.key);
-                }}
-                onMouseEnter={() => sound.playHover()}
-                className={`font-mono text-xs uppercase tracking-wider px-4 py-2 shrink-0 border transition-all duration-200 ${
-                  selectedCategory === cat.key
-                    ? "bg-[#F20D18] border-[#F20D18] text-white font-bold shadow-[0_0_15px_rgba(242,13,24,0.6)]"
-                    : "bg-transparent border-white/15 text-white/70 hover:border-white hover:text-white"
-                }`}
-              >
-                {cat.label}
-              </button>
-            </MagneticButton>
-          ))}
-        </div>
+        {/* Filter Navigation Bar — hidden in preview mode */}
+        {!preview && (
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2">
+            <span className="font-mono text-xs text-white/40 uppercase tracking-widest mr-3 flex items-center gap-1.5 shrink-0">
+              <Filter className="w-3.5 h-3.5 text-[#F20D18]" /> CATEGORIES:
+            </span>
+            {categories.map((cat) => (
+              <MagneticButton key={cat.key} strength={0.2}>
+                <button
+                  onClick={() => {
+                    sound.playClick();
+                    setSelectedCategory(cat.key);
+                  }}
+                  onMouseEnter={() => sound.playHover()}
+                  className={`font-mono text-xs uppercase tracking-wider px-4 py-2 shrink-0 border transition-colors ${
+                    selectedCategory === cat.key
+                      ? "bg-[#F20D18] border-[#F20D18] text-white font-bold shadow-[0_0_15px_rgba(242,13,24,0.6)]"
+                      : "bg-transparent border-white/15 text-white/70 hover:border-white hover:text-white"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              </MagneticButton>
+            ))}
+          </div>
+        )}
 
         {/* Featured Hero Cinema Card (Visible on ALL filter) */}
         {selectedCategory === "ALL" && (
@@ -315,6 +327,26 @@ export default function AIAdFilmsSection() {
             </div>
           ))}
         </div>
+
+        {/* Preview mode: See All CTA */}
+        {preview && (
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
+            <p className="font-mono text-xs text-white/40 uppercase tracking-widest">
+              Showing 3 of {AI_AD_FILMS.length} films — zero stock footage, all original production
+            </p>
+            <MagneticButton strength={0.3}>
+              <Link
+                href="/work/ai-ad-films"
+                onClick={() => sound.playClick()}
+                onMouseEnter={() => sound.playHover()}
+                className="group inline-flex items-center gap-3 px-6 py-3 bg-[#F20D18] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors shadow-[0_0_20px_rgba(242,13,24,0.4)]"
+              >
+                SEE ALL {AI_AD_FILMS.length} AI FILMS
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </MagneticButton>
+          </div>
+        )}
       </div>
 
       {/* Cinematic Video Player Modal */}

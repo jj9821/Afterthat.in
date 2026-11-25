@@ -49,5 +49,8 @@ assets-to-import/
 *.tsbuildinfo
 next-env.d.ts
 
+# agent skills
+.agents/
+
 # scratch scripts
 scratch/

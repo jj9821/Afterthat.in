@@ -774,22 +774,6 @@
       "featured": true
     },
     {
-      "id": "aptvel-cyberpunk-led",
-      "title": "Aptvel: Cyberpunk VR LED Billboard",
-      "client": "Aptvel EdTech",
-      "category": "OOH & Creative Technology",
-      "description": "Night urban billboard installation with neon VR headset immersion styling illuminating a high-density intersection.",
-      "image": "/portfolio/technology/aptvel/cover.webp",
-      "aspect": "landscape",
-      "tags": [
-        "OOH Media",
-        "LED Billboard",
-        "Cyberpunk",
-        "EdTech"
-      ],
-      "featured": true
-    },
-    {
       "id": "meem-coin-3d-tokens",
       "title": "meem coin: 3D Commemorative Gold Coins",
       "client": "meem coin",

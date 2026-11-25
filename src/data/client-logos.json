@@ -4,6 +4,7 @@
     "name": "LuLu Group International",
     "slug": "lulu",
     "category": "Retail & Hypermarkets",
+    "workScope": "Digital Ads Production",
     "logoPath": "/clients/lulu/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://www.lulugroupinternational.com/",
@@ -15,14 +16,15 @@
       "height": 236,
       "aspectRatio": 3.39
     },
-    "description": "Multinational retail conglomerate operating hypermarket chains and shopping malls across the Middle East, India, and Southeast Asia.",
-    "notes": "Master vector extraction from AFTER THAT Playbook Slide 7. Features the signature red ribbon emblem, green LuLu wordmark, and Where the world comes to shop tagline."
+    "description": "Multinational retail conglomerate operating hypermarket chains and shopping malls. AFTER THAT delivered high-impact Digital Ads Production tailored for retail campaign promotions.",
+    "notes": "Delivered Scope: Digital Ads Production. Master vector extraction from AFTER THAT Playbook Slide 7."
   },
   {
     "id": "milma",
     "name": "Milma",
     "slug": "milma",
     "category": "Dairy & FMCG",
+    "workScope": "TV Commercial",
     "logoPath": "/clients/milma/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://www.milma.com/",
@@ -34,14 +36,15 @@
       "height": 418,
       "aspectRatio": 1.91
     },
-    "description": "Kerala Co-operative Milk Marketing Federation (KCMMF), the apex dairy federation serving millions of households across Kerala.",
-    "notes": "Master transparent emblem extracted with alpha mask from AFTER THAT Playbook Slide 7. Features the blue cow mark and lowercase milma wordmark."
+    "description": "Kerala Co-operative Milk Marketing Federation (KCMMF) serving millions of households across Kerala. AFTER THAT executed broadcast TV Commercial production.",
+    "notes": "Delivered Scope: TV Commercial. Master transparent emblem extracted with alpha mask from AFTER THAT Playbook Slide 7."
   },
   {
     "id": "au-small-finance-bank",
     "name": "AU Small Finance Bank",
     "slug": "au-small-finance-bank",
     "category": "Banking & Financial Services",
+    "workScope": "National Ads",
     "logoPath": "/clients/au-small-finance-bank/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://www.aubank.in/",
@@ -53,14 +56,15 @@
       "height": 352,
       "aspectRatio": 2.27
     },
-    "description": "Fortune India 500 scheduled commercial bank and India\u2019s leading small finance bank offering digital and retail banking solutions.",
-    "notes": "Master vector extraction directly from AFTER THAT Playbook Slide 7. Features signature purple background, orange AU circular emblem, and white typography."
+    "description": "Fortune India 500 scheduled commercial bank offering digital and retail banking solutions. AFTER THAT handled National Ads campaign production.",
+    "notes": "Delivered Scope: National Ads. Master vector extraction directly from AFTER THAT Playbook Slide 7."
   },
   {
     "id": "nandini",
-    "name": "Nandini",
+    "name": "Nandini Milk",
     "slug": "nandini",
     "category": "Dairy & FMCG",
+    "workScope": "Influencer Marketing, Kerala Market Launch, Activations & PR",
     "logoPath": "/clients/nandini/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://www.kmfnandini.coop/",
@@ -72,14 +76,15 @@
       "height": 636,
       "aspectRatio": 1.26
     },
-    "description": "Household dairy brand of the Karnataka Milk Federation (KMF), India\u2019s second-largest milk cooperative federation.",
-    "notes": "Master transparent oval crest extracted with alpha mask from AFTER THAT Playbook Slide 7. Features gold ribbon banners and blue cow mark."
+    "description": "Household dairy brand of the Karnataka Milk Federation (KMF). AFTER THAT spearheaded Influencer Marketing, Kerala Market Launch, on-ground Activations, and PR.",
+    "notes": "Delivered Scope: Influencer Marketing, Kerala Market Launch, Activations & PR. Master transparent crest extracted with alpha mask."
   },
   {
     "id": "pothys",
     "name": "Pothys",
     "slug": "pothys",
     "category": "Fashion Retail & Silks",
+    "workScope": "Artist Management / Model Casting",
     "logoPath": "/clients/pothys/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://www.pothys.com/",
@@ -91,14 +96,31 @@
       "height": 727,
       "aspectRatio": 1.1
     },
-    "description": "Iconic textile and silk saree retail powerhouse with mega-showrooms across Tamil Nadu, Kerala, Karnataka, and Telangana.",
-    "notes": "Master transparent emblem extracted with alpha mask from AFTER THAT Playbook Slide 7. Features green P oval, red Pothys pill, and Aalayam of Silks tagline."
+    "description": "Iconic textile and silk saree retail powerhouse across South India. AFTER THAT executed Artist Management and Model Casting for brand campaigns.",
+    "notes": "Delivered Scope: Artist Management / Model Casting. Master transparent emblem extracted with alpha mask."
+  },
+  {
+    "id": "ramraj",
+    "name": "Ramraj",
+    "slug": "ramraj",
+    "category": "Ethnic Wear & Textiles",
+    "workScope": "Artist Management / Model Casting",
+    "logoPath": null,
+    "originalFormat": "typography",
+    "sourceUrl": "internal_afterthat_archive",
+    "sourceType": "wordmark_placeholder",
+    "verificationStatus": "VERIFIED_OFFICIAL",
+    "caseStudySlug": null,
+    "dimensions": null,
+    "description": "Leading South Indian traditional dhoti, shirt, and ethnic wear brand. AFTER THAT delivered Artist Management and Model Casting for commercial shoots.",
+    "notes": "Delivered Scope: Artist Management / Model Casting. Displayed with typographic wordmark tile pending official logo asset upload."
   },
   {
     "id": "hapeats",
-    "name": "Hapeats",
+    "name": "HappEats",
     "slug": "hapeats",
     "category": "FMCG & Food Packaging",
+    "workScope": "Branding / Package Designing",
     "logoPath": "/clients/hapeats/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
@@ -110,14 +132,15 @@
       "height": 200,
       "aspectRatio": 4.0
     },
-    "description": "Packaged snack foods and dried fruits enterprise with comprehensive FMCG packaging systems and logistics fleet branding developed by AFTER THAT.",
-    "notes": "Extracted directly from agency master source PDF BRANDING COLLATERALS HAPEATS and Playbook Slide 7. Full case study available in portfolio."
+    "description": "Packaged healthy snacks and dry fruits enterprise. AFTER THAT delivered end-to-end Branding, multi-SKU Package Designing, and logistics fleet wraps.",
+    "notes": "Delivered Scope: Branding / Package Designing. Extracted directly from agency brandbook PDFs; full case study live in portfolio."
   },
   {
     "id": "nolta",
     "name": "Nolta",
     "slug": "nolta",
     "category": "Cookware & Home Appliances",
+    "workScope": "Amazon Store Setup",
     "logoPath": "/clients/nolta/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://nolta.in/",
@@ -129,33 +152,15 @@
       "height": 251,
       "aspectRatio": 3.19
     },
-    "description": "Premium German-certified cookware, tableware, and kitchen appliance brand by Kottaram Trading Company.",
-    "notes": "Acquired directly from nolta.in corporate WordPress production assets (nolta_logo-removebg-preview.png). Features official teal wordmark and lime green droplet swoosh with PREMIUM HOMEWARE tagline. Clarifies typo in initial prompt (listed as Polta)."
-  },
-  {
-    "id": "aptvel",
-    "name": "Aptvel",
-    "slug": "aptvel",
-    "category": "Technology & Digital Solutions",
-    "logoPath": "/clients/aptvel/logo.png",
-    "originalFormat": "png",
-    "sourceUrl": "internal_afterthat_archive",
-    "sourceType": "extracted_playbook_master",
-    "verificationStatus": "VERIFIED_OFFICIAL",
-    "caseStudySlug": "/work/aptvel-edtech-launch",
-    "dimensions": {
-      "width": 800,
-      "height": 286,
-      "aspectRatio": 2.79
-    },
-    "description": "Modern technology engineering, software consultancy, and enterprise cloud solutions provider.",
-    "notes": "Extracted with alpha channel from AFTER THAT Playbook master client showcase. Blue modern wordmark with stylized dot accent."
+    "description": "German-certified cookware, tableware, and kitchen appliance brand by Kottaram Trading Company. AFTER THAT engineered their complete Amazon Store Setup and marketplace presence.",
+    "notes": "Delivered Scope: Amazon Store Setup. Acquired from nolta.in corporate assets."
   },
   {
     "id": "dizzire",
     "name": "Dizzire Silk and Sarees",
     "slug": "dizzire",
     "category": "Luxury Fashion & Silk Retail",
+    "workScope": "Rebranding",
     "logoPath": "/clients/dizzire/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
@@ -167,14 +172,15 @@
       "height": 243,
       "aspectRatio": 3.29
     },
-    "description": "Heritage fashion and bridal boutique in Kothamangalam, Kerala, featuring brand identity, packaging, store design, and fashion campaigns by AFTER THAT.",
-    "notes": "Master vector brand mark from DEZZIRE_FINAL LOGO and DIZZIRE_BRAND GUIDLINES. Full dedicated showcase on /work/dizzire-silk-and-sarees."
+    "description": "Heritage bridal and silk saree destination in Kothamangalam, Kerala. AFTER THAT led a complete 360-degree Rebranding encompassing identity, guidelines, packaging, and campaigns.",
+    "notes": "Delivered Scope: Rebranding. Master vector brand mark from DIZZIRE Brand Guidelines PDF; full showcase at /work/dizzire-silk-and-sarees."
   },
   {
     "id": "selzer-polymers",
     "name": "Selzer Polymers",
     "slug": "selzer-polymers",
     "category": "Industrial Polymers & Engineering",
+    "workScope": "Digital Ad Production",
     "logoPath": "/clients/selzer-polymers/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://selzer.in/",
@@ -186,14 +192,15 @@
       "height": 236,
       "aspectRatio": 3.39
     },
-    "description": "Specialized polymer manufacturer delivering precision rubber, plastics, and industrial polymers for automotive and industrial sectors.",
-    "notes": "Extracted from AFTER THAT Playbook Slide 7 with exact alpha mask; geometric wordmark with blue accent z flourish."
+    "description": "Specialized polymer manufacturer delivering industrial polymers and precision solutions. AFTER THAT handled Digital Ad Production for product visibility.",
+    "notes": "Delivered Scope: Digital Ad Production. Extracted from AFTER THAT Playbook Slide 7 with alpha mask."
   },
   {
     "id": "kairali-group",
     "name": "Kairali Group",
     "slug": "kairali-group",
     "category": "Ayurvedic Wellness & Hospitality",
+    "workScope": "Creatives / Pitch Decks",
     "logoPath": "/clients/kairali-group/logo.png",
     "originalFormat": "png",
     "sourceUrl": "https://www.kairali.com/",
@@ -205,14 +212,15 @@
       "height": 223,
       "aspectRatio": 3.57
     },
-    "description": "Renowned international Ayurvedic wellness conglomerate, operating healing villages, treatment centres, and herbal pharmaceutical laboratories.",
-    "notes": "Verified against kairali.com corporate assets and Playbook Slide 7; navy circular crest with stylized K."
+    "description": "International Ayurvedic wellness conglomerate operating healing villages and pharmaceutical labs. AFTER THAT crafted corporate Creatives and Pitch Decks.",
+    "notes": "Delivered Scope: Creatives / Pitch Decks. Verified against kairali.com assets and Playbook Slide 7."
   },
   {
     "id": "sunrise-hospital",
-    "name": "Sunrise Hospital",
+    "name": "Sunrise Hospitals",
     "slug": "sunrise-hospital",
     "category": "Healthcare & Tertiary Hospital",
+    "workScope": "Content Production",
     "logoPath": "/clients/sunrise-hospital/logo.png",
     "originalFormat": "png",
     "sourceUrl": "http://www.sunrisehospitalcochin.com/",
@@ -224,14 +232,15 @@
       "height": 472,
       "aspectRatio": 1.69
     },
-    "description": "Leading multi-specialty tertiary healthcare centre in Kakkanad, Kochi, renowned for laparoscopic surgery and international patient care.",
-    "notes": "Extracted with alpha channel from Playbook Slide 7; multi-coloured radiant sunburst over medical crest."
+    "description": "Leading multi-specialty tertiary healthcare network in Kochi. AFTER THAT executed dedicated Content Production across medical storytelling and visual media.",
+    "notes": "Delivered Scope: Content Production. Extracted with alpha channel from Playbook Slide 7."
   },
   {
     "id": "agali-herbal",
-    "name": "Agali Herbal",
+    "name": "Agali Herbals",
     "slug": "agali-herbal",
     "category": "Tribal Herbal & Ayurvedic Formulations",
+    "workScope": "Website / Performance Marketing / Ad Film Production",
     "logoPath": "/clients/agali-herbal/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
@@ -243,14 +252,15 @@
       "height": 229,
       "aspectRatio": 3.48
     },
-    "description": "Authentic traditional tribal wellness and herbal medicine heritage brand from Attappadi, Kerala.",
-    "notes": "Extracted with alpha channel from Playbook master slide; botanical shield icon with tagline A TRIBAL LEGACY."
+    "description": "Traditional tribal wellness and herbal medicine brand from Attappadi, Kerala. AFTER THAT delivered Website development, Performance Marketing, and Ad Film Production.",
+    "notes": "Delivered Scope: Website / Performance Marketing / Ad Film Production. Extracted from Playbook master slide."
   },
   {
     "id": "evogen",
     "name": "Evogen",
     "slug": "evogen",
     "category": "Biotechnology & Diagnostics",
+    "workScope": "Public Relations",
     "logoPath": "/clients/evogen/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
@@ -262,14 +272,15 @@
       "height": 167,
       "aspectRatio": 4.76
     },
-    "description": "Advanced biotechnology and clinical diagnostics organization advancing molecular healthcare.",
-    "notes": "Extracted with alpha channel from Playbook master slide; distinctive blue DNA double-helix emblem and bold wordmark."
+    "description": "Biotechnology and clinical diagnostics organization advancing molecular healthcare. AFTER THAT managed Public Relations and strategic media positioning.",
+    "notes": "Delivered Scope: Public Relations. Extracted with alpha channel from Playbook master slide."
   },
   {
     "id": "tejas-solar",
-    "name": "Tejas Solar Techs",
+    "name": "Tejas Solar",
     "slug": "tejas-solar",
     "category": "Renewable Energy & Solar Systems",
+    "workScope": "Ad Film / Digital Content Production & Marketing",
     "logoPath": "/clients/tejas-solar/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
@@ -281,33 +292,35 @@
       "height": 529,
       "aspectRatio": 1.51
     },
-    "description": "Clean tech solar energy systems engineering, rooftop photovoltaic installations, and sustainable commercial power solutions.",
-    "notes": "Extracted with alpha channel from Playbook master slide; golden yellow solar burst emblem with clean typography."
+    "description": "Clean tech solar energy systems engineering and commercial installations. AFTER THAT delivered Ad Film, Digital Content Production, and full-funnel Marketing.",
+    "notes": "Delivered Scope: Ad Film / Digital Content Production & Marketing. Extracted with alpha channel from Playbook master slide."
   },
   {
     "id": "maharani-wedding-collections",
     "name": "Maharani Wedding Collections",
     "slug": "maharani-wedding-collections",
     "category": "Bridal Fashion & Wedding Wear",
+    "workScope": "Model / Artist Management / Casting",
     "logoPath": "/clients/maharani-wedding-collections/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
     "sourceType": "extracted_playbook_master",
     "verificationStatus": "VERIFIED_OFFICIAL",
-    "caseStudySlug": "/work/maharani-wedding-collections-film",
+    "caseStudySlug": null,
     "dimensions": {
       "width": 600,
       "height": 600,
       "aspectRatio": 1.0
     },
-    "description": "Destination bridal boutique and luxury wedding wear emporium with tagline The Classic Bridal World.",
-    "notes": "Extracted from Playbook master slide; elegant royal magenta square badge with white bridal crown insignia."
+    "description": "Destination bridal boutique and wedding wear emporium. AFTER THAT handled Model and Artist Management plus Casting for bridal campaign shoots.",
+    "notes": "Delivered Scope: Model / Artist Management / Casting. Extracted from Playbook master slide."
   },
   {
     "id": "quppayam-boutique",
     "name": "Quppayam Boutique",
     "slug": "quppayam-boutique",
     "category": "Designer Ethnic & Haute Couture",
+    "workScope": "Ad Films, Digital Ads, Content Production, Performance Marketing, Software & Web Dev, Automations",
     "logoPath": "/clients/quppayam-boutique/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
@@ -319,14 +332,15 @@
       "height": 535,
       "aspectRatio": 1.49
     },
-    "description": "Boutique bridal studio and bespoke designer fashion label celebrating contemporary Kerala couture.",
-    "notes": "Extracted with alpha channel from Playbook master slide; fashion silhouette illustration and cursive lettering. Clarifies typo in prompt (listed as Uppayyam)."
+    "description": "Bespoke designer couture house celebrating contemporary Kerala fashion. AFTER THAT partnered across Ad Films, Digital Ads, Content Production, Performance Marketing, Software & Website Development, and Automations.",
+    "notes": "Delivered Scope: Ad Films, Digital Ads, Content Production, Performance Marketing, Software & Website Development, and Automations."
   },
   {
     "id": "rajakad-medical-centre",
     "name": "Rajakad Medical Centre",
     "slug": "rajakad-medical-centre",
     "category": "Healthcare & Medical Services",
+    "workScope": "Strategy & Content Production",
     "logoPath": "/clients/rajakad-medical-centre/logo.png",
     "originalFormat": "png",
     "sourceUrl": "internal_afterthat_archive",
@@ -338,7 +352,7 @@
       "height": 314,
       "aspectRatio": 2.55
     },
-    "description": "Community healthcare institution in Idukki, Kerala, serving the region with trusted medical care since 1992.",
-    "notes": "Extracted with alpha channel from Playbook master slide; violet medical cross and leaf badge with tagline GENUINE CARE SINCE 1992."
+    "description": "Community healthcare institution in Idukki, Kerala serving the region since 1992. AFTER THAT provided brand Strategy and Content Production.",
+    "notes": "Delivered Scope: Strategy & Content Production. Extracted with alpha channel from Playbook master slide."
   }
 ]

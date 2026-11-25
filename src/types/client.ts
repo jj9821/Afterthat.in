@@ -11,15 +11,17 @@ export type ClientSourceType =
   | "vector_portal"
   | "extracted_playbook_vector"
   | "extracted_playbook_master"
-  | "official_brand_guidelines";
+  | "official_brand_guidelines"
+  | "wordmark_placeholder";
 
 export interface ClientLogo {
   id: string;
   name: string;
   slug: string;
   category: string;
-  logoPath: string;
-  originalFormat: "svg" | "png";
+  workScope?: string;
+  logoPath: string | null;
+  originalFormat: "svg" | "png" | "typography";
   sourceUrl: string;
   sourceType: ClientSourceType;
   verificationStatus: VerificationStatus;
@@ -28,7 +30,7 @@ export interface ClientLogo {
     width: number;
     height: number;
     aspectRatio: number;
-  };
+  } | null;
   description: string;
   notes: string;
 }

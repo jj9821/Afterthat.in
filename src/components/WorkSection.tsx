@@ -20,22 +20,29 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
 
   const categories = [
     { label: "ALL WORK", key: "ALL WORK" },
-    { label: "BRANDING", key: "branding" },
-    { label: "ADVERTISING", key: "advertising" },
-    { label: "DIGITAL MARKETING", key: "digital-marketing" },
-    { label: "AI ADVERTISING", key: "ai-advertising" },
-    { label: "TECHNOLOGY", key: "technology" },
-    { label: "PR & EXPERIENCES", key: "events-pr" },
+    { label: "FASHION & APPAREL", key: "fashion" },
+    { label: "FMCG & PACKAGING", key: "fmcg" },
+    { label: "HOSPITALITY & CAFÉ", key: "hospitality" },
   ];
 
   const filteredProjects =
     selectedFilter === "ALL WORK"
       ? PROJECTS
-      : PROJECTS.filter(
-          (p) =>
-            p.category === selectedFilter ||
-            (selectedFilter === "ai-advertising" && (p.category === "ai-advertising" || p.tags.some(t => t.toLowerCase().includes("ai"))))
-        );
+      : PROJECTS.filter((p) => {
+          if (selectedFilter === "fashion") {
+            return (
+              p.category === "fashion" ||
+              p.categoryLabel.toLowerCase().includes("fashion")
+            );
+          }
+          if (selectedFilter === "fmcg") {
+            return p.id === "hapeats-fmcg-packaging";
+          }
+          if (selectedFilter === "hospitality") {
+            return p.id === "milli-flame-bistro-paris";
+          }
+          return p.category === selectedFilter;
+        });
 
   const handleFilterClick = (key: string) => {
     sound.playClick();
@@ -65,7 +72,7 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
               <span>// SECTION 06</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
-                VERIFIED ARCHIVE · PDF EXTRACTED
+                VERIFIED BRANDBOOKS · PDF EXTRACTED
               </span>
             </div>
             <h2 className="font-anton text-4xl sm:text-6xl md:text-8xl tracking-tight uppercase text-white">
@@ -108,12 +115,15 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
         {/* Asymmetrical Portfolio Grid with 3D Tilt */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {filteredProjects.map((project, index) => {
-            const isSpanFull = index === 0;
-            const colSpan = isSpanFull
-              ? "md:col-span-12"
-              : index % 3 === 1
-              ? "md:col-span-7"
-              : "md:col-span-5";
+            const total = filteredProjects.length;
+            const colSpan =
+              total === 1
+                ? "md:col-span-12"
+                : total === 2
+                ? "md:col-span-6"
+                : index === 0 || index === 3
+                ? "md:col-span-7"
+                : "md:col-span-5";
 
             const projectNumber = index < 9 ? `0${index + 1}` : `${index + 1}`;
 
@@ -131,11 +141,9 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
                 <TiltCard intensity={6} glare={true} className="w-full">
                   <div
                     className={`relative w-full overflow-hidden bg-black ${
-                      isSpanFull
+                      total === 1
                         ? "aspect-[16/9] md:aspect-[21/9]"
-                        : index % 3 === 1
-                        ? "aspect-[16/10]"
-                        : "aspect-[4/3]"
+                        : "aspect-[16/10]"
                     }`}
                   >
                     {/* Primary Image Still */}
@@ -214,6 +222,19 @@ export default function WorkSection({ onSelectProject }: WorkSectionProps) {
               </div>
             );
           })}
+        </div>
+
+        {/* Archive CTA — links to /work full archive */}
+        <div className="flex justify-center pt-4 pb-2">
+          <Link
+            href="/work"
+            onClick={() => sound.playClick()}
+            onMouseEnter={() => sound.playHover()}
+            className="group inline-flex items-center gap-2 font-mono text-xs font-bold text-white/50 hover:text-[#F20D18] uppercase tracking-widest border-b border-white/20 hover:border-[#F20D18] pb-1 transition-colors"
+          >
+            EXPLORE FULL ARCHIVE — AI FILMS, PITCH DECKS & MORE
+            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
         </div>
 
         {/* Portfolio Bottom Banner */}

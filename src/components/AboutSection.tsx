@@ -120,15 +120,15 @@ export default function AboutSection() {
           {/* Right Column: Layered Editorial Visuals & Hub Telemetry */}
           <div className="lg:col-span-5 space-y-8">
             <TiltCard intensity={10} glare={true}>
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-black border border-white/20 group shadow-2xl">
+              <div className="relative aspect-square w-full overflow-hidden bg-black border border-white/20 group shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200&auto=format&fit=crop"
-                  alt="Integrated Agency Strategy & Creative Direction"
+                  src="/media/agency/team-session.jpg"
+                  alt="AFTER THAT Entertainment team strategy and creative direction session"
                   fill
-                  className="object-cover group-hover:scale-106 transition-transform duration-700 opacity-85 group-hover:opacity-100"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 500px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
 
                 {/* Top Badge */}
                 <div className="absolute top-4 left-4 font-mono text-[10px] bg-black/80 backdrop-blur-md px-3 py-1 text-[#F20D18] font-bold border border-white/20">
@@ -285,7 +285,22 @@ export default function AboutSection() {
               {/* Press Citation Card 1: Entrepreneur Ethics */}
               <TiltCard intensity={8} glare={true} className="flex-1">
                 <div className="h-full bg-[#111111] border border-white/10 hover:border-[#F20D18] transition-colors p-6 sm:p-7 flex flex-col justify-between space-y-5 group">
-                  <div className="space-y-3">
+                  <div className="space-y-4">
+                    <a
+                      href="https://entrepreneurethics.com/meet-struggling-actor-anand-bhairavv/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative block aspect-[16/9] w-full overflow-hidden bg-black border border-white/10"
+                    >
+                      <Image
+                        src="/media/press/entrepreneur-ethics-anand.jpg"
+                        alt="Anand Bhairavv featured in Entrepreneur Ethics"
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 1024px) 100vw, 520px"
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </a>
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[11px] px-2.5 py-1 bg-[#F20D18]/10 text-[#F20D18] font-bold border border-[#F20D18]/30 uppercase tracking-widest">
                         ENTREPRENEUR ETHICS
@@ -318,7 +333,22 @@ export default function AboutSection() {
               {/* Press Citation Card 2: R9 News */}
               <TiltCard intensity={8} glare={true} className="flex-1">
                 <div className="h-full bg-[#111111] border border-white/10 hover:border-[#F20D18] transition-colors p-6 sm:p-7 flex flex-col justify-between space-y-5 group">
-                  <div className="space-y-3">
+                  <div className="space-y-4">
+                    <a
+                      href="https://r9news.in/2024/09/17/a-journey-of-innovation-and-excellence-after-that-entertainment-led-by-anand-bhairav/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative block aspect-[3/2] w-full overflow-hidden bg-black border border-white/10"
+                    >
+                      <Image
+                        src="/media/press/r9-news-team.jpg"
+                        alt="AFTER THAT Entertainment team featured in R9 News"
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 1024px) 100vw, 520px"
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </a>
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-[11px] px-2.5 py-1 bg-[#F20D18]/10 text-[#F20D18] font-bold border border-[#F20D18]/30 uppercase tracking-widest">
                         R9 NEWS

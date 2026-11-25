@@ -22,29 +22,32 @@ const CLIENTS = clientLogosRaw as ClientLogo[];
 type CategoryFilter =
   | "ALL"
   | "RETAIL & FMCG"
-  | "FINANCE & TECH"
+  | "FASHION & BRIDAL"
   | "HEALTHCARE"
-  | "FASHION & LUXURY"
-  | "INDUSTRIAL & ENERGY";
+  | "BANKING & INDUSTRIAL";
 
 const CATEGORY_MAP: Record<CategoryFilter, string[]> = {
-  "ALL": [],
-  "RETAIL & FMCG": ["lulu", "milma", "nandini", "pothys", "hapeats"],
-  "FINANCE & TECH": ["au-small-finance-bank", "aptvel", "selzer-polymers"],
-  "HEALTHCARE": [
+  ALL: [],
+  "RETAIL & FMCG": ["lulu", "milma", "nandini", "hapeats", "nolta"],
+  "FASHION & BRIDAL": [
+    "pothys",
+    "ramraj",
+    "dizzire",
+    "maharani-wedding-collections",
+    "quppayam-boutique",
+  ],
+  HEALTHCARE: [
     "sunrise-hospital",
     "kairali-group",
     "agali-herbal",
     "evogen",
     "rajakad-medical-centre",
   ],
-  "FASHION & LUXURY": [
-    "dizzire",
-    "nolta",
-    "maharani-wedding-collections",
-    "quppayam-boutique",
+  "BANKING & INDUSTRIAL": [
+    "au-small-finance-bank",
+    "selzer-polymers",
+    "tejas-solar",
   ],
-  "INDUSTRIAL & ENERGY": ["selzer-polymers", "tejas-solar"],
 };
 
 export default function TrustedBySection() {
@@ -89,9 +92,9 @@ export default function TrustedBySection() {
       count: CATEGORY_MAP["RETAIL & FMCG"].length,
     },
     {
-      key: "FINANCE & TECH",
-      label: "FINANCE & TECH",
-      count: CATEGORY_MAP["FINANCE & TECH"].length,
+      key: "FASHION & BRIDAL",
+      label: "FASHION & BRIDAL",
+      count: CATEGORY_MAP["FASHION & BRIDAL"].length,
     },
     {
       key: "HEALTHCARE",
@@ -99,14 +102,9 @@ export default function TrustedBySection() {
       count: CATEGORY_MAP["HEALTHCARE"].length,
     },
     {
-      key: "FASHION & LUXURY",
-      label: "FASHION & LUXURY",
-      count: CATEGORY_MAP["FASHION & LUXURY"].length,
-    },
-    {
-      key: "INDUSTRIAL & ENERGY",
-      label: "INDUSTRIAL & ENERGY",
-      count: CATEGORY_MAP["INDUSTRIAL & ENERGY"].length,
+      key: "BANKING & INDUSTRIAL",
+      label: "BANKING & INDUSTRIAL",
+      count: CATEGORY_MAP["BANKING & INDUSTRIAL"].length,
     },
   ];
 
@@ -203,20 +201,23 @@ export default function TrustedBySection() {
                   className="group flex items-center gap-4 px-5 py-2.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-[#F20D18]/50 transition-all duration-300 flex-shrink-0 cursor-pointer"
                 >
                   <div className="w-24 h-9 relative flex items-center justify-center bg-white rounded px-2 py-1 shadow-sm group-hover:scale-105 transition-transform">
-                    <Image
-                      src={client.logoPath}
-                      alt={client.name}
-                      fill
-                      className="object-contain p-1"
-                      sizes="120px"
-                    />
+                    {client.logoPath ? (
+                      <Image
+                        src={client.logoPath}
+                        alt={client.name}
+                        fill
+                        className="object-contain p-1"
+                        sizes="120px"
+                      />
+                    ) : (
+                      <span className="font-anton text-base tracking-[0.12em] uppercase text-[#111111] leading-none">
+                        {client.name}
+                      </span>
+                    )}
                   </div>
-                  <div className="text-left border-l border-white/10 pl-3">
-                    <div className="font-space text-xs font-bold text-white group-hover:text-[#F20D18] transition-colors whitespace-nowrap">
-                      {client.name}
-                    </div>
-                    <div className="font-mono text-[9px] text-white/50 tracking-wider uppercase whitespace-nowrap">
-                      {client.category}
+                  <div className="text-left border-l border-white/10 pl-3 max-w-[210px]">
+                    <div className="font-mono text-[9px] text-white/60 tracking-wider uppercase truncate">
+                      {client.workScope || client.category}
                     </div>
                   </div>
                   {client.caseStudySlug && (
@@ -243,20 +244,23 @@ export default function TrustedBySection() {
                   className="group flex items-center gap-4 px-5 py-2.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-[#F20D18]/50 transition-all duration-300 flex-shrink-0 cursor-pointer"
                 >
                   <div className="w-24 h-9 relative flex items-center justify-center bg-white rounded px-2 py-1 shadow-sm group-hover:scale-105 transition-transform">
-                    <Image
-                      src={client.logoPath}
-                      alt={client.name}
-                      fill
-                      className="object-contain p-1"
-                      sizes="120px"
-                    />
+                    {client.logoPath ? (
+                      <Image
+                        src={client.logoPath}
+                        alt={client.name}
+                        fill
+                        className="object-contain p-1"
+                        sizes="120px"
+                      />
+                    ) : (
+                      <span className="font-anton text-base tracking-[0.12em] uppercase text-[#111111] leading-none">
+                        {client.name}
+                      </span>
+                    )}
                   </div>
-                  <div className="text-left border-l border-white/10 pl-3">
-                    <div className="font-space text-xs font-bold text-white group-hover:text-[#F20D18] transition-colors whitespace-nowrap">
-                      {client.name}
-                    </div>
-                    <div className="font-mono text-[9px] text-white/50 tracking-wider uppercase whitespace-nowrap">
-                      {client.category}
+                  <div className="text-left border-l border-white/10 pl-3 max-w-[210px]">
+                    <div className="font-mono text-[9px] text-white/60 tracking-wider uppercase truncate">
+                      {client.workScope || client.category}
                     </div>
                   </div>
                   {client.caseStudySlug && (
@@ -343,15 +347,26 @@ export default function TrustedBySection() {
 
                   {/* Centered Gallery-Mat Canvas Frame */}
                   <div className="relative w-full h-24 sm:h-28 rounded-md bg-white p-2.5 sm:p-3 flex items-center justify-center shadow-inner group-hover:scale-[1.03] transition-transform duration-300 my-auto">
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={client.logoPath}
-                        alt={`${client.name} logo`}
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 640px) 160px, (max-width: 1024px) 240px, 300px"
-                      />
-                    </div>
+                    {client.logoPath ? (
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={client.logoPath}
+                          alt={`${client.name} logo`}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 640px) 160px, (max-width: 1024px) 240px, 300px"
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex flex-col items-center justify-center text-center px-2">
+                        <span className="font-anton text-2xl sm:text-3xl tracking-[0.14em] uppercase text-[#111111] leading-none">
+                          {client.name}
+                        </span>
+                        <span className="font-mono text-[8px] tracking-[0.2em] uppercase text-[#555555] mt-1.5">
+                          {client.category}
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Bottom Meta & Action */}
@@ -359,8 +374,8 @@ export default function TrustedBySection() {
                     <h3 className="font-space font-bold text-xs sm:text-sm text-white group-hover:text-[#F20D18] transition-colors line-clamp-1">
                       {client.name}
                     </h3>
-                    <p className="font-mono text-[10px] text-white/50 tracking-wide line-clamp-1 uppercase">
-                      {client.category}
+                    <p className="font-mono text-[10px] text-white/60 tracking-wide line-clamp-2 min-h-[28px] uppercase">
+                      {client.workScope || client.category}
                     </p>
 
                     {/* Bottom Status / Case Study Indicator */}
@@ -378,7 +393,7 @@ export default function TrustedBySection() {
                       )}
 
                       <span className="text-[9px] text-white/20 uppercase font-mono">
-                        {client.originalFormat.toUpperCase()}
+                        {client.logoPath ? client.originalFormat.toUpperCase() : "WORDMARK"}
                       </span>
                     </div>
                   </div>
@@ -451,7 +466,9 @@ export default function TrustedBySection() {
                 <span className="text-white/30 font-mono">/</span>
                 <span className="flex items-center gap-1 font-mono text-[10px] text-green-400 bg-green-500/10 px-2 py-0.5 rounded border border-green-500/20 uppercase">
                   <ShieldCheck className="w-3 h-3" />
-                  {activeClient.verificationStatus.replace(/_/g, " ")}
+                  {activeClient.logoPath
+                    ? activeClient.verificationStatus.replace(/_/g, " ")
+                    : "ROSTER PARTNER"}
                 </span>
               </div>
 
@@ -468,30 +485,46 @@ export default function TrustedBySection() {
             <div className="p-6 sm:p-8 space-y-6">
               {/* Highlighted Logo Canvas */}
               <div className="relative w-full h-44 sm:h-52 rounded-lg bg-white border border-white/10 flex items-center justify-center p-6 shadow-inner">
-                <div className="relative w-full h-full max-w-md">
-                  <Image
-                    src={activeClient.logoPath}
-                    alt={`${activeClient.name} official logo`}
-                    fill
-                    className="object-contain"
-                    sizes="500px"
-                    priority
-                  />
-                </div>
+                {activeClient.logoPath ? (
+                  <div className="relative w-full h-full max-w-md">
+                    <Image
+                      src={activeClient.logoPath}
+                      alt={`${activeClient.name} official logo`}
+                      fill
+                      className="object-contain"
+                      sizes="500px"
+                      priority
+                    />
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center text-center space-y-2">
+                    <span className="font-anton text-4xl sm:text-5xl tracking-[0.16em] uppercase text-[#111111] leading-none">
+                      {activeClient.name}
+                    </span>
+                    <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#555555]">
+                      {activeClient.category} • WORDMARK TILE
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Title & Category */}
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <h3 className="font-anton text-2xl sm:text-3xl uppercase tracking-tight text-white">
                   {activeClient.name}
                 </h3>
-                <div className="flex items-center gap-3 font-mono text-xs text-white/60">
+                <div className="flex flex-wrap items-center gap-3 font-mono text-xs text-white/60">
                   <span className="text-[#F20D18] font-bold uppercase">
                     {activeClient.category}
                   </span>
                   <span>·</span>
                   <span>ID: {activeClient.slug}</span>
                 </div>
+                {activeClient.workScope && (
+                  <div className="inline-flex items-center px-2.5 py-1 rounded bg-[#F20D18]/10 border border-[#F20D18]/30 font-mono text-[11px] text-[#F20D18] font-bold uppercase tracking-wider">
+                    SCOPE: {activeClient.workScope}
+                  </div>
+                )}
               </div>
 
               {/* Description */}
@@ -520,15 +553,18 @@ export default function TrustedBySection() {
                 <div className="p-3 rounded bg-white/[0.03] border border-white/5">
                   <div className="text-white/40 uppercase">Format</div>
                   <div className="text-white font-bold uppercase mt-0.5">
-                    {activeClient.originalFormat.toUpperCase()} MASTER
+                    {activeClient.logoPath
+                      ? `${activeClient.originalFormat.toUpperCase()} MASTER`
+                      : "TYPOGRAPHIC WORDMARK"}
                   </div>
                 </div>
 
                 <div className="p-3 rounded bg-white/[0.03] border border-white/5">
                   <div className="text-white/40 uppercase">Resolution</div>
                   <div className="text-white font-bold mt-0.5">
-                    {activeClient.dimensions.width} ×{" "}
-                    {activeClient.dimensions.height}
+                    {activeClient.dimensions
+                      ? `${activeClient.dimensions.width} × ${activeClient.dimensions.height}`
+                      : "Scalable Type"}
                   </div>
                 </div>
 

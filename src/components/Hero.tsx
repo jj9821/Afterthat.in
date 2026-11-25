@@ -46,7 +46,6 @@ const CAMERA_FEEDS: CameraFeed[] = [
     tag: "CALICUT BANGER HIP-HOP FESTIVAL",
     url: "/videos/pulse-festival-reel.mp4",
     poster: "/portfolio/events-pr/calicut-banger/cover.webp",
-    projectId: "calicut-banger-music-festival",
   },
   {
     id: "cam-3",
@@ -58,11 +57,11 @@ const CAMERA_FEEDS: CameraFeed[] = [
   },
   {
     id: "cam-4",
-    name: "04 // EDTECH PLATFORM",
-    tag: "APTVEL DIGITAL LAUNCH CAMPAIGN",
+    name: "04 // STREETWEAR & APPAREL",
+    tag: "KAKAPO BRAND IDENTITY",
     url: "/videos/motorsport-reel.mp4",
-    poster: "/portfolio/technology/aptvel/cover.webp",
-    projectId: "aptvel-edtech-launch",
+    poster: "/portfolio/branding/kakapo/cover.webp",
+    projectId: "kakapo",
   },
   {
     id: "cam-5",
@@ -70,7 +69,6 @@ const CAMERA_FEEDS: CameraFeed[] = [
     tag: "BAKERS POINT AI CREATIVE SUITE",
     url: "/videos/hero-cinematic-reel.mp4",
     poster: "/portfolio/ai-advertising/bakers-point/cover.webp",
-    projectId: "bakers-point-ai-creative-suite",
   },
 ];
 

@@ -24,8 +24,6 @@ import { Project } from "@/types";
 const HorizontalGallery = dynamic(() => import("@/components/HorizontalGallery"));
 const FeaturedFilmSection = dynamic(() => import("@/components/FeaturedFilmSection"));
 const AIAdFilmsSection = dynamic(() => import("@/components/AIAdFilmsSection"));
-const CreativeArchiveSection = dynamic(() => import("@/components/CreativeArchiveSection"));
-const PitchDecksSection = dynamic(() => import("@/components/PitchDecksSection"));
 const ProjectModal = dynamic(() => import("@/components/ProjectModal"), { ssr: false });
 
 export default function HomeClient() {
@@ -101,19 +99,13 @@ export default function HomeClient() {
         {/* Section 04: Featured Production Film — Live On-Set Commercial Cinema (EVA GOLD) */}
         <FeaturedFilmSection />
 
-        {/* Section 05: AI-Powered Creative Technology & 4K Commercials */}
-        <AIAdFilmsSection />
+        {/* Section 05: AI Films Preview — 3 curated films, links to /work/ai-ad-films for full archive */}
+        <AIAdFilmsSection preview />
 
         {/* Section 06: Dynamic Selected Work & Case Studies */}
         <WorkSection onSelectProject={setSelectedProject} />
 
-        {/* Section 07: The Creative Archive (Ideas Made Visible) */}
-        <CreativeArchiveSection />
-
-        {/* Section 08: Pitch Decks & Strategy Presentations (Ideas, Presented) */}
-        <PitchDecksSection />
-
-        {/* Section 09: Why After That — Strategic Advantages & Operational Philosophy */}
+        {/* Section 06: Why After That — Strategic Advantages & Operational Philosophy */}
         <WhyUsSection />
 
         {/* Section 10: Execution Process — 5-Stage Framework */}

@@ -297,7 +297,15 @@ export default function ServiceDetailClient({ service }: ServiceDetailClientProp
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${
+              service.caseStudies.length === 2
+                ? "lg:grid-cols-2"
+                : service.caseStudies.length === 3
+                ? "lg:grid-cols-3"
+                : "lg:grid-cols-4"
+            }`}
+          >
             {service.caseStudies.map((project) => (
               <Link
                 key={project.slug}

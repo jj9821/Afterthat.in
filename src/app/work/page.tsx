@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import WorkSection from "@/components/WorkSection";
 import AIAdFilmsSection from "@/components/AIAdFilmsSection";
 import CreativeArchiveSection from "@/components/CreativeArchiveSection";
 import PitchDecksSection from "@/components/PitchDecksSection";
@@ -125,12 +124,6 @@ export default function WorkHubPage() {
                 AI AD FILMS
               </a>
               <a
-                href="#work"
-                className="px-3.5 py-1.5 bg-white/10 hover:bg-[#F20D18] text-white transition-colors border border-white/20 uppercase"
-              >
-                SELECTED WORK
-              </a>
-              <a
                 href="#creative-archive"
                 className="px-3.5 py-1.5 bg-white/10 hover:bg-[#F20D18] text-white transition-colors border border-white/20 uppercase"
               >
@@ -149,9 +142,6 @@ export default function WorkHubPage() {
 
       {/* AI Ad Films Section */}
       <AIAdFilmsSection />
-
-      {/* Primary Selected Works Section */}
-      <WorkSection />
 
       {/* The Creative Archive (Unified Showcase) */}
       <CreativeArchiveSection />
