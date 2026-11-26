@@ -87,7 +87,7 @@ export default function FeaturedFilmSection() {
                 src={videoData.poster}
                 alt={videoData.title}
                 fill
-                priority
+                loading="lazy"
                 className="object-cover group-hover:scale-104 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                 sizes="(max-width: 1440px) 100vw, 1720px"
               />

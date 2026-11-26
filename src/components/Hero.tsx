@@ -66,17 +66,60 @@ const CAMERA_FEEDS: CameraFeed[] = [
   {
     id: "cam-5",
     name: "05 // AI AD FILMS",
-    tag: "BAKERS POINT AI CREATIVE SUITE",
+    tag: "QUPPAYAM AI BRIDAL COUTURE",
     url: "/videos/hero-cinematic-reel.mp4",
-    poster: "/portfolio/ai-advertising/bakers-point/cover.webp",
+    poster: "/media/ai-ads/thumbnails/quppayam-bridal-couture.webp",
   },
 ];
+
+function TimecodeDisplay() {
+  const tcRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    let frame = 18;
+    let sec = 24;
+    let min = 0;
+
+    const tick = () => {
+      if (document.hidden) return;
+      frame++;
+      if (frame >= 24) {
+        frame = 0;
+        sec++;
+        if (sec >= 60) {
+          sec = 0;
+          min++;
+        }
+      }
+      if (tcRef.current) {
+        const pad = (n: number) => n.toString().padStart(2, "0");
+        tcRef.current.textContent = `TC 00:${pad(min)}:${pad(sec)}:${pad(frame)}`;
+      }
+    };
+
+    const interval = setInterval(tick, 1000 / 24);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span
+      ref={tcRef}
+      className="bg-black/70 px-2.5 py-1 border border-white/10 tracking-widest text-white font-mono text-[11px] tabular-nums"
+    >
+      TC 00:00:24:18
+    </span>
+  );
+}
 
 export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
   const containerRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activeFeed, setActiveFeed] = useState<CameraFeed>(CAMERA_FEEDS[0]);
-  const [timecode, setTimecode] = useState("00:00:24:18");
   const [showFullReelModal, setShowFullReelModal] = useState(false);
   const [viewfinderActive, setViewfinderActive] = useState(true);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -118,28 +161,6 @@ export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
 
   const bgParallaxX = useTransform(smoothMouseX, [-800, 800], [-25, 25]);
   const bgParallaxY = useTransform(smoothMouseY, [-500, 500], [-15, 15]);
-
-  // Live running SMPTE Timecode simulation
-  useEffect(() => {
-    let frame = 18;
-    let sec = 24;
-    let min = 0;
-    const interval = setInterval(() => {
-      frame++;
-      if (frame >= 24) {
-        frame = 0;
-        sec++;
-        if (sec >= 60) {
-          sec = 0;
-          min++;
-        }
-      }
-      const pad = (n: number) => n.toString().padStart(2, "0");
-      setTimecode(`00:${pad(min)}:${pad(sec)}:${pad(frame)}`);
-    }, 1000 / 24);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
@@ -254,9 +275,7 @@ export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
             <span className="w-1.5 h-1.5 rounded-full bg-[#F20D18] animate-ping" />
             REC [●]
           </span>
-          <span className="bg-black/70 px-2.5 py-1 border border-white/10 tracking-widest text-white font-mono text-[11px]">
-            TC {timecode}
-          </span>
+          <TimecodeDisplay />
           <span className="px-2 py-0.5 bg-[#F20D18] text-white font-extrabold tracking-widest text-[9px] uppercase hidden sm:inline">
             4K DCI • 24.00 FPS
           </span>

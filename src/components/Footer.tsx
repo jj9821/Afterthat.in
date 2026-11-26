@@ -1,32 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
+import LiveISTClock from "@/components/LiveISTClock";
 
 export default function Footer() {
-  const [currentTime, setCurrentTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone: "Asia/Kolkata",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      };
-      setCurrentTime(now.toLocaleTimeString("en-GB", options) + " IST");
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   const scrollToTop = () => {
     sound.playClick();
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -77,7 +57,7 @@ export default function Footer() {
                 { name: "FEATURED FILM", href: "/#featured-film" },
                 { name: "AI AD FILMS", href: "/work/ai-ad-films" },
                 { name: "SELECTED WORK", href: "/work" },
-                { name: "CREATIVE ARCHIVE", href: "/#creative-archive" },
+                { name: "CREATIVE ARCHIVE", href: "/work#creative-archive" },
                 { name: "PITCH DECKS", href: "/work/pitch-decks" },
                 { name: "WHY AFTER THAT", href: "/#why-us" },
                 { name: "PROCESS", href: "/#process" },
@@ -88,7 +68,7 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     onClick={(e) => {
-                      if (link.href.includes("#")) {
+                      if (link.href.startsWith("/#")) {
                         const hash = link.href.substring(link.href.indexOf("#"));
                         const element = document.querySelector(hash);
                         if (element) {
@@ -241,7 +221,7 @@ export default function Footer() {
               </div>
               <div className="flex justify-between border-b border-white/5 pb-1">
                 <span>LOCAL TIME:</span>
-                <span className="text-white">{currentTime}</span>
+                <LiveISTClock className="text-white text-right" />
               </div>
             </div>
           </div>

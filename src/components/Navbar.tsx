@@ -8,6 +8,7 @@ import { Volume2, VolumeX, Menu, X, ArrowUpRight } from "lucide-react";
 import { sound } from "@/utils/sound";
 import { COMPANY_INFO } from "@/data/company";
 import { useScrollLock } from "@/utils/scrollLock";
+import LiveISTClock from "@/components/LiveISTClock";
 
 interface NavbarProps {
   onSoundToggle?: (enabled: boolean) => void;
@@ -18,7 +19,6 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
-  const [currentTime, setCurrentTime] = useState("");
 
   // Lock body scroll when mobile navigation menu is open
   useScrollLock(isOpen);
@@ -33,25 +33,6 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
-
-  // Live Kerala (IST) Time
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone: "Asia/Kolkata",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      };
-      setCurrentTime(now.toLocaleTimeString("en-GB", options) + " IST");
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   // Track scroll position for navbar styling
   useEffect(() => {
@@ -74,10 +55,10 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
     { label: "CLIENTS", href: "#clients", index: "2.5" },
     { label: "SERVICES", href: "#services", index: "03" },
     { label: "FEATURED FILM", href: "#featured-film", index: "04" },
-    { label: "AI AD FILMS", href: "#ai-films", index: "05" },
+    { label: "AI AD FILMS", href: "/work/ai-ad-films", index: "05" },
     { label: "SELECTED WORK", href: "#work", index: "06" },
-    { label: "CREATIVE ARCHIVE", href: "#creative-archive", index: "07" },
-    { label: "PITCH DECKS", href: "#pitch-decks", index: "08" },
+    { label: "CREATIVE ARCHIVE", href: "/work", index: "07" },
+    { label: "PITCH DECKS", href: "/work/pitch-decks", index: "08" },
     { label: "WHY AFTER THAT", href: "#why-us", index: "09" },
     { label: "EXECUTION PROCESS", href: "#process", index: "10" },
     { label: "REGIONAL HUBS", href: "#locations", index: "11" },
@@ -176,7 +157,7 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
                 AI FILMS
               </button>
               <button
-                onClick={() => handleLinkClick("#creative-archive")}
+                onClick={() => handleLinkClick("/work")}
                 onMouseEnter={() => sound.playHover()}
                 className="hover:text-[#F20D18] transition-colors"
               >
@@ -193,7 +174,7 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
             <div className="h-3 w-[1px] bg-white/20" />
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#F20D18] animate-ping" />
-              <span className="text-white/60 font-mono tracking-widest">{currentTime}</span>
+              <LiveISTClock className="text-white/60 font-mono tracking-widest" />
             </div>
           </div>
 

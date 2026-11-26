@@ -35,7 +35,7 @@ export default function HorizontalGallery() {
       num: "FRAME 03",
       title: "FORT KOCHI 35MM NOIR",
       location: "Heritage Warehouse, Fort Kochi",
-      spec: "KODAK 500T 35MM FILM EMBULSION",
+      spec: "KODAK 500T 35MM FILM EMULSION",
       image:
         "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
       tagline: "Analogue modular synthesizers, red smoke, and late-night art direction.",
@@ -69,18 +69,19 @@ export default function HorizontalGallery() {
     const watermark = watermarkRef.current;
     if (!container || !track) return;
 
-    // Calculate total horizontal scroll length
-    const totalWidth = track.scrollWidth - window.innerWidth;
+    const getScrollDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
 
-    const ctx = gsap.context(() => {
-      // 1. Horizontal Scroll Pinning
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px) and (prefers-reduced-motion: no-preference)", () => {
+      // 1. Desktop horizontal scroll pinning with dynamic resize calculation
       gsap.to(track, {
-        x: () => -totalWidth,
+        x: () => -getScrollDistance(),
         ease: "none",
         scrollTrigger: {
           trigger: container,
           start: "top top",
-          end: () => `+=${totalWidth * 1.2}`,
+          end: () => `+=${getScrollDistance() * 1.1}`,
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -91,25 +92,26 @@ export default function HorizontalGallery() {
       // 2. Parallax background typography
       if (watermark) {
         gsap.to(watermark, {
-          x: () => -totalWidth * 0.45,
+          x: () => -getScrollDistance() * 0.45,
           ease: "none",
           scrollTrigger: {
             trigger: container,
             start: "top top",
-            end: () => `+=${totalWidth * 1.2}`,
+            end: () => `+=${getScrollDistance() * 1.1}`,
             scrub: 1,
+            invalidateOnRefresh: true,
           },
         });
       }
-    }, container);
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen bg-[#060606] text-white overflow-hidden border-b border-white/10"
+      className="relative w-full min-h-[600px] md:h-screen bg-[#060606] text-white overflow-x-auto md:overflow-hidden no-scrollbar border-b border-white/10"
     >
       {/* Background Watermark Parallax Type */}
       <div
@@ -120,7 +122,7 @@ export default function HorizontalGallery() {
       </div>
 
       {/* Top Pin Header */}
-      <div className="absolute top-6 left-6 right-6 md:left-12 md:right-12 z-20 flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs">
+      <div className="md:absolute md:top-6 md:left-12 md:right-12 px-6 pt-8 md:px-0 md:pt-0 z-20 flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs">
         <div className="flex items-center gap-3">
           <span className="w-2 h-2 rounded-full bg-[#F20D18] animate-ping" />
           <span className="text-[#F20D18] font-bold tracking-widest uppercase">
@@ -132,7 +134,8 @@ export default function HorizontalGallery() {
           </span>
         </div>
         <div className="flex items-center gap-2 text-white/50 text-[11px]">
-          <span>SCROLL VERTICALLY TO TRAVERSE</span>
+          <span className="hidden md:inline">SCROLL VERTICALLY TO TRAVERSE</span>
+          <span className="md:hidden">SWIPE TO EXPLORE</span>
           <ArrowRight className="w-3.5 h-3.5 text-[#F20D18]" />
         </div>
       </div>
@@ -140,7 +143,7 @@ export default function HorizontalGallery() {
       {/* Horizontal Track Container */}
       <div
         ref={trackRef}
-        className="h-full flex items-center gap-8 md:gap-14 px-6 md:px-16 pt-20 pb-12 w-max"
+        className="md:h-full flex items-center gap-6 md:gap-14 px-6 md:px-16 py-10 md:pt-20 md:pb-12 w-max"
       >
         {/* Intro Card */}
         <div className="w-[300px] sm:w-[420px] shrink-0 space-y-6">

@@ -89,9 +89,9 @@ export default function ProjectDetailClient({
     return "Brand Strategy & Identity";
   };
 
-  const contactUrl = `/#contact?service=${encodeURIComponent(getServiceParam())}&project=${encodeURIComponent(
+  const contactUrl = `/?service=${encodeURIComponent(getServiceParam())}&project=${encodeURIComponent(
     project.title
-  )}`;
+  )}#contact`;
 
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#F20D18] selection:text-white">

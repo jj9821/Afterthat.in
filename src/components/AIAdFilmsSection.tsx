@@ -190,9 +190,9 @@ export default function AIAdFilmsSection({ preview = false }: AIAdFilmsSectionPr
                   src={featuredFilm.thumbnailUrl}
                   alt={featuredFilm.title}
                   fill
+                  loading="lazy"
                   className="object-cover group-hover/thumb:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1200px) 100vw, 1200px"
-                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 

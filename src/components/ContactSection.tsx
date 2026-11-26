@@ -82,7 +82,7 @@ export default function ContactSection() {
     email: "",
     phone: "",
     service: "Brand Strategy & Identity",
-    budget: "₹10L – ₹25 Lakhs",
+    budget: "₹10L – ₹25 Lakhs (Core Project)",
     preferredContactMethod: "WhatsApp",
     timeline: "1–3 Months (Q2 Launch)",
     preferredHub: "Remote / Pan-India Mandate",
@@ -170,7 +170,7 @@ export default function ContactSection() {
         email: "",
         phone: "",
         service: "Brand Strategy & Identity",
-        budget: "₹10L – ₹25 Lakhs",
+        budget: "₹10L – ₹25 Lakhs (Core Project)",
         preferredContactMethod: "WhatsApp",
         timeline: "1–3 Months (Q2 Launch)",
         preferredHub: "Remote / Pan-India Mandate",
@@ -197,7 +197,7 @@ export default function ContactSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-6">
           <div className="space-y-3">
             <div className="flex items-center gap-3 font-mono text-xs text-[#F20D18] font-bold tracking-[0.3em] uppercase">
-              <span>// SECTION 12</span>
+              <span>// SECTION 10</span>
               <span className="text-white/30">/</span>
               <span className="text-white/50 tracking-widest">
                 COMMISSION TERMINAL · START A PROJECT
@@ -237,10 +237,12 @@ export default function ContactSection() {
               {/* Row 1: Name & Company */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-name" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     YOUR NAME *
                   </label>
                   <input
+                    id="contact-name"
+                    name="name"
                     type="text"
                     required
                     placeholder="e.g. Rahul Menon"
@@ -251,10 +253,12 @@ export default function ContactSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-company" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     COMPANY / ORGANISATION
                   </label>
                   <input
+                    id="contact-company"
+                    name="company"
                     type="text"
                     placeholder="e.g. Apex Consumer Brands"
                     value={formData.company}
@@ -267,10 +271,12 @@ export default function ContactSection() {
               {/* Row 2: Email & Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-email" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     BUSINESS EMAIL *
                   </label>
                   <input
+                    id="contact-email"
+                    name="email"
                     type="email"
                     required
                     placeholder="rahul@company.com"
@@ -281,10 +287,12 @@ export default function ContactSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-phone" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     PHONE / WHATSAPP NUMBER
                   </label>
                   <input
+                    id="contact-phone"
+                    name="phone"
                     type="tel"
                     placeholder="+91 98765 43210"
                     value={formData.phone}
@@ -296,10 +304,12 @@ export default function ContactSection() {
 
               {/* Row 3: Service Required */}
               <div className="space-y-2">
-                <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                <label htmlFor="contact-service" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                   SERVICE REQUIRED *
                 </label>
                 <select
+                  id="contact-service"
+                  name="service"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
@@ -315,10 +325,12 @@ export default function ContactSection() {
               {/* Row 4: Budget & Timeline */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-budget" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     APPROXIMATE BUDGET BRACKET
                   </label>
                   <select
+                    id="contact-budget"
+                    name="budget"
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
@@ -332,10 +344,12 @@ export default function ContactSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-timeline" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     TARGET LAUNCH WINDOW
                   </label>
                   <select
+                    id="contact-timeline"
+                    name="timeline"
                     value={formData.timeline}
                     onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
@@ -352,10 +366,12 @@ export default function ContactSection() {
               {/* Row 5: Preferred Contact Method & Hub */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-method" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     PREFERRED CONTACT METHOD
                   </label>
                   <select
+                    id="contact-method"
+                    name="preferredContactMethod"
                     value={formData.preferredContactMethod}
                     onChange={(e) =>
                       setFormData({ ...formData, preferredContactMethod: e.target.value })
@@ -371,10 +387,12 @@ export default function ContactSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                  <label htmlFor="contact-hub" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                     PREFERRED OPERATING HUB
                   </label>
                   <select
+                    id="contact-hub"
+                    name="preferredHub"
                     value={formData.preferredHub}
                     onChange={(e) => setFormData({ ...formData, preferredHub: e.target.value })}
                     className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-space text-sm focus:outline-none focus:border-[#F20D18] transition-colors"
@@ -390,10 +408,12 @@ export default function ContactSection() {
 
               {/* Row 6: Project Scope & Objectives */}
               <div className="space-y-2">
-                <label className="font-mono text-xs uppercase tracking-wider text-white/80 block">
+                <label htmlFor="contact-description" className="font-mono text-xs uppercase tracking-wider text-white/80 block">
                   PROJECT DESCRIPTION & STRATEGIC OBJECTIVES *
                 </label>
                 <textarea
+                  id="contact-description"
+                  name="description"
                   required
                   rows={4}
                   placeholder="Tell us about your brand, current challenges, desired deliverables, target timeline, or creative ambition..."

@@ -16,7 +16,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     // Sequence progress
     const phrases = [
       "INITIALIZING AUDIOVISUAL ENGINE",
-      "SYNCHRONIZING WESTERN GHATS COORDINATES [10.02°N, 77.06°E]",
+      "SYNCHRONIZING HUB TELEMETRY [KOCHI • BLR • AMD]",
       "LOADING 70MM ANAMORPHIC FRAMES",
       "CALIBRATING MONOCHROME CONTRAST",
       "AFTER THAT — WHAT HAPPENS NEXT",
@@ -145,8 +145,8 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             </div>
 
             <div className="flex justify-between items-center text-[10px] font-mono text-[#666666] tracking-widest">
-              <span>ANAND BHAIRAV / DIRECTION</span>
-              <span>CALICUT • KOCHI • IDUKKI</span>
+              <span>ANAND BHAIRAVV / DIRECTION</span>
+              <span>KOCHI • BANGALORE • AHMEDABAD</span>
             </div>
           </div>
 

@@ -33,6 +33,9 @@ export default function CustomCursor() {
     let prevX = -100;
     let prevY = -100;
     let isInitialized = false;
+    let lastCursorText = "";
+    let lastPreviewImg: string | null = null;
+    let lastIsPointer = false;
     let animationFrameId: number;
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -52,34 +55,30 @@ export default function CustomCursor() {
       if (target) {
         // 1. Contextual Cursor Label check
         const cursorAttr = target.closest("[data-cursor]");
-        if (cursorAttr) {
-          const text = cursorAttr.getAttribute("data-cursor") || "";
-          setCursorText(text);
-        } else {
-          setCursorText("");
+        const nextText = cursorAttr?.getAttribute("data-cursor") || "";
+        if (nextText !== lastCursorText) {
+          lastCursorText = nextText;
+          setCursorText(nextText);
         }
 
         // 2. Hover Image Preview check
         const previewAttr = target.closest("[data-preview-img]");
-        if (previewAttr) {
-          const imgUrl = previewAttr.getAttribute("data-preview-img");
-          setPreviewImage(imgUrl);
-        } else {
-          setPreviewImage(null);
+        const nextPreview = previewAttr?.getAttribute("data-preview-img") || null;
+        if (nextPreview !== lastPreviewImg) {
+          lastPreviewImg = nextPreview;
+          setPreviewImage(nextPreview);
         }
 
-        // 3. Clickable Interactive Element check
-        const isClickable =
-          target.tagName === "BUTTON" ||
-          target.tagName === "A" ||
-          target.closest("button") !== null ||
-          target.closest("a") !== null ||
-          target.closest("[role='button']") !== null ||
-          target.closest(".cursor-pointer") !== null ||
-          target.getAttribute("role") === "button" ||
-          window.getComputedStyle(target).cursor === "pointer";
+        // 3. Clickable Interactive Element check (avoids forced style recalc via getComputedStyle)
+        const nextIsPointer =
+          target.closest(
+            "button, a, [role='button'], [data-cursor], .cursor-pointer, input, select, textarea"
+          ) !== null;
 
-        setIsPointer(isClickable);
+        if (nextIsPointer !== lastIsPointer) {
+          lastIsPointer = nextIsPointer;
+          setIsPointer(nextIsPointer);
+        }
       }
     };
 
