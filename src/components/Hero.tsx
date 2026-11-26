@@ -223,15 +223,9 @@ export default function Hero({ onOpenProject: _onOpenProject }: HeroProps) {
         <div className="absolute inset-0 subtle-grid opacity-20" />
       </div>
 
-      {/* 2. DIRECTOR VIEWFINDER TECHNICAL HUD (Reticles & VU Meter) */}
+      {/* 2. DIRECTOR VIEWFINDER TECHNICAL HUD (VU Meter & Coordinates) */}
       {viewfinderActive && (
-        <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-between p-4 sm:p-8 pt-32">
-          {/* Top Corner Crosshairs */}
-          <div className="w-full flex justify-between">
-            <span className="text-[#F20D18]/50 font-mono text-sm leading-none">[ + ]</span>
-            <span className="text-[#F20D18]/50 font-mono text-sm leading-none">[ + ]</span>
-          </div>
-
+        <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-end p-4 sm:p-8 pt-32">
           {/* Bottom HUD: Live Audio Visualizer VU Equalizer */}
           <div className="w-full flex items-end justify-between font-mono text-[10px] text-white/50 pb-16">
             <div className="flex items-center gap-2 bg-black/70 px-3 py-1.5 border border-white/15">

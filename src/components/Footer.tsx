@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { sound } from "@/utils/sound";
@@ -22,14 +23,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 border-b border-white/10 pb-16">
           {/* Col 1: Brand Info & Positioning */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-[#F20D18] text-white font-anton flex items-center justify-center text-lg font-bold">
-                AT
-              </div>
-              <span className="font-anton text-2xl tracking-wider uppercase text-white">
-                {COMPANY_INFO.name}
-              </span>
-            </div>
+            <Link
+              href="/"
+              onMouseEnter={() => sound.playHover()}
+              className="inline-flex items-center opacity-90 hover:opacity-100 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <Image
+                src="/brand/afterthat-logo-white.png"
+                alt="AFTER THAT ENTERTAINMENT"
+                width={751}
+                height={398}
+                className="h-8 sm:h-9 w-auto object-contain"
+              />
+            </Link>
 
             <p className="font-anton text-xl sm:text-2xl text-[#F20D18] uppercase tracking-wide">
               {COMPANY_INFO.tagline}

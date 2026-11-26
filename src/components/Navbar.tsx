@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Volume2, VolumeX, Menu, X, ArrowUpRight } from "lucide-react";
 import { sound } from "@/utils/sound";
 import { COMPANY_INFO } from "@/data/company";
@@ -16,29 +17,51 @@ interface NavbarProps {
 
 export default function Navbar({ onSoundToggle }: NavbarProps) {
   const router = useRouter();
+  const prefersReducedMotion = useReducedMotion();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstDrawerLinkRef = useRef<HTMLAnchorElement>(null);
 
-  // Lock body scroll when mobile navigation menu is open
+  // Lock body & Lenis scroll when mobile/tablet navigation drawer is open
   useScrollLock(isOpen);
+
+  const closeDrawer = useCallback((restoreFocus = false) => {
+    setIsOpen(false);
+    if (restoreFocus) {
+      requestAnimationFrame(() => {
+        menuButtonRef.current?.focus();
+      });
+    }
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
+
+    const rafId = requestAnimationFrame(() => {
+      firstDrawerLinkRef.current?.focus();
+    });
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setIsOpen(false);
+        closeDrawer(true);
       }
     };
+
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen]);
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, closeDrawer]);
 
   // Track scroll position for navbar styling
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -49,20 +72,20 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
     if (onSoundToggle) onSoundToggle(active);
   };
 
-  const navLinks = [
-    { label: "INDEX", href: "#hero", index: "01" },
-    { label: "ABOUT", href: "#about", index: "02" },
-    { label: "CLIENTS", href: "#clients", index: "2.5" },
-    { label: "SERVICES", href: "#services", index: "03" },
-    { label: "FEATURED FILM", href: "#featured-film", index: "04" },
-    { label: "AI AD FILMS", href: "/work/ai-ad-films", index: "05" },
-    { label: "SELECTED WORK", href: "#work", index: "06" },
-    { label: "CREATIVE ARCHIVE", href: "/work", index: "07" },
-    { label: "PITCH DECKS", href: "/work/pitch-decks", index: "08" },
-    { label: "WHY AFTER THAT", href: "#why-us", index: "09" },
-    { label: "EXECUTION PROCESS", href: "#process", index: "10" },
-    { label: "REGIONAL HUBS", href: "#locations", index: "11" },
-    { label: "START A PROJECT", href: "#contact", index: "12" },
+  const desktopLinks = [
+    { label: "WORK", href: "#work" },
+    { label: "AI FILMS", href: "#ai-films" },
+    { label: "SERVICES", href: "#services" },
+    { label: "AGENCY", href: "#about" },
+  ];
+
+  const drawerLinks = [
+    { label: "WORK", href: "#work", meta: "SELECTED CASE STUDIES" },
+    { label: "AI FILMS", href: "/work/ai-ad-films", meta: "GENERATIVE CINEMA" },
+    { label: "SERVICES", href: "#services", meta: "CAPABILITIES" },
+    { label: "AGENCY", href: "#about", meta: "STUDIO & LEADERSHIP" },
+    { label: "ARCHIVE", href: "/work", meta: "ALL WORK" },
+    { label: "PITCH DECKS", href: "/work/pitch-decks", meta: "PRESENTATIONS" },
   ];
 
   const handleLinkClick = (href: string) => {
@@ -71,7 +94,7 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
     if (href.startsWith("#")) {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
       } else {
         router.push(`/${href}`);
       }
@@ -83,13 +106,13 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
           isScrolled
-            ? "bg-[#080808]/90 backdrop-blur-md border-b border-white/10 py-3 md:py-4 shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
-            : "bg-transparent py-5 md:py-7"
+            ? "bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/10 py-3.5 md:py-4 shadow-[0_12px_32px_rgba(0,0,0,0.75)]"
+            : "bg-transparent py-5 md:py-6"
         }`}
       >
-        <div className="max-w-[1720px] mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between">
+        <div className="max-w-[1720px] mx-auto px-4 sm:px-8 md:px-12 flex items-center justify-between gap-6">
           {/* Brand Logo */}
           <Link
             href="/"
@@ -102,99 +125,56 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
             }}
             onMouseEnter={() => sound.playHover()}
             data-cursor="AFTER THAT"
-            className="group flex items-center gap-3 relative z-50"
+            className="inline-flex items-center shrink-0 relative z-50 opacity-90 hover:opacity-100 hover:-translate-y-0.5 transition-all duration-200"
           >
-            <div className="w-8 h-8 md:w-9 md:h-9 bg-white text-black font-anton flex items-center justify-center text-lg md:text-xl font-bold tracking-tighter group-hover:bg-[#F20D18] group-hover:text-white transition-colors duration-200">
-              AT
-            </div>
-            <div className="flex flex-col">
-              <span className="font-anton text-xl md:text-2xl tracking-wider text-white uppercase group-hover:text-[#F20D18] transition-colors leading-none">
-                AFTER THAT
-              </span>
-              <span className="font-mono text-[9px] text-[#888888] tracking-[0.2em] uppercase hidden sm:block">
-                ENTERTAINMENT LLP
-              </span>
-            </div>
+            <Image
+              src="/brand/afterthat-logo-white.png"
+              alt="AFTER THAT ENTERTAINMENT"
+              width={751}
+              height={398}
+              priority
+              className="h-10 sm:h-11 md:h-12 w-auto object-contain"
+            />
           </Link>
 
-          {/* Desktop Status Bar / Quick Navigation */}
-          <div className="hidden lg:flex items-center gap-6 font-mono text-[11px] text-[#888888]">
-            <nav className="flex items-center gap-5 font-mono text-[11px] font-bold tracking-widest uppercase text-white/70">
+          {/* Focused Desktop Navigation */}
+          <nav
+            aria-label="Primary navigation"
+            className="hidden lg:flex items-center gap-7 lg:gap-9 font-mono text-[11px] font-bold tracking-[0.18em] uppercase text-white/75"
+          >
+            {desktopLinks.map((item) => (
               <button
-                onClick={() => handleLinkClick("#about")}
+                key={item.href}
+                type="button"
+                onClick={() => handleLinkClick(item.href)}
                 onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors"
+                className="relative py-1 hover:text-white transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-[#F20D18] hover:after:w-full after:transition-all after:duration-200"
               >
-                ABOUT
+                {item.label}
               </button>
-              <button
-                onClick={() => handleLinkClick("#clients")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors"
-              >
-                CLIENTS
-              </button>
-              <button
-                onClick={() => handleLinkClick("#services")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors"
-              >
-                SERVICES
-              </button>
-              <button
-                onClick={() => handleLinkClick("#work")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors"
-              >
-                WORK
-              </button>
-              <button
-                onClick={() => handleLinkClick("#ai-films")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors flex items-center gap-1"
-              >
-                <span className="w-1 h-1 rounded-full bg-[#F20D18]" />
-                AI FILMS
-              </button>
-              <button
-                onClick={() => handleLinkClick("/work")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors"
-              >
-                ARCHIVE
-              </button>
-              <button
-                onClick={() => handleLinkClick("#locations")}
-                onMouseEnter={() => sound.playHover()}
-                className="hover:text-[#F20D18] transition-colors"
-              >
-                HUBS
-              </button>
-            </nav>
-            <div className="h-3 w-[1px] bg-white/20" />
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F20D18] animate-ping" />
-              <LiveISTClock className="text-white/60 font-mono tracking-widest" />
-            </div>
-          </div>
+            ))}
+          </nav>
 
-          {/* Right Action Controls: Audio Toggle + Menu Trigger */}
-          <div className="flex items-center gap-3 md:gap-5">
-            {/* Audio Feedback Toggle */}
+          {/* Right Action Controls */}
+          <div className="flex items-center gap-2.5 sm:gap-3.5 shrink-0">
+            {/* Lightweight Audio Utility Toggle */}
             <button
+              type="button"
               onClick={handleSoundClick}
               onMouseEnter={() => sound.playHover()}
               data-cursor={soundEnabled ? "MUTE" : "AUDIO ON"}
-              className={`flex items-center gap-2 px-3 py-1.5 font-mono text-[11px] tracking-wider uppercase border transition-all duration-200 ${
+              aria-pressed={soundEnabled}
+              aria-label={soundEnabled ? "Mute audio feedback" : "Enable audio feedback"}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-[2px] font-mono text-[10px] tracking-[0.16em] uppercase border transition-colors duration-200 ${
                 soundEnabled
-                  ? "bg-[#F20D18] border-[#F20D18] text-white font-bold shadow-[0_0_15px_rgba(242,13,24,0.5)]"
-                  : "bg-black/50 border-white/20 text-white/70 hover:border-white hover:text-white"
+                  ? "border-[#F20D18]/70 bg-[#F20D18]/15 text-white"
+                  : "border-white/20 bg-[#111111]/70 text-[#B3B3B3] hover:border-white/40 hover:text-white"
               }`}
               title="Toggle Audio Feedback"
             >
               {soundEnabled ? (
                 <>
-                  <Volume2 className="w-3.5 h-3.5 animate-pulse" />
+                  <Volume2 className="w-3.5 h-3.5 text-[#F20D18]" />
                   <span className="hidden sm:inline">SOUND ON</span>
                 </>
               ) : (
@@ -205,38 +185,48 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
               )}
             </button>
 
-            {/* Quick Contact CTA Desktop */}
+            {/* Primary Crimson CTA */}
             <button
+              type="button"
               onClick={() => handleLinkClick("#contact")}
               onMouseEnter={() => sound.playHover()}
-              className="hidden md:flex items-center gap-2 px-4 py-1.5 font-mono text-[11px] font-bold tracking-wider uppercase border border-[#F20D18] text-white hover:bg-[#F20D18] hover:text-white transition-all duration-200 group"
+              className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-[2px] font-mono text-[11px] font-bold tracking-[0.14em] uppercase bg-[#F20D18] text-white hover:bg-[#d90b15] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group"
             >
               <span>START A PROJECT</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#F20D18] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
             </button>
 
-            {/* Menu Trigger Button */}
+            {/* Mobile / Tablet Drawer Trigger (< lg) */}
             <button
+              ref={menuButtonRef}
+              type="button"
               onClick={() => {
                 sound.playClick();
-                setIsOpen(!isOpen);
+                if (isOpen) {
+                  closeDrawer(false);
+                } else {
+                  setIsOpen(true);
+                }
               }}
               onMouseEnter={() => sound.playHover()}
               data-cursor={isOpen ? "CLOSE" : "MENU"}
-              className={`relative z-50 flex items-center gap-2 px-4 py-2 font-mono text-xs font-bold tracking-widest uppercase transition-all duration-200 ${
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation-drawer"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              className={`lg:hidden relative z-50 inline-flex items-center gap-2 px-3.5 py-2 rounded-[2px] font-mono text-[11px] font-bold tracking-[0.16em] uppercase border transition-colors duration-200 ${
                 isOpen
-                  ? "bg-[#F20D18] text-white"
-                  : "bg-white text-black hover:bg-[#F20D18] hover:text-white"
+                  ? "bg-[#F20D18] border-[#F20D18] text-white hover:bg-[#d90b15]"
+                  : "bg-[#111111]/90 border-white/25 text-white hover:border-white"
               }`}
             >
               {isOpen ? (
                 <>
-                  <X className="w-4 h-4 stroke-[2.5]" />
+                  <X className="w-4 h-4 stroke-[2.25]" aria-hidden="true" />
                   <span>CLOSE</span>
                 </>
               ) : (
                 <>
-                  <Menu className="w-4 h-4 stroke-[2.5]" />
+                  <Menu className="w-4 h-4 stroke-[2.25]" aria-hidden="true" />
                   <span>MENU</span>
                 </>
               )}
@@ -245,67 +235,76 @@ export default function Navbar({ onSoundToggle }: NavbarProps) {
         </div>
       </header>
 
-      {/* Full-Screen Maximalist Navigation Overlay */}
+      {/* Mobile / Tablet Navigation Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-            animate={{ opacity: 1, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
-            exit={{ opacity: 0, clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-            transition={{ duration: 0.55, ease: [0.76, 0, 0.24, 1] }}
-            className="modal-backdrop fixed inset-0 z-40 bg-[#080808] flex flex-col justify-between pt-24 pb-8 px-6 sm:px-12 md:px-16 overflow-y-auto overscroll-contain modal-content-scroll"
+            id="mobile-navigation-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
+            initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
+            animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+            exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
+            transition={{ duration: prefersReducedMotion ? 0.01 : 0.25, ease: [0.22, 1, 0.36, 1] }}
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                closeDrawer(true);
+              }
+            }}
+            className="modal-backdrop fixed inset-0 z-40 bg-[#0A0A0A]/95 backdrop-blur-md flex flex-col justify-between pt-28 pb-8 px-4 sm:px-8 md:px-12 overflow-y-auto overscroll-contain modal-content-scroll"
             data-lenis-prevent="true"
             onWheel={(e) => e.stopPropagation()}
           >
-            {/* Background brutalist red accent slash */}
-            <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-[#F20D18]/10 pointer-events-none hidden lg:block subtle-red-grid" />
-            <div className="absolute left-1/4 top-1/2 -translate-y-1/2 font-anton text-[24vw] text-white/[0.02] pointer-events-none select-none">
-              AFTER THAT
-            </div>
-
-            {/* Navigation links grid */}
-            <div className="relative z-10 max-w-6xl w-full mx-auto my-auto py-8">
-              <span className="font-mono text-xs text-[#F20D18] tracking-[0.3em] uppercase block mb-6">
-                // SYSTEM DIRECTORY — KOCHI • BANGALORE • AHMEDABAD
-              </span>
-
-              <nav className="flex flex-col space-y-3 md:space-y-4">
-                {navLinks.map((item, i) => (
-                  <motion.div
+            {/* Navigation Links */}
+            <div className="relative z-10 max-w-[1720px] w-full mx-auto my-auto py-6">
+              <nav aria-label="Mobile navigation" className="flex flex-col border-t border-white/15">
+                {drawerLinks.map((item, i) => (
+                  <a
                     key={item.href}
-                    initial={{ x: -40, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.1 + i * 0.04, duration: 0.35 }}
-                    className="group flex items-baseline gap-4 md:gap-8 border-b border-white/10 pb-2 md:pb-3"
+                    ref={i === 0 ? firstDrawerLinkRef : undefined}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLinkClick(item.href);
+                    }}
+                    onMouseEnter={() => sound.playHover()}
+                    data-cursor="EXPLORE"
+                    className="group flex items-center justify-between gap-4 border-b border-white/10 py-4 sm:py-5 text-white hover:border-white/30 transition-colors duration-200"
                   >
-                    <span className="font-mono text-xs md:text-sm text-[#F20D18] tracking-widest font-bold">
-                      {item.index}
-                    </span>
-                    <a
-                      href={item.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleLinkClick(item.href);
-                      }}
-                      onMouseEnter={() => sound.playHover()}
-                      data-cursor="EXPLORE"
-                      className="font-anton text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight uppercase text-white group-hover:text-[#F20D18] group-hover:translate-x-4 transition-all duration-200 inline-block"
-                    >
+                    <span className="font-anton text-3xl sm:text-5xl tracking-tight uppercase text-white group-hover:text-[#F20D18] group-hover:translate-x-0.5 transition-all duration-200">
                       {item.label}
-                    </a>
-                    <ArrowUpRight className="w-5 h-5 md:w-7 md:h-7 text-[#F20D18] opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 hidden sm:inline" />
-                  </motion.div>
+                    </span>
+                    <span className="flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] uppercase text-[#B3B3B3] group-hover:text-white transition-colors duration-200">
+                      <span className="hidden sm:inline">{item.meta}</span>
+                      <ArrowUpRight className="w-4 h-4 text-[#F20D18] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                    </span>
+                  </a>
                 ))}
               </nav>
+
+              {/* Drawer Primary CTA */}
+              <div className="mt-8">
+                <button
+                  type="button"
+                  onClick={() => handleLinkClick("#contact")}
+                  onMouseEnter={() => sound.playHover()}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] font-mono text-xs font-bold tracking-[0.16em] uppercase bg-[#F20D18] text-white hover:bg-[#d90b15] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group"
+                >
+                  <span>START A PROJECT</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                </button>
+              </div>
             </div>
 
             {/* Bottom Meta & Social Coordinates */}
-            <div className="relative z-10 max-w-6xl w-full mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 font-mono text-xs text-[#888888]">
-              <div className="space-y-1">
-                <span className="text-white block font-bold uppercase tracking-wider">
+            <div className="relative z-10 max-w-[1720px] w-full mx-auto pt-6 border-t border-white/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-xs text-[#B3B3B3]">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                <span className="text-white font-bold uppercase tracking-wider">
                   AFTER THAT ENTERTAINMENT LLP
                 </span>
-                <span>KOCHI • BANGALORE • AHMEDABAD</span>
+                <span className="text-white/30">•</span>
+                <LiveISTClock className="text-white/75 tracking-widest" />
               </div>
 
               <div className="flex items-center gap-6">

@@ -17,14 +17,14 @@ import { SERVICES, VerticalService } from "@/data/services";
 import { sound } from "@/utils/sound";
 
 export default function ServicesSection() {
-  const [activeService, setActiveService] = useState<string>(SERVICES[0].id);
+  const [activeService, setActiveService] = useState<string | null>(SERVICES[0].id);
 
   const currentService: VerticalService =
     SERVICES.find((s) => s.id === activeService) || SERVICES[0];
 
   const handleSelect = (id: string) => {
     sound.playClick();
-    setActiveService(id);
+    setActiveService((prev) => (prev === id ? null : id));
   };
 
   const handleCommissionClick = (serviceTitle: string) => {
